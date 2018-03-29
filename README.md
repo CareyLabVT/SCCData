@@ -1,3 +1,2 @@
 # SCCRawData
-Raw Sensor Data for SCC
-
+Raw Sensor Data for SCC Project
