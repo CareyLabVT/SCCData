@@ -3310,3 +3310,131 @@ PING github.com (192.30.253.113) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2002ms
 rtt min/avg/max/mdev = 57.627/94.331/133.590/31.064 ms
+
+
+-------------- 04/05/18 13:00:16 --------------
+
+
+ppp0      Link encap:Point-to-Point Protocol  
+          inet addr:10.252.247.99  P-t-P:66.174.112.192  Mask:255.255.255.255
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:6 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3 
+          RX bytes:72 (72.0 B)  TX bytes:141 (141.0 B)
+
+ipop      Link encap:Ethernet  HWaddr ea:2e:5b:5f:7e:2d  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::e82e:5bff:fe5f:7e2d/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:82 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:9758 (9.7 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-04-05 12:42:15 EDT; 18min ago
+  Process: 1706 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1698 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1712 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1712 /usr/sbin/watchdog -f
+
+Apr 05 12:42:15 carina watchdog[1712]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+Apr 05 12:42:15 carina watchdog[1712]: ping: no machine to check
+Apr 05 12:42:15 carina systemd[1]: Started watchdog daemon.
+Apr 05 12:42:15 carina watchdog[1712]: file: no file to check
+Apr 05 12:42:15 carina watchdog[1712]: pidfile: no server process to check
+Apr 05 12:42:15 carina watchdog[1712]: interface: no interface to check
+Apr 05 12:42:15 carina watchdog[1712]: temperature: no sensors to check
+Apr 05 12:42:15 carina watchdog[1712]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+Apr 05 12:42:15 carina watchdog[1712]: watchdog now set to 254 seconds
+Apr 05 12:42:15 carina watchdog[1712]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-04-05 12:42:08 EDT; 18min ago
+ Main PID: 1095 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1095 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 05 12:59:07 carina ipop-tincan[1095]: Cleanup
+Apr 05 12:59:07 carina ipop-tincan[1095]: [04/05 12:59:07.956510] Connect: XMPP CONNECTING
+Apr 05 12:59:22 carina ipop-tincan[1095]: Cleanup
+Apr 05 12:59:22 carina ipop-tincan[1095]: [04/05 12:59:22.967291] Connect: XMPP CONNECTING
+Apr 05 12:59:37 carina ipop-tincan[1095]: Cleanup
+Apr 05 12:59:37 carina ipop-tincan[1095]: [04/05 12:59:37.977607] Connect: XMPP CONNECTING
+Apr 05 12:59:52 carina ipop-tincan[1095]: Cleanup
+Apr 05 12:59:52 carina ipop-tincan[1095]: [04/05 12:59:52.988661] Connect: XMPP CONNECTING
+Apr 05 13:00:08 carina ipop-tincan[1095]: Cleanup
+Apr 05 13:00:08 carina ipop-tincan[1095]: [04/05 13:00:07.999450] Connect: XMPP CONNECTING
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-04-05 12:42:08 EDT; 18min ago
+ Main PID: 1097 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1097 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 05 12:58:40 carina python[1097]: [20180405 12:58:40.478] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+Apr 05 12:58:55 carina python[1097]: [20180405 12:58:55.486] INFO:discovered nodes:
+Apr 05 12:59:10 carina python[1097]: [20180405 12:59:10.495] INFO:discovered nodes:
+Apr 05 12:59:25 carina python[1097]: [20180405 12:59:25.505] INFO:discovered nodes:
+Apr 05 12:59:40 carina python[1097]: [20180405 12:59:40.513] INFO:discovered nodes:
+Apr 05 12:59:40 carina python[1097]: [20180405 12:59:40.516] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+Apr 05 12:59:40 carina python[1097]: [20180405 12:59:40.517] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+Apr 05 12:59:40 carina python[1097]: [20180405 12:59:40.517] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+Apr 05 12:59:55 carina python[1097]: [20180405 12:59:55.522] INFO:discovered nodes:
+Apr 05 13:00:10 carina python[1097]: [20180405 13:00:10.530] INFO:discovered nodes:
+
+
+● cellular.service - wvdial
+   Loaded: loaded (/etc/systemd/system/cellular.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Thu 2018-04-05 12:46:15 EDT; 14min ago
+  Process: 900 ExecStart=/usr/bin/wvdial (code=exited, status=1/FAILURE)
+ Main PID: 900 (code=exited, status=1/FAILURE)
+
+Apr 05 12:46:02 carina wvdial[900]: Caught signal 15:  Attempting to exit gracefully...
+Apr 05 12:46:02 carina pppd[1148]: Terminating on signal 15
+Apr 05 12:46:02 carina pppd[1148]: Connect time 3.9 minutes.
+Apr 05 12:46:02 carina pppd[1148]: Sent 46064 bytes, received 513652 bytes.
+Apr 05 12:46:02 carina wvdial[900]: --> Terminating on signal 15
+Apr 05 12:46:02 carina wvdial[900]: --> Connect time 3.9 minutes.
+Apr 05 12:46:03 carina wvdial[900]: --> Disconnecting at Thu Apr  5 12:46:03 2018
+Apr 05 12:46:15 carina systemd[1]: cellular.service: Main process exited, code=exited, status=1/FAILURE
+Apr 05 12:46:15 carina systemd[1]: cellular.service: Unit entered failed state.
+Apr 05 12:46:15 carina systemd[1]: cellular.service: Failed with result 'exit-code'.
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2030ms
+pipe 3
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2042ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.102 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.077 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.099 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 0.077/0.092/0.102/0.015 ms
+
+
+ping: unknown host github.com
