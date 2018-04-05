@@ -3059,3 +3059,116 @@ PING github.com (192.30.253.112) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2002ms
 rtt min/avg/max/mdev = 44.640/67.611/82.639/16.499 ms
+
+
+-------------- 04/05/18 06:00:01 --------------
+
+
+ppp0      Link encap:Point-to-Point Protocol  
+          inet addr:100.82.153.111  P-t-P:10.64.64.64  Mask:255.255.255.255
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:176826 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:156413 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3 
+          RX bytes:90142579 (90.1 MB)  TX bytes:17101320 (17.1 MB)
+
+ipop      Link encap:Ethernet  HWaddr 9a:fc:4f:5e:fc:90  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::98fc:4fff:fe5e:fc90/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:367 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:355 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:47241 (47.2 KB)  TX bytes:55292 (55.2 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-04-04 22:38:58 EDT; 7h ago
+  Process: 1543 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1537 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1549 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1549 /usr/sbin/watchdog -f
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-04-04 22:38:52 EDT; 7h ago
+ Main PID: 1097 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1097 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 05 05:59:37 carina ipop-tincan[1097]: Cleanup
+Apr 05 05:59:37 carina ipop-tincan[1097]: [04/05 05:59:37.101177] Connect: XMPP CONNECTING
+Apr 05 05:59:37 carina ipop-tincan[1097]: OpenSSLAdapter::OnConnectEvent
+Apr 05 05:59:37 carina ipop-tincan[1097]: [04/05 05:59:37.229425] OnStateChange: OPENING
+Apr 05 05:59:52 carina ipop-tincan[1097]: Cleanup
+Apr 05 05:59:52 carina ipop-tincan[1097]: [04/05 05:59:52.115501] OnStateChange: CLOSED
+Apr 05 05:59:52 carina ipop-tincan[1097]: Cleanup
+Apr 05 05:59:52 carina ipop-tincan[1097]: [04/05 05:59:52.115716] Connect: XMPP CONNECTING
+Apr 05 05:59:52 carina ipop-tincan[1097]: OpenSSLAdapter::OnConnectEvent
+Apr 05 05:59:52 carina ipop-tincan[1097]: [04/05 05:59:52.303304] OnStateChange: OPENING
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-04-04 22:38:52 EDT; 7h ago
+ Main PID: 1098 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1098 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 05 05:49:57 carina python[1098]: <p style="text-align:center;">System Error</p>
+Apr 05 05:49:57 carina python[1098]: </div>
+Apr 05 05:53:19 carina python[1098]: [20180405 05:53:19.995] INFO:Succesfully reported status to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 05 05:53:19 carina python[1098]: HTTP response code:200, msg:<div id = "simpleError">
+Apr 05 05:53:19 carina python[1098]: <p style="text-align:center;">System Error</p>
+Apr 05 05:53:19 carina python[1098]: </div>
+Apr 05 05:56:42 carina python[1098]: [20180405 05:56:42.564] INFO:Succesfully reported status to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 05 05:56:42 carina python[1098]: HTTP response code:200, msg:<div id = "simpleError">
+Apr 05 05:56:42 carina python[1098]: <p style="text-align:center;">System Error</p>
+Apr 05 05:56:42 carina python[1098]: </div>
+
+
+● cellular.service - wvdial
+   Loaded: loaded (/etc/systemd/system/cellular.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-04-04 22:38:51 EDT; 7h ago
+ Main PID: 935 (wvdial)
+   CGroup: /system.slice/cellular.service
+           ├─ 935 /usr/bin/wvdial
+           └─1028 /usr/sbin/pppd 9600 modem crtscts defaultroute usehostname -detach user blank noipdefault call wvdial usepeerdns idle 0 logfd 6
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2053ms
+
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2027ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.092 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.078 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.079 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.078/0.083/0.092/0.006 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+
+--- github.com ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2028ms
+
