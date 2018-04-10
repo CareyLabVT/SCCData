@@ -6123,3 +6123,143 @@ PING github.com (192.30.253.112) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 3958ms
 rtt min/avg/max/mdev = 1736.146/1943.472/2198.914/191.966 ms, pipe 2
+
+
+-------------- 04/10/18 18:00:01 --------------
+
+
+ppp0      Link encap:Point-to-Point Protocol  
+          inet addr:100.125.23.40  P-t-P:10.64.64.64  Mask:255.255.255.255
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:141772 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:106415 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3 
+          RX bytes:128861011 (128.8 MB)  TX bytes:9798811 (9.7 MB)
+
+ipop      Link encap:Ethernet  HWaddr 36:24:5e:99:12:fd  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::3424:5eff:fe99:12fd/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:1169 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:769 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:119203 (119.2 KB)  TX bytes:111453 (111.4 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-04-10 15:18:29 EDT; 2h 41min ago
+  Process: 1530 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1522 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1535 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1535 /usr/sbin/watchdog -f
+
+Apr 10 15:18:29 carina watchdog[1535]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+Apr 10 15:18:29 carina systemd[1]: Started watchdog daemon.
+Apr 10 15:18:29 carina watchdog[1535]: ping: no machine to check
+Apr 10 15:18:29 carina watchdog[1535]: file: no file to check
+Apr 10 15:18:29 carina watchdog[1535]: pidfile: no server process to check
+Apr 10 15:18:29 carina watchdog[1535]: interface: no interface to check
+Apr 10 15:18:29 carina watchdog[1535]: temperature: no sensors to check
+Apr 10 15:18:29 carina watchdog[1535]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+Apr 10 15:18:29 carina watchdog[1535]: watchdog now set to 254 seconds
+Apr 10 15:18:29 carina watchdog[1535]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-04-10 15:18:23 EDT; 2h 41min ago
+ Main PID: 1059 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1059 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 10 17:59:53 carina ipop-tincan[1059]: [04/10 17:59:53.973931] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 10 17:59:55 carina ipop-tincan[1059]: [04/10 17:59:55.974217] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 10 17:59:55 carina ipop-tincan[1059]: [04/10 17:59:55.974309] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 10 17:59:55 carina ipop-tincan[1059]: [04/10 17:59:55.974352] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 10 17:59:57 carina ipop-tincan[1059]: [04/10 17:59:57.975378] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 10 17:59:57 carina ipop-tincan[1059]: [04/10 17:59:57.975465] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 10 17:59:57 carina ipop-tincan[1059]: [04/10 17:59:57.975503] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 10 17:59:59 carina ipop-tincan[1059]: [04/10 17:59:59.975851] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 10 17:59:59 carina ipop-tincan[1059]: [04/10 17:59:59.975945] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 10 17:59:59 carina ipop-tincan[1059]: [04/10 17:59:59.975990] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-04-10 15:18:23 EDT; 2h 41min ago
+ Main PID: 1061 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1061 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 10 17:59:17 carina python[1061]: [20180410 17:59:17.983] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Apr 10 17:59:31 carina python[1061]: [20180410 17:59:31.788] INFO:p2p state: CONNECTED
+Apr 10 17:59:32 carina python[1061]: [20180410 17:59:32.984] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Apr 10 17:59:46 carina python[1061]: [20180410 17:59:46.797] INFO:p2p state: CONNECTED
+Apr 10 17:59:47 carina python[1061]: [20180410 17:59:47.987] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Apr 10 17:59:52 carina python[1061]: [20180410 17:59:52.842] INFO:Succesfully reported status to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 10 17:59:52 carina python[1061]: HTTP response code:200, msg:{
+Apr 10 17:59:52 carina python[1061]:   "result": "23ba762935cd4e52b1b9e0d940f11950",
+Apr 10 17:59:52 carina python[1061]:   "status": "success"
+Apr 10 17:59:52 carina python[1061]: }
+
+
+● cellular.service - wvdial
+   Loaded: loaded (/etc/systemd/system/cellular.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-04-10 15:18:22 EDT; 2h 41min ago
+ Main PID: 878 (wvdial)
+   CGroup: /system.slice/cellular.service
+           ├─ 878 /usr/bin/wvdial
+           └─1077 /usr/sbin/pppd 9600 modem crtscts defaultroute usehostname -detach user blank noipdefault call wvdial usepeerdns idle 0 logfd 6
+
+Apr 10 15:18:23 carina wvdial[878]: --> Using interface ppp0
+Apr 10 15:18:24 carina pppd[1077]: Could not determine remote IP address: defaulting to 10.64.64.64
+Apr 10 15:18:24 carina pppd[1077]: local  IP address 100.125.23.40
+Apr 10 15:18:24 carina pppd[1077]: remote IP address 10.64.64.64
+Apr 10 15:18:24 carina pppd[1077]: primary   DNS address 198.224.138.129
+Apr 10 15:18:24 carina pppd[1077]: secondary DNS address 198.224.137.129
+Apr 10 15:18:24 carina wvdial[878]: --> local  IP address 100.125.23.40
+Apr 10 15:18:24 carina wvdial[878]: --> remote IP address 10.64.64.64
+Apr 10 15:18:24 carina wvdial[878]: --> primary   DNS address 198.224.138.129
+Apr 10 15:18:24 carina wvdial[878]: --> secondary DNS address 198.224.137.129
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=54 time=95.8 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=54 time=55.6 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=54 time=69.5 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 55.637/73.678/95.881/16.691 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=94.9 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=114 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=123 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 94.910/111.177/123.747/12.065 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.070 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.079 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.079 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.070/0.076/0.079/0.004 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=50 time=37.9 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=50 time=85.7 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=50 time=202 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 37.910/108.763/202.646/69.197 ms
