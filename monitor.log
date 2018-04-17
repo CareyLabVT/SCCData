@@ -9184,3 +9184,117 @@ rtt min/avg/max/mdev = 0.079/0.092/0.118/0.018 ms
 
 
 connect: Network is unreachable
+
+
+-------------- 04/17/18 00:00:01 --------------
+
+
+ppp0: error fetching interface information: Device not found
+ipop      Link encap:Ethernet  HWaddr 86:37:bf:40:29:b2  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          inet6 addr: fe80::8437:bfff:fe40:29b2/64 Scope:Link
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:258 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:26222 (26.2 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-04-16 15:32:36 EDT; 8h ago
+  Process: 1506 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1499 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1508 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1508 /usr/sbin/watchdog -f
+
+Apr 16 15:32:36 carina watchdog[1508]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+Apr 16 15:32:36 carina watchdog[1508]: ping: no machine to check
+Apr 16 15:32:36 carina systemd[1]: Started watchdog daemon.
+Apr 16 15:32:36 carina watchdog[1508]: file: no file to check
+Apr 16 15:32:36 carina watchdog[1508]: pidfile: no server process to check
+Apr 16 15:32:36 carina watchdog[1508]: interface: no interface to check
+Apr 16 15:32:36 carina watchdog[1508]: temperature: no sensors to check
+Apr 16 15:32:36 carina watchdog[1508]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+Apr 16 15:32:36 carina watchdog[1508]: watchdog now set to 254 seconds
+Apr 16 15:32:36 carina watchdog[1508]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-04-16 15:32:31 EDT; 8h ago
+ Main PID: 1062 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1062 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 16 23:59:18 carina ipop-tincan[1062]: OpenSSLAdapter::OnCloseEvent(-1)
+Apr 16 23:59:18 carina ipop-tincan[1062]: [04/16 23:59:18.518973] OnCloseEvent: ONCLOSEEVENT -1
+Apr 16 23:59:33 carina ipop-tincan[1062]: Cleanup
+Apr 16 23:59:33 carina ipop-tincan[1062]: [04/16 23:59:33.524668] Connect: XMPP CONNECTING
+Apr 16 23:59:33 carina ipop-tincan[1062]: OpenSSLAdapter::OnCloseEvent(-1)
+Apr 16 23:59:33 carina ipop-tincan[1062]: [04/16 23:59:33.526728] OnCloseEvent: ONCLOSEEVENT -1
+Apr 16 23:59:48 carina ipop-tincan[1062]: Cleanup
+Apr 16 23:59:48 carina ipop-tincan[1062]: [04/16 23:59:48.531304] Connect: XMPP CONNECTING
+Apr 16 23:59:48 carina ipop-tincan[1062]: OpenSSLAdapter::OnCloseEvent(-1)
+Apr 16 23:59:48 carina ipop-tincan[1062]: [04/16 23:59:48.533227] OnCloseEvent: ONCLOSEEVENT -1
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-04-16 15:32:31 EDT; 8h ago
+ Main PID: 1063 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1063 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 16 23:57:42 carina python[1063]: [20180416 23:57:42.490] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 16 23:57:48 carina python[1063]: [20180416 23:57:48.466] INFO:p2p state: searching
+Apr 16 23:58:03 carina python[1063]: [20180416 23:58:03.475] INFO:p2p state: searching
+Apr 16 23:58:18 carina python[1063]: [20180416 23:58:18.485] INFO:p2p state: searching
+Apr 16 23:58:33 carina python[1063]: [20180416 23:58:33.494] INFO:p2p state: searching
+Apr 16 23:58:48 carina python[1063]: [20180416 23:58:48.502] INFO:p2p state: searching
+Apr 16 23:59:03 carina python[1063]: [20180416 23:59:03.509] INFO:p2p state: searching
+Apr 16 23:59:18 carina python[1063]: [20180416 23:59:18.516] INFO:p2p state: searching
+Apr 16 23:59:33 carina python[1063]: [20180416 23:59:33.523] INFO:p2p state: searching
+Apr 16 23:59:48 carina python[1063]: [20180416 23:59:48.530] INFO:p2p state: searching
+
+
+● cellular.service - wvdial
+   Loaded: loaded (/etc/systemd/system/cellular.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Mon 2018-04-16 17:43:04 EDT; 6h ago
+  Process: 920 ExecStart=/usr/bin/wvdial (code=exited, status=1/FAILURE)
+ Main PID: 920 (code=exited, status=1/FAILURE)
+
+Apr 16 17:43:04 carina wvdial[920]: --> man pppd explains pppd error codes in more detail.
+Apr 16 17:43:04 carina wvdial[920]: --> Try again and look into /var/log/messages and the wvdial and pppd man pages for more information.
+Apr 16 17:43:04 carina wvdial[920]: --> Auto Reconnect will be attempted in 5 seconds
+Apr 16 17:43:04 carina wvdial[920]: --> Cannot open /dev/ttyUSB0: No such file or directory
+Apr 16 17:43:04 carina wvdial[920]: --> Cannot open /dev/ttyUSB0: No such file or directory
+Apr 16 17:43:04 carina wvdial[920]: --> Cannot open /dev/ttyUSB0: No such file or directory
+Apr 16 17:43:04 carina wvdial[920]: --> Disconnecting at Mon Apr 16 17:43:04 2018
+Apr 16 17:43:04 carina systemd[1]: cellular.service: Main process exited, code=exited, status=1/FAILURE
+Apr 16 17:43:04 carina systemd[1]: cellular.service: Unit entered failed state.
+Apr 16 17:43:04 carina systemd[1]: cellular.service: Failed with result 'exit-code'.
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2048ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.072 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.068 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.068 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.068/0.069/0.072/0.007 ms
+
+
+connect: Network is unreachable
