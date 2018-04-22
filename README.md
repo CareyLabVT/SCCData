@@ -1,2 +1,2 @@
-# SCCRawData
-Raw Sensor Data for SCC
+# SCCData
+Data for SCC
