@@ -15486,3 +15486,109 @@ PING github.com (192.30.253.113) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 41.571/44.139/46.168/1.930 ms
+
+
+-------------- 04/30/18 06:00:01 --------------
+
+
+ppp0: error fetching interface information: Device not found
+ipop      Link encap:Ethernet  HWaddr 66:0f:3e:90:c2:ed  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          inet6 addr: fe80::640f:3eff:fe90:c2ed/64 Scope:Link
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:8761 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6019 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:910734 (910.7 KB)  TX bytes:864907 (864.9 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2018-04-28 17:04:40 EDT; 1 day 12h ago
+  Process: 1510 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1504 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1513 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1513 /usr/sbin/watchdog -f
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2018-04-28 17:04:34 EDT; 1 day 12h ago
+ Main PID: 1065 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1065 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 30 05:59:16 carina ipop-tincan[1065]: OpenSSLAdapter::OnCloseEvent(-3)
+Apr 30 05:59:16 carina ipop-tincan[1065]: [04/30 05:59:16.589053] OnCloseEvent: ONCLOSEEVENT -3
+Apr 30 05:59:31 carina ipop-tincan[1065]: Cleanup
+Apr 30 05:59:31 carina ipop-tincan[1065]: [04/30 05:59:31.594756] Connect: XMPP CONNECTING
+Apr 30 05:59:31 carina ipop-tincan[1065]: OpenSSLAdapter::OnCloseEvent(-3)
+Apr 30 05:59:31 carina ipop-tincan[1065]: [04/30 05:59:31.596075] OnCloseEvent: ONCLOSEEVENT -3
+Apr 30 05:59:46 carina ipop-tincan[1065]: Cleanup
+Apr 30 05:59:46 carina ipop-tincan[1065]: [04/30 05:59:46.605899] Connect: XMPP CONNECTING
+Apr 30 05:59:46 carina ipop-tincan[1065]: OpenSSLAdapter::OnCloseEvent(-3)
+Apr 30 05:59:46 carina ipop-tincan[1065]: [04/30 05:59:46.607070] OnCloseEvent: ONCLOSEEVENT -3
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2018-04-28 17:04:34 EDT; 1 day 12h ago
+ Main PID: 1066 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1066 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 30 05:27:46 carina python[1066]: [20180430 05:27:46.875] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 30 05:31:06 carina python[1066]: [20180430 05:31:06.877] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 30 05:34:26 carina python[1066]: [20180430 05:34:26.880] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 30 05:37:46 carina python[1066]: [20180430 05:37:46.883] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 30 05:41:06 carina python[1066]: [20180430 05:41:06.886] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 30 05:44:26 carina python[1066]: [20180430 05:44:26.888] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 30 05:47:46 carina python[1066]: [20180430 05:47:46.891] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 30 05:51:06 carina python[1066]: [20180430 05:51:06.893] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 30 05:54:26 carina python[1066]: [20180430 05:54:26.896] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 30 05:57:46 carina python[1066]: [20180430 05:57:46.899] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+● cellular.service - wvdial
+   Loaded: loaded (/etc/systemd/system/cellular.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-04-30 05:53:17 EDT; 6min ago
+ Main PID: 20289 (wvdial)
+   CGroup: /system.slice/cellular.service
+           └─20289 /usr/bin/wvdial
+
+Apr 30 05:58:39 carina wvdial[20289]: ATZ
+Apr 30 05:58:39 carina wvdial[20289]: OK
+Apr 30 05:58:39 carina wvdial[20289]: --> Sending: ATQ0 V1 E1 S0=0 &C1 &D2 +FCLASS=0
+Apr 30 05:58:39 carina wvdial[20289]: ATQ0 V1 E1 S0=0 &C1 &D2 +FCLASS=0
+Apr 30 05:58:39 carina wvdial[20289]: OK
+Apr 30 05:58:39 carina wvdial[20289]: --> Sending: AT+CSQ
+Apr 30 05:58:39 carina wvdial[20289]: AT+CSQ
+Apr 30 05:58:39 carina wvdial[20289]: +CSQ: 99,99
+Apr 30 05:58:39 carina wvdial[20289]: OK
+Apr 30 05:58:39 carina wvdial[20289]: --> Modem initialized.
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2002ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.093 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.080 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.084 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2009ms
+rtt min/avg/max/mdev = 0.080/0.085/0.093/0.012 ms
+
+
+ping: unknown host github.com
