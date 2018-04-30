@@ -15592,3 +15592,133 @@ rtt min/avg/max/mdev = 0.080/0.085/0.093/0.012 ms
 
 
 ping: unknown host github.com
+
+
+-------------- 04/30/18 12:00:01 --------------
+
+
+ppp0      Link encap:Point-to-Point Protocol  
+          inet addr:100.91.217.187  P-t-P:10.64.64.64  Mask:255.255.255.255
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:7 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3 
+          RX bytes:70 (70.0 B)  TX bytes:157 (157.0 B)
+
+ipop      Link encap:Ethernet  HWaddr 3e:63:f6:8a:e2:32  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::3c63:f6ff:fe8a:e232/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:105 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:11766 (11.7 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-04-30 09:54:31 EDT; 2h 5min ago
+  Process: 1367 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1361 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1370 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1370 /usr/sbin/watchdog -f
+
+Apr 30 09:54:31 carina watchdog[1370]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+Apr 30 09:54:31 carina watchdog[1370]: ping: no machine to check
+Apr 30 09:54:31 carina watchdog[1370]: file: no file to check
+Apr 30 09:54:31 carina watchdog[1370]: pidfile: no server process to check
+Apr 30 09:54:31 carina systemd[1]: Started watchdog daemon.
+Apr 30 09:54:31 carina watchdog[1370]: interface: no interface to check
+Apr 30 09:54:31 carina watchdog[1370]: temperature: no sensors to check
+Apr 30 09:54:31 carina watchdog[1370]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+Apr 30 09:54:31 carina watchdog[1370]: watchdog now set to 254 seconds
+Apr 30 09:54:31 carina watchdog[1370]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-04-30 09:54:25 EDT; 2h 5min ago
+ Main PID: 991 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─991 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 30 11:58:59 carina ipop-tincan[991]: Cleanup
+Apr 30 11:58:59 carina ipop-tincan[991]: [04/30 11:58:59.277627] Connect: XMPP CONNECTING
+Apr 30 11:59:14 carina ipop-tincan[991]: Cleanup
+Apr 30 11:59:14 carina ipop-tincan[991]: [04/30 11:59:14.281882] Connect: XMPP CONNECTING
+Apr 30 11:59:29 carina ipop-tincan[991]: Cleanup
+Apr 30 11:59:29 carina ipop-tincan[991]: [04/30 11:59:29.286455] Connect: XMPP CONNECTING
+Apr 30 11:59:44 carina ipop-tincan[991]: Cleanup
+Apr 30 11:59:44 carina ipop-tincan[991]: [04/30 11:59:44.291029] Connect: XMPP CONNECTING
+Apr 30 11:59:59 carina ipop-tincan[991]: Cleanup
+Apr 30 11:59:59 carina ipop-tincan[991]: [04/30 11:59:59.295826] Connect: XMPP CONNECTING
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-04-30 09:54:25 EDT; 2h 5min ago
+ Main PID: 992 (python)
+   CGroup: /system.slice/ipopController.service
+           └─992 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 30 11:57:46 carina python[992]: [20180430 11:57:46.155] INFO:p2p state: searching
+Apr 30 11:58:01 carina python[992]: [20180430 11:58:01.163] INFO:p2p state: searching
+Apr 30 11:58:16 carina python[992]: [20180430 11:58:16.170] INFO:p2p state: searching
+Apr 30 11:58:31 carina python[992]: [20180430 11:58:31.177] INFO:p2p state: searching
+Apr 30 11:58:46 carina python[992]: [20180430 11:58:46.186] INFO:p2p state: searching
+Apr 30 11:59:01 carina python[992]: [20180430 11:59:01.193] INFO:p2p state: searching
+Apr 30 11:59:16 carina python[992]: [20180430 11:59:16.201] INFO:p2p state: searching
+Apr 30 11:59:31 carina python[992]: [20180430 11:59:31.210] INFO:p2p state: searching
+Apr 30 11:59:46 carina python[992]: [20180430 11:59:46.220] INFO:p2p state: searching
+Apr 30 12:00:01 carina python[992]: [20180430 12:00:01.226] INFO:p2p state: searching
+
+
+● cellular.service - wvdial
+   Loaded: loaded (/etc/systemd/system/cellular.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-04-30 11:53:26 EDT; 6min ago
+ Main PID: 4142 (wvdial)
+   CGroup: /system.slice/cellular.service
+           ├─4142 /usr/bin/wvdial
+           └─4143 /usr/sbin/pppd 9600 modem crtscts defaultroute usehostname -detach user blank noipdefault call wvdial usepeerdns idle 0 logfd 6
+
+Apr 30 11:53:30 carina wvdial[4142]: [15B blob data]
+Apr 30 11:53:30 carina wvdial[4142]: [15B blob data]
+Apr 30 11:53:30 carina wvdial[4142]: --> local  IP address 100.91.217.187
+Apr 30 11:53:30 carina wvdial[4142]: [15B blob data]
+Apr 30 11:53:30 carina wvdial[4142]: --> remote IP address 10.64.64.64
+Apr 30 11:53:30 carina wvdial[4142]: [15B blob data]
+Apr 30 11:53:30 carina wvdial[4142]: --> primary   DNS address 198.224.138.129
+Apr 30 11:53:30 carina wvdial[4142]: [15B blob data]
+Apr 30 11:53:30 carina wvdial[4142]: --> secondary DNS address 198.224.137.129
+Apr 30 11:53:30 carina wvdial[4142]: [15B blob data]
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2016ms
+pipe 2
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.102 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.081 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.069 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 0.069/0.084/0.102/0.013 ms
+
+
+ping: unknown host github.com
