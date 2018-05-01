@@ -15962,3 +15962,132 @@ PING github.com (192.30.253.112) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 18.722/18.784/18.843/0.165 ms
+
+
+-------------- 05/01/18 12:00:01 --------------
+
+
+ppp0: error fetching interface information: Device not found
+ipop      Link encap:Ethernet  HWaddr 06:6d:a4:1a:3a:4f  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          inet6 addr: fe80::46d:a4ff:fe1a:3a4f/64 Scope:Link
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:125 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:191 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:12250 (12.2 KB)  TX bytes:19396 (19.3 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-05-01 11:57:27 EDT; 2min 33s ago
+  Process: 1483 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1476 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1486 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1486 /usr/sbin/watchdog -f
+
+May 01 11:57:27 carina watchdog[1486]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+May 01 11:57:27 carina watchdog[1486]: ping: no machine to check
+May 01 11:57:27 carina watchdog[1486]: file: no file to check
+May 01 11:57:27 carina watchdog[1486]: pidfile: no server process to check
+May 01 11:57:27 carina watchdog[1486]: interface: no interface to check
+May 01 11:57:27 carina systemd[1]: Started watchdog daemon.
+May 01 11:57:27 carina watchdog[1486]: temperature: no sensors to check
+May 01 11:57:27 carina watchdog[1486]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+May 01 11:57:27 carina watchdog[1486]: watchdog now set to 254 seconds
+May 01 11:57:27 carina watchdog[1486]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-05-01 11:57:20 EDT; 2min 41s ago
+ Main PID: 1019 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1019 /home/scc/applications/ipopbin/ipop-tincan
+
+May 01 11:59:53 carina ipop-tincan[1019]: [05/01 11:59:53.834616] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 01 11:59:55 carina ipop-tincan[1019]: [05/01 11:59:55.836367] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 01 11:59:55 carina ipop-tincan[1019]: [05/01 11:59:55.836453] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 01 11:59:55 carina ipop-tincan[1019]: [05/01 11:59:55.836495] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 01 11:59:57 carina ipop-tincan[1019]: [05/01 11:59:57.838132] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 01 11:59:57 carina ipop-tincan[1019]: [05/01 11:59:57.838225] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 01 11:59:57 carina ipop-tincan[1019]: [05/01 11:59:57.838266] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 01 11:59:59 carina ipop-tincan[1019]: [05/01 11:59:59.839799] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 01 11:59:59 carina ipop-tincan[1019]: [05/01 11:59:59.839852] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 01 11:59:59 carina ipop-tincan[1019]: [05/01 11:59:59.839869] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-05-01 11:57:20 EDT; 2min 41s ago
+ Main PID: 1020 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1020 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 01 11:59:06 carina python[1020]: [20180501 11:59:06.749] INFO:p2p state: CONNECTED
+May 01 11:59:10 carina python[1020]: [20180501 11:59:10.038] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+May 01 11:59:21 carina python[1020]: [20180501 11:59:21.757] INFO:p2p state: CONNECTED
+May 01 11:59:25 carina python[1020]: [20180501 11:59:25.040] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+May 01 11:59:28 carina python[1020]: [20180501 11:59:28.209] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=161.96.177.217
+May 01 11:59:36 carina python[1020]: [20180501 11:59:36.765] INFO:p2p state: CONNECTED
+May 01 11:59:40 carina python[1020]: [20180501 11:59:40.043] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+May 01 11:59:40 carina python[1020]: [20180501 11:59:40.589] WARNING:recv illegal tincan_packet: src=0.0.0.0 dst=4.109.164.255
+May 01 11:59:51 carina python[1020]: [20180501 11:59:51.775] INFO:p2p state: CONNECTED
+May 01 11:59:55 carina python[1020]: [20180501 11:59:55.046] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+
+
+● cellular.service - wvdial
+   Loaded: loaded (/etc/systemd/system/cellular.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Tue 2018-05-01 11:57:19 EDT; 2min 42s ago
+  Process: 857 ExecStart=/usr/bin/wvdial (code=exited, status=1/FAILURE)
+ Main PID: 857 (code=exited, status=1/FAILURE)
+
+May 01 11:57:19 carina systemd[1]: Started wvdial.
+May 01 11:57:19 carina wvdial[857]: --> WvDial: Internet dialer version 1.61
+May 01 11:57:19 carina wvdial[857]: --> Cannot open /dev/ttyUSB0: No such file or directory
+May 01 11:57:19 carina wvdial[857]: --> Cannot open /dev/ttyUSB0: No such file or directory
+May 01 11:57:19 carina wvdial[857]: --> Cannot open /dev/ttyUSB0: No such file or directory
+May 01 11:57:19 carina systemd[1]: cellular.service: Main process exited, code=exited, status=1/FAILURE
+May 01 11:57:19 carina systemd[1]: cellular.service: Unit entered failed state.
+May 01 11:57:19 carina systemd[1]: cellular.service: Failed with result 'exit-code'.
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=58 time=8.56 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=58 time=8.54 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=58 time=8.57 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 8.548/8.561/8.574/0.010 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=30.1 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=30.5 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=30.4 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 30.130/30.377/30.557/0.270 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.069 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.070 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.080 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2040ms
+rtt min/avg/max/mdev = 0.069/0.073/0.080/0.005 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=53 time=18.6 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=53 time=18.8 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=53 time=18.7 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 18.668/18.756/18.830/0.066 ms
