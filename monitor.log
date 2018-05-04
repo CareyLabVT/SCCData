@@ -17476,3 +17476,132 @@ PING github.com (192.30.253.113) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 8.717/8.819/8.875/0.072 ms
+
+
+-------------- 05/04/18 12:00:01 --------------
+
+
+ppp0      Link encap:Point-to-Point Protocol  
+          inet addr:100.124.31.142  P-t-P:10.64.64.64  Mask:255.255.255.255
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:5 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3 
+          RX bytes:62 (62.0 B)  TX bytes:101 (101.0 B)
+
+ipop      Link encap:Ethernet  HWaddr 32:e2:0e:f9:0b:3e  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          inet6 addr: fe80::30e2:eff:fef9:b3e/64 Scope:Link
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:65 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:7310 (7.3 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-05-04 10:37:11 EDT; 1h 22min ago
+  Process: 1477 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1471 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1480 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1480 /usr/sbin/watchdog -f
+
+May 04 10:37:11 carina watchdog[1480]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+May 04 10:37:11 carina systemd[1]: Started watchdog daemon.
+May 04 10:37:11 carina watchdog[1480]: ping: no machine to check
+May 04 10:37:11 carina watchdog[1480]: file: no file to check
+May 04 10:37:11 carina watchdog[1480]: pidfile: no server process to check
+May 04 10:37:11 carina watchdog[1480]: interface: no interface to check
+May 04 10:37:11 carina watchdog[1480]: temperature: no sensors to check
+May 04 10:37:11 carina watchdog[1480]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+May 04 10:37:11 carina watchdog[1480]: watchdog now set to 254 seconds
+May 04 10:37:11 carina watchdog[1480]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-05-04 10:37:04 EDT; 1h 22min ago
+ Main PID: 1038 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1038 /home/scc/applications/ipopbin/ipop-tincan
+
+May 04 11:58:51 carina ipop-tincan[1038]: Cleanup
+May 04 11:58:51 carina ipop-tincan[1038]: [05/04 11:58:51.952127] Connect: XMPP CONNECTING
+May 04 11:59:06 carina ipop-tincan[1038]: Cleanup
+May 04 11:59:06 carina ipop-tincan[1038]: [05/04 11:59:06.956578] Connect: XMPP CONNECTING
+May 04 11:59:21 carina ipop-tincan[1038]: Cleanup
+May 04 11:59:21 carina ipop-tincan[1038]: [05/04 11:59:21.960729] Connect: XMPP CONNECTING
+May 04 11:59:36 carina ipop-tincan[1038]: Cleanup
+May 04 11:59:36 carina ipop-tincan[1038]: [05/04 11:59:36.964978] Connect: XMPP CONNECTING
+May 04 11:59:51 carina ipop-tincan[1038]: Cleanup
+May 04 11:59:51 carina ipop-tincan[1038]: [05/04 11:59:51.970172] Connect: XMPP CONNECTING
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-05-04 10:37:04 EDT; 1h 22min ago
+ Main PID: 1039 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1039 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 04 11:57:38 carina python[1039]: [20180504 11:57:38.403] INFO:p2p state: searching
+May 04 11:57:53 carina python[1039]: [20180504 11:57:53.412] INFO:p2p state: searching
+May 04 11:58:08 carina python[1039]: [20180504 11:58:08.418] INFO:p2p state: searching
+May 04 11:58:23 carina python[1039]: [20180504 11:58:23.426] INFO:p2p state: searching
+May 04 11:58:38 carina python[1039]: [20180504 11:58:38.433] INFO:p2p state: searching
+May 04 11:58:53 carina python[1039]: [20180504 11:58:53.441] INFO:p2p state: searching
+May 04 11:59:08 carina python[1039]: [20180504 11:59:08.448] INFO:p2p state: searching
+May 04 11:59:23 carina python[1039]: [20180504 11:59:23.456] INFO:p2p state: searching
+May 04 11:59:38 carina python[1039]: [20180504 11:59:38.462] INFO:p2p state: searching
+May 04 11:59:53 carina python[1039]: [20180504 11:59:53.471] INFO:p2p state: searching
+
+
+● cellular.service - wvdial
+   Loaded: loaded (/etc/systemd/system/cellular.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-05-04 11:33:31 EDT; 26min ago
+ Main PID: 2309 (wvdial)
+   CGroup: /system.slice/cellular.service
+           ├─2309 /usr/bin/wvdial
+           └─2310 /usr/sbin/pppd 9600 modem crtscts defaultroute usehostname -detach user blank noipdefault call wvdial usepeerdns idle 0 logfd 6
+
+May 04 11:33:32 carina wvdial[2309]: --> pppd: 3[7f]
+May 04 11:33:32 carina wvdial[2309]: --> primary   DNS address 198.224.138.129
+May 04 11:33:32 carina wvdial[2309]: --> pppd: 3[7f]
+May 04 11:33:32 carina wvdial[2309]: --> secondary DNS address 198.224.137.129
+May 04 11:33:32 carina wvdial[2309]: --> pppd: 3[7f]
+May 04 11:33:32 carina pppd[2310]: not replacing default route to enp2s0 [192.168.1.2]
+May 04 11:33:32 carina pppd[2310]: local  IP address 100.124.31.142
+May 04 11:33:32 carina pppd[2310]: remote IP address 10.64.64.64
+May 04 11:33:32 carina pppd[2310]: primary   DNS address 198.224.138.129
+May 04 11:33:32 carina pppd[2310]: secondary DNS address 198.224.137.129
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2023ms
+pipe 2
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.091 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.077 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.080 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.077/0.082/0.091/0.012 ms
+
+
