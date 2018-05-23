@@ -23068,3 +23068,134 @@ PING github.com (192.30.253.113) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 9020ms
 rtt min/avg/max/mdev = 8.787/9.218/9.686/0.376 ms
+
+
+-------------- 05/23/18 12:05:01 --------------
+
+
+ 12:05:01 up 21 min,  0 users,  load average: 0.18, 0.08, 0.06
+
+
+ppp0: error fetching interface information: Device not found
+ipop      Link encap:Ethernet  HWaddr c6:51:4e:eb:0a:fe  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::c451:4eff:feeb:afe/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:98 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:10924 (10.9 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-05-23 11:44:01 EDT; 20min ago
+  Process: 1495 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1488 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1497 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1497 /usr/sbin/watchdog -f
+
+May 23 11:44:01 carina watchdog[1497]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+May 23 11:44:01 carina watchdog[1497]: ping: no machine to check
+May 23 11:44:01 carina watchdog[1497]: file: no file to check
+May 23 11:44:01 carina watchdog[1497]: pidfile: no server process to check
+May 23 11:44:01 carina watchdog[1497]: interface: no interface to check
+May 23 11:44:01 carina watchdog[1497]: temperature: no sensors to check
+May 23 11:44:01 carina watchdog[1497]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+May 23 11:44:01 carina watchdog[1497]: watchdog now set to 254 seconds
+May 23 11:44:01 carina systemd[1]: Started watchdog daemon.
+May 23 11:44:01 carina watchdog[1497]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-05-23 11:43:53 EDT; 21min ago
+ Main PID: 1028 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1028 /home/scc/applications/ipopbin/ipop-tincan
+
+May 23 12:04:29 carina ipop-tincan[1028]: OpenSSLAdapter::OnCloseEvent(113)
+May 23 12:04:29 carina ipop-tincan[1028]: [05/23 12:04:29.130586] OnCloseEvent: ONCLOSEEVENT 113
+May 23 12:04:41 carina ipop-tincan[1028]: Cleanup
+May 23 12:04:41 carina ipop-tincan[1028]: [05/23 12:04:41.075572] Connect: XMPP CONNECTING
+May 23 12:04:44 carina ipop-tincan[1028]: OpenSSLAdapter::OnCloseEvent(113)
+May 23 12:04:44 carina ipop-tincan[1028]: [05/23 12:04:44.138627] OnCloseEvent: ONCLOSEEVENT 113
+May 23 12:04:56 carina ipop-tincan[1028]: Cleanup
+May 23 12:04:56 carina ipop-tincan[1028]: [05/23 12:04:56.087774] Connect: XMPP CONNECTING
+May 23 12:04:59 carina ipop-tincan[1028]: OpenSSLAdapter::OnCloseEvent(113)
+May 23 12:04:59 carina ipop-tincan[1028]: [05/23 12:04:59.146654] OnCloseEvent: ONCLOSEEVENT 113
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-05-23 11:43:53 EDT; 21min ago
+ Main PID: 1029 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1029 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 23 12:02:56 carina python[1029]: [20180523 12:02:56.113] INFO:p2p state: searching
+May 23 12:03:11 carina python[1029]: [20180523 12:03:11.119] INFO:p2p state: searching
+May 23 12:03:26 carina python[1029]: [20180523 12:03:26.127] INFO:p2p state: searching
+May 23 12:03:41 carina python[1029]: [20180523 12:03:41.134] INFO:p2p state: searching
+May 23 12:03:56 carina python[1029]: [20180523 12:03:56.140] INFO:p2p state: searching
+May 23 12:04:10 carina python[1029]: [20180523 12:04:10.123] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 23 12:04:11 carina python[1029]: [20180523 12:04:11.149] INFO:p2p state: searching
+May 23 12:04:26 carina python[1029]: [20180523 12:04:26.157] INFO:p2p state: searching
+May 23 12:04:41 carina python[1029]: [20180523 12:04:41.165] INFO:p2p state: searching
+May 23 12:04:56 carina python[1029]: [20180523 12:04:56.172] INFO:p2p state: searching
+
+
+● cellular.service - wvdial
+   Loaded: loaded (/etc/systemd/system/cellular.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Wed 2018-05-23 12:03:55 EDT; 1min 6s ago
+  Process: 1936 ExecStart=/usr/bin/wvdial (code=exited, status=1/FAILURE)
+ Main PID: 1936 (code=exited, status=1/FAILURE)
+
+May 23 12:03:43 carina wvdial[1936]: --> Sending: ATQ0
+May 23 12:03:43 carina wvdial[1936]: ATQ0
+May 23 12:03:44 carina wvdial[1936]: Password:
+May 23 12:03:44 carina wvdial[1936]: --> Re-Sending: ATZ
+May 23 12:03:47 carina wvdial[1936]: Login incorrect
+May 23 12:03:52 carina wvdial[1936]: mifi login:
+May 23 12:03:52 carina wvdial[1936]: --> Modem not responding.
+May 23 12:03:55 carina systemd[1]: cellular.service: Main process exited, code=exited, status=1/FAILURE
+May 23 12:03:55 carina systemd[1]: cellular.service: Unit entered failed state.
+May 23 12:03:55 carina systemd[1]: cellular.service: Failed with result 'exit-code'.
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2004ms
+pipe 2
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.070 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.078 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.078 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.070/0.075/0.078/0.008 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- github.com ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2027ms
+pipe 3
