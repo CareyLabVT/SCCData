@@ -397,3 +397,120 @@ pipe 3
 
 sudo: no tty present and no askpass program specified
 sudo: no tty present and no askpass program specified
+
+
+-------------- 05/25/18 06:05:01 --------------
+
+
+ 06:05:01 up  6:57,  0 users,  load average: 0.00, 0.00, 0.00
+
+
+ppp0: error fetching interface information: Device not found
+ipop      Link encap:Ethernet  HWaddr de:fa:40:c6:6b:18  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          inet6 addr: fe80::dcfa:40ff:fec6:6b18/64 Scope:Link
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1681 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:127056 (127.0 KB)
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-05-24 23:07:29 EDT; 6h ago
+  Process: 1519 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1513 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1522 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1522 /usr/sbin/watchdog -f
+
+May 24 23:07:29 carina watchdog[1522]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+May 24 23:07:29 carina watchdog[1522]: ping: no machine to check
+May 24 23:07:29 carina watchdog[1522]: file: no file to check
+May 24 23:07:29 carina systemd[1]: Started watchdog daemon.
+May 24 23:07:29 carina watchdog[1522]: pidfile: no server process to check
+May 24 23:07:29 carina watchdog[1522]: interface: no interface to check
+May 24 23:07:29 carina watchdog[1522]: temperature: no sensors to check
+May 24 23:07:29 carina watchdog[1522]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+May 24 23:07:29 carina watchdog[1522]: watchdog now set to 254 seconds
+May 24 23:07:29 carina watchdog[1522]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-05-24 23:07:18 EDT; 6h ago
+ Main PID: 1036 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1036 /home/scc/applications/ipopbin/ipop-tincan
+
+May 25 06:04:21 carina ipop-tincan[1036]: OpenSSLAdapter::OnCloseEvent(113)
+May 25 06:04:21 carina ipop-tincan[1036]: [05/25 06:04:21.966040] OnCloseEvent: ONCLOSEEVENT 113
+May 25 06:04:33 carina ipop-tincan[1036]: Cleanup
+May 25 06:04:33 carina ipop-tincan[1036]: [05/25 06:04:33.897636] Connect: XMPP CONNECTING
+May 25 06:04:36 carina ipop-tincan[1036]: OpenSSLAdapter::OnCloseEvent(113)
+May 25 06:04:36 carina ipop-tincan[1036]: [05/25 06:04:36.973725] OnCloseEvent: ONCLOSEEVENT 113
+May 25 06:04:48 carina ipop-tincan[1036]: Cleanup
+May 25 06:04:48 carina ipop-tincan[1036]: [05/25 06:04:48.905589] Connect: XMPP CONNECTING
+May 25 06:04:51 carina ipop-tincan[1036]: OpenSSLAdapter::OnCloseEvent(113)
+May 25 06:04:51 carina ipop-tincan[1036]: [05/25 06:04:51.981731] OnCloseEvent: ONCLOSEEVENT 113
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-05-24 23:07:18 EDT; 6h ago
+ Main PID: 1037 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1037 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 25 06:02:33 carina python[1037]: [20180525 06:02:33.828] INFO:p2p state: searching
+May 25 06:02:48 carina python[1037]: [20180525 06:02:48.837] INFO:p2p state: searching
+May 25 06:03:03 carina python[1037]: [20180525 06:03:03.847] INFO:p2p state: searching
+May 25 06:03:18 carina python[1037]: [20180525 06:03:18.858] INFO:p2p state: searching
+May 25 06:03:33 carina python[1037]: [20180525 06:03:33.865] INFO:p2p state: searching
+May 25 06:03:48 carina python[1037]: [20180525 06:03:48.875] INFO:p2p state: searching
+May 25 06:04:03 carina python[1037]: [20180525 06:04:03.882] INFO:p2p state: searching
+May 25 06:04:18 carina python[1037]: [20180525 06:04:18.889] INFO:p2p state: searching
+May 25 06:04:33 carina python[1037]: [20180525 06:04:33.896] INFO:p2p state: searching
+May 25 06:04:48 carina python[1037]: [20180525 06:04:48.907] INFO:p2p state: searching
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2039ms
+pipe 3
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.062 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.081 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.080 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.062/0.074/0.081/0.011 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- github.com ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2038ms
+pipe 3
+
+
+sudo: no tty present and no askpass program specified
+sudo: no tty present and no askpass program specified
