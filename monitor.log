@@ -9007,3 +9007,155 @@ Database updated: Fri Jun  1 12:05:10 2018
          today         0 KiB |       0 KiB |       0 KiB |    0.00 kbit/s
      ------------------------+-------------+-------------+---------------
      estimated        --     |      --     |      --     |
+
+
+-------------- 06/01/18 15:09:43 --------------
+
+
+ 15:09:43 up  2:54,  2 users,  load average: 0.03, 0.14, 0.13
+
+
+enx0015ff030033: error fetching interface information: Device not found
+ipop      Link encap:Ethernet  HWaddr f2:24:fb:f4:93:57  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::f024:fbff:fef4:9357/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:3872 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2785 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:758014 (758.0 KB)  TX bytes:424656 (424.6 KB)
+
+enp2s0    Link encap:Ethernet  HWaddr 00:01:c0:1f:d4:0f  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Memory:c1100000-c111ffff 
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-06-01 12:15:33 EDT; 2h 54min ago
+  Process: 1703 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1698 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1706 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1706 /usr/sbin/watchdog -f
+
+Jun 01 12:15:33 carina watchdog[1706]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+Jun 01 12:15:33 carina watchdog[1706]: ping: no machine to check
+Jun 01 12:15:33 carina systemd[1]: Started watchdog daemon.
+Jun 01 12:15:33 carina watchdog[1706]: file: no file to check
+Jun 01 12:15:33 carina watchdog[1706]: pidfile: no server process to check
+Jun 01 12:15:33 carina watchdog[1706]: interface: no interface to check
+Jun 01 12:15:33 carina watchdog[1706]: temperature: no sensors to check
+Jun 01 12:15:33 carina watchdog[1706]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+Jun 01 12:15:33 carina watchdog[1706]: watchdog now set to 254 seconds
+Jun 01 12:15:33 carina watchdog[1706]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-06-01 12:15:26 EDT; 2h 54min ago
+ Main PID: 1012 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1012 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 01 15:09:36 carina ipop-tincan[1012]: [06/01 15:09:36.043744] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 01 15:09:38 carina ipop-tincan[1012]: [06/01 15:09:38.045497] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 01 15:09:38 carina ipop-tincan[1012]: [06/01 15:09:38.045592] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 01 15:09:38 carina ipop-tincan[1012]: [06/01 15:09:38.045635] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 01 15:09:40 carina ipop-tincan[1012]: [06/01 15:09:40.046422] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 01 15:09:40 carina ipop-tincan[1012]: [06/01 15:09:40.046519] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 01 15:09:40 carina ipop-tincan[1012]: [06/01 15:09:40.046562] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 01 15:09:42 carina ipop-tincan[1012]: [06/01 15:09:42.047506] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 01 15:09:42 carina ipop-tincan[1012]: [06/01 15:09:42.047598] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 01 15:09:42 carina ipop-tincan[1012]: [06/01 15:09:42.047641] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-06-01 12:15:26 EDT; 2h 54min ago
+ Main PID: 1013 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1013 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 01 15:08:53 carina python[1013]: [20180601 15:08:53.843] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Jun 01 15:09:02 carina python[1013]: [20180601 15:09:02.632] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jun 01 15:09:04 carina python[1013]: [20180601 15:09:04.411] INFO:p2p state: CONNECTED
+Jun 01 15:09:08 carina python[1013]: [20180601 15:09:08.850] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Jun 01 15:09:17 carina python[1013]: [20180601 15:09:17.632] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jun 01 15:09:19 carina python[1013]: [20180601 15:09:19.419] INFO:p2p state: CONNECTED
+Jun 01 15:09:23 carina python[1013]: [20180601 15:09:23.857] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Jun 01 15:09:32 carina python[1013]: [20180601 15:09:32.636] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jun 01 15:09:34 carina python[1013]: [20180601 15:09:34.428] INFO:p2p state: CONNECTED
+Jun 01 15:09:38 carina python[1013]: [20180601 15:09:38.864] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=58 time=8.43 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=58 time=8.58 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=58 time=8.64 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 8.432/8.556/8.648/0.091 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=30.3 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=30.6 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=30.5 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 30.313/30.507/30.685/0.252 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.048 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.081 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2038ms
+rtt min/avg/max/mdev = 0.048/0.070/0.083/0.018 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=53 time=8.83 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=53 time=8.70 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=53 time=8.72 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 8.709/8.755/8.830/0.093 ms
+
+
+Error: Unable to get interface "enx0015ff030033" statistics.
+Only available interfaces can be added for monitoring.
+
+The following interfaces are currently available:
+    ipop (10 Mbit) lo enp3s0 (100 Mbit) wlp1s0 enp2s0 
+Database updated: Fri Jun  1 12:05:10 2018
+
+   enx0015ff030033 since 05/24/2018
+
+          rx:  1.39 MiB      tx:  1.52 MiB      total:  2.91 MiB
+
+   monthly
+                     rx      |     tx      |    total    |   avg. rate
+     ------------------------+-------------+-------------+---------------
+       May '18      1.39 MiB |    1.52 MiB |    2.91 MiB |    0.01 kbit/s
+       Jun '18         0 KiB |       0 KiB |       0 KiB |    0.00 kbit/s
+     ------------------------+-------------+-------------+---------------
+     estimated        --     |      --     |      --     |
+
+   daily
+                     rx      |     tx      |    total    |   avg. rate
+     ------------------------+-------------+-------------+---------------
+     yesterday         0 KiB |       0 KiB |       0 KiB |    0.00 kbit/s
+         today         0 KiB |       0 KiB |       0 KiB |    0.00 kbit/s
+     ------------------------+-------------+-------------+---------------
+     estimated        --     |      --     |      --     |
