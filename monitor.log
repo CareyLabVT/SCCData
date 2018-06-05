@@ -1575,3 +1575,115 @@ PING github.com (192.30.253.112) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 7.874/14.805/28.473/9.665 ms
+
+
+-------------- 06/05/18 00:05:01 --------------
+
+
+ 00:05:01 up 3 days, 11:49,  1 user,  load average: 0.05, 0.12, 0.09
+
+
+enx0015ff030033: error fetching interface information: Device not found
+ipop      Link encap:Ethernet  HWaddr f2:24:fb:f4:93:57  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::f024:fbff:fef4:9357/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:7109 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:10270 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1131627 (1.1 MB)  TX bytes:1174808 (1.1 MB)
+
+enp2s0    Link encap:Ethernet  HWaddr 00:01:c0:1f:d4:0f  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Memory:c1100000-c111ffff 
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-06-01 12:15:33 EDT; 3 days ago
+  Process: 1703 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1698 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1706 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1706 /usr/sbin/watchdog -f
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-06-01 12:15:26 EDT; 3 days ago
+ Main PID: 1012 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1012 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 04 23:56:07 carina ipop-tincan[1012]: [06/04 23:56:07.763431] SendToPeer: uid:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef data:{"con_type": "successor", "fpr": "4D:34:34:41:83:29:27:A5:6E:8E:69:91:B4:9A:77:F6:37:4D:72:BC"} type:con_req
+Jun 04 23:56:07 carina ipop-tincan[1012]: [06/04 23:56:07.763526] HandlePeer: uid:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef data:{"con_type": "successor", "fpr": "4D:34:34:41:83:29:27:A5:6E:8E:69:91:B4:9A:77:F6:37:4D:72:BC"} type:con_req
+Jun 04 23:57:48 carina ipop-tincan[1012]: [06/04 23:57:48.533460] SendToPeer: uid:249ee114d182cfc3279a919454c017d547b13651 data:249ee114d182cfc3279a919454c017d547b13651 type:ping
+Jun 04 23:57:48 carina ipop-tincan[1012]: [06/04 23:57:48.533554] HandlePeer: uid:249ee114d182cfc3279a919454c017d547b13651 data:249ee114d182cfc3279a919454c017d547b13651 type:ping
+Jun 05 00:00:52 carina ipop-tincan[1012]: [06/05 00:00:52.931339] SendToPeer: uid:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef data:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef type:ping
+Jun 05 00:00:52 carina ipop-tincan[1012]: [06/05 00:00:52.931441] HandlePeer: uid:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef data:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef type:ping
+Jun 05 00:00:52 carina ipop-tincan[1012]: [06/05 00:00:52.931569] SendToPeer: uid:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef data:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef type:ping
+Jun 05 00:00:52 carina ipop-tincan[1012]: [06/05 00:00:52.931616] HandlePeer: uid:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef data:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef type:ping
+Jun 05 00:00:52 carina ipop-tincan[1012]: [06/05 00:00:52.932646] SendToPeer: uid:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef data:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef type:ping
+Jun 05 00:00:52 carina ipop-tincan[1012]: [06/05 00:00:52.932713] HandlePeer: uid:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef data:a255de54ecccdf40c56d4f0ebb1d377ce17a51ef type:ping
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-06-01 12:15:26 EDT; 3 days ago
+ Main PID: 1013 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1013 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 05 00:00:42 carina python[1013]: [20180605 00:00:42.952] INFO:Succesfully reported status to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 05 00:00:42 carina python[1013]: HTTP response code:200, msg:{
+Jun 05 00:00:42 carina python[1013]:   "result": "7ec6f229efe64520a6fd743e9552c7fe",
+Jun 05 00:00:42 carina python[1013]:   "status": "success"
+Jun 05 00:00:42 carina python[1013]: }
+Jun 05 00:04:03 carina python[1013]: [20180605 00:04:03.094] INFO:Succesfully reported status to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 05 00:04:03 carina python[1013]: HTTP response code:200, msg:{
+Jun 05 00:04:03 carina python[1013]:   "result": "554a2177afaf4bc2a7222bfe9e24c5fb",
+Jun 05 00:04:03 carina python[1013]:   "status": "success"
+Jun 05 00:04:03 carina python[1013]: }
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=58 time=6.94 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=58 time=6.99 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=58 time=6.97 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 6.947/6.971/6.990/0.017 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2028ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.062 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.081 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.079 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.062/0.074/0.081/0.008 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=53 time=12.8 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=53 time=7.64 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=53 time=7.83 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 7.642/9.446/12.860/2.417 ms
