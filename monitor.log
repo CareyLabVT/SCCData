@@ -2890,3 +2890,135 @@ From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
 --- github.com ping statistics ---
 3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2049ms
 pipe 3
+
+
+-------------- 06/07/18 18:05:01 --------------
+
+
+ 18:05:01 up  8:06,  0 users,  load average: 0.00, 0.02, 0.00
+
+
+enx0015ff030033 Link encap:Ethernet  HWaddr 00:15:ff:03:00:33  
+          inet addr:100.107.204.150  Bcast:100.107.204.151  Mask:255.255.255.252
+          inet6 addr: fe80::50a6:68dc:8cd4:b8aa/64 Scope:Link
+          inet6 addr: 2600:1003:b851:90b9:84e1:554d:b75b:1a89/64 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:773 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1166 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:62111 (62.1 KB)  TX bytes:127273 (127.2 KB)
+
+ipop      Link encap:Ethernet  HWaddr 0e:5b:1b:15:28:83  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::c5b:1bff:fe15:2883/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:365 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:29830 (29.8 KB)
+
+enp2s0    Link encap:Ethernet  HWaddr 00:01:c0:1f:d4:0f  
+          inet addr:192.168.1.5  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::4077:88d7:cc2:3c09/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2186 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14909 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2093269 (2.0 MB)  TX bytes:666874 (666.8 KB)
+          Memory:c1100000-c111ffff 
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-06-07 09:59:10 EDT; 8h ago
+  Process: 1411 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1404 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1414 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1414 /usr/sbin/watchdog -f
+
+Jun 07 09:59:10 carina watchdog[1414]: int=250s realtime=yes sync=no soft=no mla=0 mem=0
+Jun 07 09:59:10 carina watchdog[1414]: ping: no machine to check
+Jun 07 09:59:10 carina watchdog[1414]: file: no file to check
+Jun 07 09:59:10 carina systemd[1]: Started watchdog daemon.
+Jun 07 09:59:10 carina watchdog[1414]: pidfile: no server process to check
+Jun 07 09:59:10 carina watchdog[1414]: interface: no interface to check
+Jun 07 09:59:10 carina watchdog[1414]: temperature: no sensors to check
+Jun 07 09:59:10 carina watchdog[1414]: test=none(0) repair=none(0) alive=/dev/watchdog heartbeat=none to=root no_act=no force=yes
+Jun 07 09:59:10 carina watchdog[1414]: watchdog now set to 254 seconds
+Jun 07 09:59:10 carina watchdog[1414]: hardware watchdog identity: Software Watchdog
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-06-07 09:59:04 EDT; 8h ago
+ Main PID: 1010 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1010 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 07 18:04:25 carina ipop-tincan[1010]: OpenSSLAdapter::OnCloseEvent(113)
+Jun 07 18:04:25 carina ipop-tincan[1010]: [06/07 18:04:25.626981] OnCloseEvent: ONCLOSEEVENT 113
+Jun 07 18:04:37 carina ipop-tincan[1010]: Cleanup
+Jun 07 18:04:37 carina ipop-tincan[1010]: [06/07 18:04:37.559808] Connect: XMPP CONNECTING
+Jun 07 18:04:40 carina ipop-tincan[1010]: OpenSSLAdapter::OnCloseEvent(113)
+Jun 07 18:04:40 carina ipop-tincan[1010]: [06/07 18:04:40.635000] OnCloseEvent: ONCLOSEEVENT 113
+Jun 07 18:04:52 carina ipop-tincan[1010]: Cleanup
+Jun 07 18:04:52 carina ipop-tincan[1010]: [06/07 18:04:52.568743] Connect: XMPP CONNECTING
+Jun 07 18:04:55 carina ipop-tincan[1010]: OpenSSLAdapter::OnCloseEvent(113)
+Jun 07 18:04:55 carina ipop-tincan[1010]: [06/07 18:04:55.643000] OnCloseEvent: ONCLOSEEVENT 113
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-06-07 09:59:04 EDT; 8h ago
+ Main PID: 1011 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1011 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 07 18:02:37 carina python[1011]: [20180607 18:02:37.500] INFO:p2p state: searching
+Jun 07 18:02:52 carina python[1011]: [20180607 18:02:52.508] INFO:p2p state: searching
+Jun 07 18:03:07 carina python[1011]: [20180607 18:03:07.516] INFO:p2p state: searching
+Jun 07 18:03:22 carina python[1011]: [20180607 18:03:22.523] INFO:p2p state: searching
+Jun 07 18:03:37 carina python[1011]: [20180607 18:03:37.531] INFO:p2p state: searching
+Jun 07 18:03:52 carina python[1011]: [20180607 18:03:52.537] INFO:p2p state: searching
+Jun 07 18:04:07 carina python[1011]: [20180607 18:04:07.544] INFO:p2p state: searching
+Jun 07 18:04:22 carina python[1011]: [20180607 18:04:22.553] INFO:p2p state: searching
+Jun 07 18:04:37 carina python[1011]: [20180607 18:04:37.560] INFO:p2p state: searching
+Jun 07 18:04:52 carina python[1011]: [20180607 18:04:52.567] INFO:p2p state: searching
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2052ms
+pipe 3
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.062 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.079 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.079 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2026ms
+rtt min/avg/max/mdev = 0.062/0.073/0.079/0.010 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- github.com ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2024ms
+pipe 3
