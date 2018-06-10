@@ -4015,3 +4015,126 @@ From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
 --- github.com ping statistics ---
 3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2031ms
 pipe 3
+
+
+-------------- 06/10/18 00:05:01 --------------
+
+
+ 00:05:01 up 2 days, 14:06,  0 users,  load average: 0.00, 0.04, 0.06
+
+
+enx0015ff030033 Link encap:Ethernet  HWaddr 00:15:ff:03:00:33  
+          inet addr:100.86.169.193  Bcast:100.86.169.195  Mask:255.255.255.252
+          inet6 addr: 2600:1003:b850:a1e9:484e:6fec:6024:a25d/64 Scope:Global
+          inet6 addr: fe80::50a6:68dc:8cd4:b8aa/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:19913 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:25847 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1845162 (1.8 MB)  TX bytes:2465084 (2.4 MB)
+
+ipop      Link encap:Ethernet  HWaddr 0e:5b:1b:15:28:83  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::c5b:1bff:fe15:2883/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:5056 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:380276 (380.2 KB)
+
+enp2s0    Link encap:Ethernet  HWaddr 00:01:c0:1f:d4:0f  
+          inet addr:192.168.1.5  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::4077:88d7:cc2:3c09/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3065 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:108296 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2754571 (2.7 MB)  TX bytes:4619972 (4.6 MB)
+          Memory:c1100000-c111ffff 
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-06-07 09:59:10 EDT; 2 days ago
+  Process: 1411 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1404 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1414 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1414 /usr/sbin/watchdog -f
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-06-07 09:59:04 EDT; 2 days ago
+ Main PID: 1010 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1010 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 10 00:04:24 carina ipop-tincan[1010]: OpenSSLAdapter::OnCloseEvent(113)
+Jun 10 00:04:24 carina ipop-tincan[1010]: [06/10 00:04:24.635094] OnCloseEvent: ONCLOSEEVENT 113
+Jun 10 00:04:37 carina ipop-tincan[1010]: Cleanup
+Jun 10 00:04:37 carina ipop-tincan[1010]: [06/10 00:04:37.166443] Connect: XMPP CONNECTING
+Jun 10 00:04:38 carina ipop-tincan[1010]: OpenSSLAdapter::OnCloseEvent(113)
+Jun 10 00:04:38 carina ipop-tincan[1010]: [06/10 00:04:38.235182] OnCloseEvent: ONCLOSEEVENT 113
+Jun 10 00:04:52 carina ipop-tincan[1010]: Cleanup
+Jun 10 00:04:52 carina ipop-tincan[1010]: [06/10 00:04:52.174241] Connect: XMPP CONNECTING
+Jun 10 00:04:55 carina ipop-tincan[1010]: OpenSSLAdapter::OnCloseEvent(113)
+Jun 10 00:04:55 carina ipop-tincan[1010]: [06/10 00:04:55.259005] OnCloseEvent: ONCLOSEEVENT 113
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-06-07 09:59:04 EDT; 2 days ago
+ Main PID: 1011 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1011 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 10 00:02:52 carina python[1011]: [20180610 00:02:52.110] INFO:p2p state: searching
+Jun 10 00:03:07 carina python[1011]: [20180610 00:03:07.117] INFO:p2p state: searching
+Jun 10 00:03:22 carina python[1011]: [20180610 00:03:22.124] INFO:p2p state: searching
+Jun 10 00:03:37 carina python[1011]: [20180610 00:03:37.131] INFO:p2p state: searching
+Jun 10 00:03:52 carina python[1011]: [20180610 00:03:52.138] INFO:p2p state: searching
+Jun 10 00:04:07 carina python[1011]: [20180610 00:04:07.149] INFO:p2p state: searching
+Jun 10 00:04:22 carina python[1011]: [20180610 00:04:22.157] INFO:p2p state: searching
+Jun 10 00:04:37 carina python[1011]: [20180610 00:04:37.165] INFO:p2p state: searching
+Jun 10 00:04:52 carina python[1011]: [20180610 00:04:52.172] INFO:p2p state: searching
+Jun 10 00:04:58 carina python[1011]: [20180610 00:04:58.331] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2044ms
+pipe 3
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.065 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.080 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.080 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2029ms
+rtt min/avg/max/mdev = 0.065/0.075/0.080/0.007 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- github.com ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2046ms
+pipe 3
