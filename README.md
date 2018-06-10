@@ -1,2 +1,2 @@
-# SCCData
-Data for SCC
+# SCCData/noaa-source
+R Scripts for SCC
