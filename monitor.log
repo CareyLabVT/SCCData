@@ -6397,3 +6397,117 @@ From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
 --- github.com ping statistics ---
 3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2030ms
 pipe 3
+
+
+-------------- 06/15/18 12:05:01 --------------
+
+
+ 12:05:01 up 22:03,  0 users,  load average: 0.00, 0.05, 0.01
+
+
+enx0015ff030033: error fetching interface information: Device not found
+ipop      Link encap:Ethernet  HWaddr 6a:0d:ca:f6:2b:bd  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::680d:caff:fef6:2bbd/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:3292 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:281502 (281.5 KB)
+
+enp2s0    Link encap:Ethernet  HWaddr 00:01:c0:1f:d4:0f  
+          inet addr:192.168.1.5  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::4077:88d7:cc2:3c09/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:391 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:54452 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:295222 (295.2 KB)  TX bytes:2351742 (2.3 MB)
+          Memory:c1100000-c111ffff 
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-06-14 14:02:00 EDT; 22h ago
+  Process: 1461 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1454 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1464 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1464 /usr/sbin/watchdog -f
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-06-14 14:01:52 EDT; 22h ago
+ Main PID: 988 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─988 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 15 12:04:24 carina ipop-tincan[988]: OpenSSLAdapter::OnCloseEvent(113)
+Jun 15 12:04:24 carina ipop-tincan[988]: [06/15 12:04:24.993677] OnCloseEvent: ONCLOSEEVENT 113
+Jun 15 12:04:36 carina ipop-tincan[988]: Cleanup
+Jun 15 12:04:36 carina ipop-tincan[988]: [06/15 12:04:36.930787] Connect: XMPP CONNECTING
+Jun 15 12:04:38 carina ipop-tincan[988]: OpenSSLAdapter::OnCloseEvent(113)
+Jun 15 12:04:38 carina ipop-tincan[988]: [06/15 12:04:38.945778] OnCloseEvent: ONCLOSEEVENT 113
+Jun 15 12:04:51 carina ipop-tincan[988]: Cleanup
+Jun 15 12:04:51 carina ipop-tincan[988]: [06/15 12:04:51.940247] Connect: XMPP CONNECTING
+Jun 15 12:04:55 carina ipop-tincan[988]: OpenSSLAdapter::OnCloseEvent(113)
+Jun 15 12:04:55 carina ipop-tincan[988]: [06/15 12:04:55.009695] OnCloseEvent: ONCLOSEEVENT 113
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-06-14 14:01:52 EDT; 22h ago
+ Main PID: 989 (python)
+   CGroup: /system.slice/ipopController.service
+           └─989 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 15 12:02:45 carina python[989]: [20180615 12:02:45.314] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 15 12:02:51 carina python[989]: [20180615 12:02:51.874] INFO:p2p state: searching
+Jun 15 12:03:06 carina python[989]: [20180615 12:03:06.883] INFO:p2p state: searching
+Jun 15 12:03:21 carina python[989]: [20180615 12:03:21.891] INFO:p2p state: searching
+Jun 15 12:03:36 carina python[989]: [20180615 12:03:36.899] INFO:p2p state: searching
+Jun 15 12:03:51 carina python[989]: [20180615 12:03:51.906] INFO:p2p state: searching
+Jun 15 12:04:06 carina python[989]: [20180615 12:04:06.914] INFO:p2p state: searching
+Jun 15 12:04:21 carina python[989]: [20180615 12:04:21.921] INFO:p2p state: searching
+Jun 15 12:04:36 carina python[989]: [20180615 12:04:36.929] INFO:p2p state: searching
+Jun 15 12:04:51 carina python[989]: [20180615 12:04:51.939] INFO:p2p state: searching
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2033ms
+pipe 3
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.101 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.080 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.080/0.088/0.101/0.009 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+From 192.168.1.5 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.5 icmp_seq=3 Destination Host Unreachable
+
+--- github.com ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2038ms
+pipe 3
