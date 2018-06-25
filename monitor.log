@@ -10889,3 +10889,109 @@ rtt min/avg/max/mdev = 0.080/0.085/0.096/0.010 ms
 
 
 ping: unknown host github.com
+
+
+-------------- 06/25/18 12:05:01 --------------
+
+
+ 12:05:01 up 4 days, 22:20,  0 users,  load average: 0.06, 0.03, 0.01
+
+
+enx0015ff030033: error fetching interface information: Device not found
+ipop      Link encap:Ethernet  HWaddr ee:fd:8f:6b:3e:76  
+          inet addr:192.168.10.11  Bcast:192.168.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::ecfd:8fff:fe6b:3e76/64 Scope:Link
+          inet6 addr: fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446/64 Scope:Global
+          UP BROADCAST RUNNING NOARP MULTICAST  MTU:1280  Metric:1
+          RX packets:2 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:10433 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:196 (196.0 B)  TX bytes:799057 (799.0 KB)
+
+enp2s0    Link encap:Ethernet  HWaddr 00:01:c0:1f:d4:0f  
+          inet6 addr: fe80::201:c0ff:fe1f:d40f/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:320863 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:275620 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:19251780 (19.2 MB)  TX bytes:16808833 (16.8 MB)
+          Memory:c1100000-c111ffff 
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-06-20 13:49:26 EDT; 4 days ago
+  Process: 1592 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog -f $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1587 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1598 (watchdog)
+   CGroup: /system.slice/watchdog.service
+           └─1598 /usr/sbin/watchdog -f
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-06-20 13:49:25 EDT; 4 days ago
+ Main PID: 1528 (ipop-tincan)
+   CGroup: /system.slice/ipopTincan.service
+           └─1528 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 25 12:03:58 carina ipop-tincan[1528]: Cleanup
+Jun 25 12:03:58 carina ipop-tincan[1528]: [06/25 12:03:58.206660] Connect: XMPP CONNECTING
+Jun 25 12:04:13 carina ipop-tincan[1528]: Cleanup
+Jun 25 12:04:13 carina ipop-tincan[1528]: [06/25 12:04:13.216735] Connect: XMPP CONNECTING
+Jun 25 12:04:28 carina ipop-tincan[1528]: Cleanup
+Jun 25 12:04:28 carina ipop-tincan[1528]: [06/25 12:04:28.226708] Connect: XMPP CONNECTING
+Jun 25 12:04:43 carina ipop-tincan[1528]: Cleanup
+Jun 25 12:04:43 carina ipop-tincan[1528]: [06/25 12:04:43.237282] Connect: XMPP CONNECTING
+Jun 25 12:04:58 carina ipop-tincan[1528]: Cleanup
+Jun 25 12:04:58 carina ipop-tincan[1528]: [06/25 12:04:58.247585] Connect: XMPP CONNECTING
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-06-20 13:49:25 EDT; 4 days ago
+ Main PID: 1529 (python)
+   CGroup: /system.slice/ipopController.service
+           └─1529 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 25 12:04:44 carina python[1529]: [20180625 12:04:44.936] INFO:removed connection: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 25 12:04:44 carina python[1529]: [20180625 12:04:44.938] INFO:Trimming Link with peer b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 25 12:04:44 carina python[1529]: [20180625 12:04:44.939] INFO:sent con_req (successor): b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 25 12:04:44 carina python[1529]: [20180625 12:04:44.941] INFO:p2p state: CONNECTED
+Jun 25 12:04:59 carina python[1529]: [20180625 12:04:59.442] INFO:sent tincan_packet (exact): 249ee114d182cfc3279a919454c017d547b13651
+Jun 25 12:04:59 carina python[1529]: [20180625 12:04:59.948] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+Jun 25 12:04:59 carina python[1529]: [20180625 12:04:59.950] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+Jun 25 12:04:59 carina python[1529]: [20180625 12:04:59.951] INFO:p2p state: CONNECTED
+Jun 25 12:04:59 carina python[1529]: [20180625 12:04:59.953] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+Jun 25 12:05:00 carina python[1529]: [20180625 12:05:00.474] INFO:sent tincan_packet (exact): 249ee114d182cfc3279a919454c017d547b13651
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+From 169.254.6.122 icmp_seq=1 Destination Host Unreachable
+From 169.254.6.122 icmp_seq=2 Destination Host Unreachable
+From 169.254.6.122 icmp_seq=3 Destination Host Unreachable
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2029ms
+pipe 3
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2020ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.093 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.066 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.078 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2051ms
+rtt min/avg/max/mdev = 0.066/0.079/0.093/0.011 ms
+
+
+ping: unknown host github.com
