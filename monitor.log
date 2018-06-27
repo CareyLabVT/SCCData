@@ -11689,3 +11689,113 @@ rtt min/avg/max/mdev = 0.077/0.081/0.085/0.003 ms
 
 
 ping: github.com: Name or service not known
+
+
+-------------- 06/27/18 06:05:01 --------------
+
+
+ 06:05:01 up 19:18,  1 user,  load average: 0.00, 0.09, 0.13
+
+
+enx0015ff030033: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.11  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::70e4:42ff:fe9a:82f4  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446  prefixlen 64  scopeid 0x0<global>
+        ether 72:e4:42:9a:82:f4  txqueuelen 1000  (Ethernet)
+        RX packets 204  bytes 19992 (19.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2566  bytes 229070 (229.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 00:01:c0:1f:d4:0f  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-06-26 10:51:34 EDT; 19h ago
+  Process: 1575 ExecStart=/bin/sh -c [ $run_watchdog != 1 ] || exec /usr/sbin/watchdog $watchdog_options (code=exited, status=0/SUCCESS)
+  Process: 1569 ExecStartPre=/bin/sh -c [ -z "${watchdog_module}" ] || [ "${watchdog_module}" = "none" ] || /sbin/modprobe $watchdog_module (code=exited, status=0/SUCCESS)
+ Main PID: 1577 (watchdog)
+    Tasks: 1 (limit: 2006)
+   CGroup: /system.slice/watchdog.service
+           └─1577 /usr/sbin/watchdog
+
+Jun 26 10:51:34 carina watchdog[1577]: file: no file to check
+Jun 26 10:51:34 carina watchdog[1577]: pidfile: no server process to check
+Jun 26 10:51:34 carina watchdog[1577]: interface: no interface to check
+Jun 26 10:51:34 carina watchdog[1577]: temperature: no sensors to check
+Jun 26 10:51:34 carina watchdog[1577]: no test binary files
+Jun 26 10:51:34 carina watchdog[1577]: no repair binary files
+Jun 26 10:51:34 carina watchdog[1577]: error retry time-out = 60 seconds
+Jun 26 10:51:34 carina watchdog[1577]: repair attempts = 1
+Jun 26 10:51:34 carina watchdog[1577]: alive=[none] heartbeat=[none] to=root no_act=no force=no
+Jun 26 10:51:34 carina systemd[1]: Started watchdog daemon.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-06-26 10:51:26 EDT; 19h ago
+ Main PID: 1139 (ipop-tincan)
+    Tasks: 5 (limit: 2006)
+   CGroup: /system.slice/ipopTincan.service
+           └─1139 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 27 06:04:23 carina ipop-tincan[1139]: Cleanup
+Jun 27 06:04:23 carina ipop-tincan[1139]: [06/27 06:04:23.158156] Connect: XMPP CONNECTING
+Jun 27 06:04:33 carina ipop-tincan[1139]: OpenSSLAdapter::OnCloseEvent(-2)
+Jun 27 06:04:33 carina ipop-tincan[1139]: [06/27 06:04:33.169731] OnCloseEvent: ONCLOSEEVENT -2
+Jun 27 06:04:38 carina ipop-tincan[1139]: Cleanup
+Jun 27 06:04:38 carina ipop-tincan[1139]: [06/27 06:04:38.163277] Connect: XMPP CONNECTING
+Jun 27 06:04:48 carina ipop-tincan[1139]: OpenSSLAdapter::OnCloseEvent(-2)
+Jun 27 06:04:48 carina ipop-tincan[1139]: [06/27 06:04:48.174675] OnCloseEvent: ONCLOSEEVENT -2
+Jun 27 06:04:53 carina ipop-tincan[1139]: Cleanup
+Jun 27 06:04:53 carina ipop-tincan[1139]: [06/27 06:04:53.164507] Connect: XMPP CONNECTING
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-06-26 10:51:26 EDT; 19h ago
+ Main PID: 1140 (python)
+    Tasks: 11 (limit: 2006)
+   CGroup: /system.slice/ipopController.service
+           └─1140 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 27 05:32:41 carina python[1140]: [20180627 05:32:41.093] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 27 05:36:11 carina python[1140]: [20180627 05:36:11.107] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 27 05:39:41 carina python[1140]: [20180627 05:39:41.120] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 27 05:43:11 carina python[1140]: [20180627 05:43:11.129] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 27 05:46:41 carina python[1140]: [20180627 05:46:41.142] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 27 05:50:11 carina python[1140]: [20180627 05:50:11.155] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 27 05:53:41 carina python[1140]: [20180627 05:53:41.167] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 27 05:57:11 carina python[1140]: [20180627 05:57:11.175] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 27 06:00:41 carina python[1140]: [20180627 06:00:41.185] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jun 27 06:04:11 carina python[1140]: [20180627 06:04:11.198] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2025ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.080 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.080 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.075 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.075/0.078/0.080/0.007 ms
+
+
+ping: github.com: Name or service not known
