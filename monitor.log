@@ -12815,3 +12815,109 @@ PING github.com (192.30.253.112) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2002ms
 rtt min/avg/max/mdev = 7.082/7.205/7.273/0.111 ms
+
+
+-------------- 07/05/18 12:05:01 --------------
+
+
+ 12:05:01 up  1:08,  1 user,  load average: 0.28, 0.21, 0.15
+
+
+enx0015ff030033: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.11  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::80cd:b3ff:fe55:8791  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446  prefixlen 64  scopeid 0x0<global>
+        ether 82:cd:b3:55:87:91  txqueuelen 1000  (Ethernet)
+        RX packets 854  bytes 88842 (88.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1093  bytes 143880 (143.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::4077:88d7:cc2:3c09  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:1f:d4:0f  txqueuelen 1000  (Ethernet)
+        RX packets 97  bytes 72832 (72.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1928  bytes 107591 (107.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 10:56:56 EDT; 1h 8min ago
+ Main PID: 937 (ipop-tincan)
+    Tasks: 4 (limit: 2006)
+   CGroup: /system.slice/ipopTincan.service
+           └─937 /home/scc/applications/ipopbin/ipop-tincan
+
+Jul 05 12:04:57 carina ipop-tincan[937]: [07/05 12:04:57.479420] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 05 12:04:57 carina ipop-tincan[937]: [07/05 12:04:57.479511] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 05 12:04:57 carina ipop-tincan[937]: [07/05 12:04:57.479547] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 05 12:04:59 carina ipop-tincan[937]: [07/05 12:04:59.480655] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 05 12:04:59 carina ipop-tincan[937]: [07/05 12:04:59.480735] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 05 12:04:59 carina ipop-tincan[937]: [07/05 12:04:59.480764] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 05 12:05:00 carina ipop-tincan[937]: Cleanup
+Jul 05 12:05:00 carina ipop-tincan[937]: [07/05 12:05:00.217739] Connect: XMPP CONNECTING
+Jul 05 12:05:00 carina ipop-tincan[937]: [07/05 12:05:00.564987] DestroyTransport: DESTROYED a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Jul 05 12:05:00 carina ipop-tincan[937]: Cleanup
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 10:56:56 EDT; 1h 8min ago
+ Main PID: 938 (python)
+    Tasks: 11 (limit: 2006)
+   CGroup: /system.slice/ipopController.service
+           └─938 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jul 05 12:04:00 carina python[938]: [20180705 12:04:00.531] INFO:discovered nodes:
+Jul 05 12:04:00 carina python[938]: [20180705 12:04:00.532] INFO:p2p state: CONNECTED
+Jul 05 12:04:15 carina python[938]: [20180705 12:04:15.539] INFO:p2p state: CONNECTED
+Jul 05 12:04:30 carina python[938]: [20180705 12:04:30.545] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+Jul 05 12:04:30 carina python[938]: [20180705 12:04:30.547] INFO:p2p state: CONNECTED
+Jul 05 12:04:30 carina python[938]: [20180705 12:04:30.548] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+Jul 05 12:04:45 carina python[938]: [20180705 12:04:45.556] INFO:p2p state: CONNECTED
+Jul 05 12:05:00 carina python[938]: [20180705 12:05:00.565] INFO:removed connection: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Jul 05 12:05:00 carina python[938]: [20180705 12:05:00.566] INFO:Trimming Link with peer a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Jul 05 12:05:00 carina python[938]: [20180705 12:05:00.567] INFO:p2p state: DISCONNECTED
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2048ms
+
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2026ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.085 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.080 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2005ms
+rtt min/avg/max/mdev = 0.080/0.082/0.085/0.007 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=47 time=725 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=47 time=369 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=47 time=108 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 108.231/401.208/725.814/253.118 ms
