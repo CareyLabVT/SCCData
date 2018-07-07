@@ -13536,3 +13536,113 @@ PING github.com (192.30.253.112) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 51.225/67.066/75.780/11.224 ms
+
+
+-------------- 07/07/18 00:05:01 --------------
+
+
+ 00:05:01 up 1 day,  9:47,  0 users,  load average: 0.74, 0.34, 0.17
+
+
+enx0015ff030033: error fetching interface information: Device not found
+enx0015ff025968: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.113.60.146  netmask 255.255.255.252  broadcast 100.113.60.147
+        inet6 2600:1003:b85e:42d5:a12e:3804:b2b2:932  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b842:2afb:35c5:3c1c:fb44:3641  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::56ac:d60:48df:4b92  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:02:59:68  txqueuelen 1000  (Ethernet)
+        RX packets 7529  bytes 1212605 (1.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 24845  bytes 4403151 (4.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.11  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::641a:87ff:fef8:4732  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446  prefixlen 64  scopeid 0x0<global>
+        ether 66:1a:87:f8:47:32  txqueuelen 1000  (Ethernet)
+        RX packets 90699  bytes 8925587 (8.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 91548  bytes 12712806 (12.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::4077:88d7:cc2:3c09  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:1f:d4:0f  txqueuelen 1000  (Ethernet)
+        RX packets 586  bytes 441759 (441.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19153  bytes 939250 (939.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 14:17:43 EDT; 1 day 9h ago
+ Main PID: 911 (ipop-tincan)
+    Tasks: 4 (limit: 2006)
+   CGroup: /system.slice/ipopTincan.service
+           └─911 /home/scc/applications/ipopbin/ipop-tincan
+
+Jul 07 00:04:55 carina ipop-tincan[911]: [07/07 00:04:55.486206] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 00:04:55 carina ipop-tincan[911]: [07/07 00:04:55.486244] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 00:04:57 carina ipop-tincan[911]: [07/07 00:04:57.487575] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 00:04:57 carina ipop-tincan[911]: [07/07 00:04:57.487666] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 00:04:57 carina ipop-tincan[911]: [07/07 00:04:57.487704] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 00:04:59 carina ipop-tincan[911]: [07/07 00:04:59.488888] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 00:04:59 carina ipop-tincan[911]: [07/07 00:04:59.488981] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 00:04:59 carina ipop-tincan[911]: [07/07 00:04:59.489019] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 00:04:59 carina ipop-tincan[911]: Error(stunport.cc:106): Binding request timed out from 192.168.1.5:50699 (enp2s0)
+Jul 07 00:04:59 carina ipop-tincan[911]: Error(stunport.cc:106): Binding request timed out from 100.113.60.146:55638 (enx0015ff025968)
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 14:17:43 EDT; 1 day 9h ago
+ Main PID: 912 (python)
+    Tasks: 11 (limit: 2006)
+   CGroup: /system.slice/ipopController.service
+           └─912 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jul 07 00:03:35 carina python[912]: [20180707 00:03:35.989] INFO:p2p state: CONNECTED
+Jul 07 00:03:50 carina python[912]: [20180707 00:03:50.995] INFO:p2p state: CONNECTED
+Jul 07 00:04:01 carina python[912]: [20180707 00:04:01.782] INFO:recv con_req (successor): b7e5e4036281f1fdc4e874258965570c822150ec
+Jul 07 00:04:01 carina python[912]: [20180707 00:04:01.783] INFO:Creating Link with peer
+Jul 07 00:04:06 carina python[912]: [20180707 00:04:06.003] INFO:p2p state: CONNECTED
+Jul 07 00:04:21 carina python[912]: [20180707 00:04:21.013] INFO:p2p state: CONNECTED
+Jul 07 00:04:36 carina python[912]: [20180707 00:04:36.021] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+Jul 07 00:04:36 carina python[912]: [20180707 00:04:36.022] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+Jul 07 00:04:36 carina python[912]: [20180707 00:04:36.023] INFO:p2p state: CONNECTED
+Jul 07 00:04:51 carina python[912]: [20180707 00:04:51.030] INFO:p2p state: CONNECTED
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2058ms
+
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.055 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.081 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.080 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2029ms
+rtt min/avg/max/mdev = 0.055/0.072/0.081/0.012 ms
+
+
+ping: github.com: Name or service not known
