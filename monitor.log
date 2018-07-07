@@ -604,3 +604,123 @@ PING github.com (192.30.253.113) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2000ms
 rtt min/avg/max/mdev = 73.653/202.562/385.047/132.651 ms
+
+
+-------------- 07/07/18 18:05:01 --------------
+
+
+ 18:05:01 up 2 days,  3:30,  0 users,  load average: 0.02, 0.12, 0.10
+
+
+enx0015ff030033: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.105.104.99  netmask 255.255.255.248  broadcast 100.105.104.103
+        inet6 2600:1003:b862:cc1e:b52e:e1c5:6020:6183  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b862:cc1e:95d8:72d5:9dfd:14a7  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::5506:e6cc:6337:b6d6  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:03:00:33  txqueuelen 1000  (Ethernet)
+        RX packets 77011  bytes 9355805 (9.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 84767  bytes 14987390 (14.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::4896:dcff:fe83:b933  prefixlen 64  scopeid 0x20<link>
+        ether 4a:96:dc:83:b9:33  txqueuelen 1000  (Ethernet)
+        RX packets 11104  bytes 3844669 (3.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7985  bytes 1144229 (1.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 498  bytes 85831 (85.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 18211  bytes 819123 (819.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 14:34:40 EDT; 2 days ago
+ Main PID: 1005 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─1005 /home/scc/applications/ipopbin/ipop-tincan
+
+Jul 07 18:04:59 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:1dTDV+Xs:1:0:stun:udp:174.226.134.240:9091->U1qAxHww:1:0.78:stun:udp:174.226.133.140:13632|CRWI|7239570484934753790|-]: Unwritable after 5 ping failures and 6854 ms without a response, ms since last received ping=231 ms since last received data=185430292 rtt=3000
+Jul 07 18:04:59 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:iFK1GiBl:1:0:stun:udp:174.226.134.240:9110->nF9Rimyu:1:0.78:stun:udp:174.226.133.140:13657|CR-I|7239851959911595518|1402]: Timed out after 22196 ms without a response, rtt=2804
+Jul 07 18:04:59 mia ipop-tincan[1005]: Jingle:Channel[ipop-tincan|1|RW]: Previous best connection: Conn[ipop-tincan:1dTDV+Xs:1:0:stun:udp:174.226.134.240:9091->U1qAxHww:1:0.78:stun:udp:174.226.133.140:13632|CRwI|7239570484934753790|-]
+Jul 07 18:04:59 mia ipop-tincan[1005]: Jingle:Channel[ipop-tincan|1|RW]: New best connection: Conn[ipop-tincan:1dTDV+Xs:1:0:stun:udp:174.226.134.240:9091->nF9Rimyu:1:0.78:stun:udp:174.226.133.140:13657|CRwI|7239570484934884862|2364]
+Jul 07 18:04:59 mia ipop-tincan[1005]: [07/07 18:04:59.847124] OnRWChangeState: OFFLINE a160b1d96c7e144608d798b1f2f3dfb920f06348 185430292
+Jul 07 18:04:59 mia ipop-tincan[1005]: [07/07 18:04:59.847297] SendToPeer: uid:a160b1d96c7e144608d798b1f2f3dfb920f06348 data:offline type:con_stat
+Jul 07 18:04:59 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:iFK1GiBl:1:0:stun:udp:174.226.134.240:9110->nF9Rimyu:1:0.78:stun:udp:174.226.133.140:13657|CR-I|7239851959911595518|1402]: Timed out after 22312 ms without a response, rtt=2804
+Jul 07 18:05:01 mia ipop-tincan[1005]: [07/07 18:05:01.297003] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 18:05:01 mia ipop-tincan[1005]: [07/07 18:05:01.297100] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 07 18:05:01 mia ipop-tincan[1005]: [07/07 18:05:01.297138] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 14:34:40 EDT; 2 days ago
+ Main PID: 1006 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─1006 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jul 07 18:04:24 mia python[1006]: [20180707 18:04:24.383] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jul 07 18:04:24 mia python[1006]: [20180707 18:04:24.503] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Jul 07 18:04:26 mia python[1006]: [20180707 18:04:26.003] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jul 07 18:04:26 mia python[1006]: [20180707 18:04:26.798] INFO:recv ping: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jul 07 18:04:26 mia python[1006]: [20180707 18:04:26.977] INFO:recv ping: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jul 07 18:04:37 mia python[1006]: [20180707 18:04:37.039] INFO:p2p state: CONNECTED
+Jul 07 18:04:40 mia python[1006]: [20180707 18:04:40.503] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jul 07 18:04:40 mia python[1006]: [20180707 18:04:40.504] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Jul 07 18:04:43 mia python[1006]: [20180707 18:04:43.787] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jul 07 18:04:52 mia python[1006]: [20180707 18:04:52.047] INFO:p2p state: CONNECTED
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=54 time=57.3 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=54 time=63.5 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=54 time=51.5 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 51.548/57.495/63.595/4.919 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=74.6 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=72.0 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=100 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 72.077/82.400/100.436/12.801 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2028ms
+
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=48 time=49.8 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=48 time=36.4 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=48 time=46.3 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1999ms
+rtt min/avg/max/mdev = 36.441/44.211/49.876/5.685 ms
