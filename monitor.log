@@ -14254,3 +14254,125 @@ PING github.com (192.30.253.113) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2002ms
 rtt min/avg/max/mdev = 37.931/47.187/64.468/12.229 ms
+
+
+-------------- 07/08/18 12:05:01 --------------
+
+
+ 12:05:01 up 2 days, 21:47,  0 users,  load average: 0.09, 0.10, 0.09
+
+
+enx0015ff030033: error fetching interface information: Device not found
+enx0015ff025968: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.89.176.134  netmask 255.255.255.252  broadcast 100.89.176.135
+        inet6 2600:1003:b85f:d758:ea8a:372a:3e90:1cba  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::56ac:d60:48df:4b92  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:02:59:68  txqueuelen 1000  (Ethernet)
+        RX packets 875440  bytes 112267558 (112.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1035799  bytes 189977102 (189.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.11  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::641a:87ff:fef8:4732  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446  prefixlen 64  scopeid 0x0<global>
+        ether 66:1a:87:f8:47:32  txqueuelen 1000  (Ethernet)
+        RX packets 193662  bytes 19120442 (19.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 194301  bytes 23057614 (23.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::4077:88d7:cc2:3c09  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:1f:d4:0f  txqueuelen 1000  (Ethernet)
+        RX packets 1171  bytes 882811 (882.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 39199  bytes 1917397 (1.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 14:17:43 EDT; 2 days ago
+ Main PID: 911 (ipop-tincan)
+    Tasks: 4 (limit: 2006)
+   CGroup: /system.slice/ipopTincan.service
+           └─911 /home/scc/applications/ipopbin/ipop-tincan
+
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.317048] SendToPeer: XMPP SEND uid 249ee114d182cfc3279a919454c017d547b13651 data a160b1d96c7e144608d798b1f2f3dfb920f06348 type ping
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.317320] SendToPeer: XMPP SEND uid b7e5e4036281f1fdc4e874258965570c822150ec data a160b1d96c7e144608d798b1f2f3dfb920f06348 type ping
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.317492] SendToPeer: XMPP SEND uid b7e5e4036281f1fdc4e874258965570c822150ec data a160b1d96c7e144608d798b1f2f3dfb920f06348 type ping
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.317655] SendToPeer: XMPP SEND uid b7e5e4036281f1fdc4e874258965570c822150ec data a160b1d96c7e144608d798b1f2f3dfb920f06348 type ping
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.317819] SendToPeer: XMPP SEND uid a255de54ecccdf40c56d4f0ebb1d377ce17a51ef data a160b1d96c7e144608d798b1f2f3dfb920f06348 type ping
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.541496] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.541596] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.541636] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.747662] SendToPeer: uid:249ee114d182cfc3279a919454c017d547b13651 data:249ee114d182cfc3279a919454c017d547b13651 type:ping_resp
+Jul 08 12:05:00 carina ipop-tincan[911]: [07/08 12:05:00.747768] HandlePeer: uid:249ee114d182cfc3279a919454c017d547b13651 data:249ee114d182cfc3279a919454c017d547b13651 type:ping_resp
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-05 14:17:43 EDT; 2 days ago
+ Main PID: 912 (python)
+    Tasks: 11 (limit: 2006)
+   CGroup: /system.slice/ipopController.service
+           └─912 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jul 08 12:04:30 carina python[912]: [20180708 12:04:30.297] INFO:p2p state: CONNECTED
+Jul 08 12:04:41 carina python[912]: [20180708 12:04:41.763] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jul 08 12:04:42 carina python[912]: [20180708 12:04:42.384] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jul 08 12:04:45 carina python[912]: [20180708 12:04:45.306] INFO:p2p state: CONNECTED
+Jul 08 12:04:56 carina python[912]: [20180708 12:04:56.744] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jul 08 12:04:56 carina python[912]: [20180708 12:04:56.817] INFO:recv ping: 249ee114d182cfc3279a919454c017d547b13651
+Jul 08 12:04:56 carina python[912]: [20180708 12:04:56.902] INFO:recv ping: 249ee114d182cfc3279a919454c017d547b13651
+Jul 08 12:04:57 carina python[912]: [20180708 12:04:57.135] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jul 08 12:05:00 carina python[912]: [20180708 12:05:00.313] INFO:p2p state: CONNECTED
+Jul 08 12:05:00 carina python[912]: [20180708 12:05:00.749] INFO:recv ping_resp: 249ee114d182cfc3279a919454c017d547b13651
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=52 time=196 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=52 time=103 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=52 time=129 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 103.043/143.086/196.404/39.253 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=684 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=167 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=109 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 109.619/320.586/684.885/258.670 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.059 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.080 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.081 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2036ms
+rtt min/avg/max/mdev = 0.059/0.073/0.081/0.012 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=48 time=164 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=48 time=81.0 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=48 time=75.9 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 75.985/107.309/164.935/40.799 ms
