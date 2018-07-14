@@ -3220,3 +3220,96 @@ PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
 
 
 ping: github.com: Name or service not known
+
+
+-------------- 07/14/18 18:05:01 --------------
+
+
+ 18:05:01 up 18:14,  0 users,  load average: 0.05, 0.07, 0.08
+
+
+enx0015ff030033: error fetching interface information: Device not found
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::6c4c:f5ff:fee8:64fe  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        ether 6e:4c:f5:e8:64:fe  txqueuelen 1000  (Ethernet)
+        RX packets 3  bytes 261 (261.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 605  bytes 52726 (52.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 108  bytes 32807 (32.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 268  bytes 25452 (25.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-07-13 23:50:42 EDT; 18h ago
+ Main PID: 1008 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─1008 /home/scc/applications/ipopbin/ipop-tincan
+
+Jul 14 18:04:29 mia ipop-tincan[1008]: OpenSSLAdapter::OnCloseEvent(-2)
+Jul 14 18:04:29 mia ipop-tincan[1008]: [07/14 18:04:29.813054] OnCloseEvent: ONCLOSEEVENT -2
+Jul 14 18:04:44 mia ipop-tincan[1008]: Cleanup
+Jul 14 18:04:44 mia ipop-tincan[1008]: [07/14 18:04:44.817598] Connect: XMPP CONNECTING
+Jul 14 18:04:44 mia ipop-tincan[1008]: OpenSSLAdapter::OnCloseEvent(-2)
+Jul 14 18:04:44 mia ipop-tincan[1008]: [07/14 18:04:44.820143] OnCloseEvent: ONCLOSEEVENT -2
+Jul 14 18:04:59 mia ipop-tincan[1008]: Cleanup
+Jul 14 18:04:59 mia ipop-tincan[1008]: [07/14 18:04:59.824115] Connect: XMPP CONNECTING
+Jul 14 18:04:59 mia ipop-tincan[1008]: OpenSSLAdapter::OnCloseEvent(-2)
+Jul 14 18:04:59 mia ipop-tincan[1008]: [07/14 18:04:59.826925] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-07-13 23:50:42 EDT; 18h ago
+ Main PID: 1010 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─1010 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jul 14 17:34:08 mia python[1010]: [20180714 17:34:08.393] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 14 17:37:28 mia python[1010]: [20180714 17:37:28.396] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 14 17:40:48 mia python[1010]: [20180714 17:40:48.399] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 14 17:44:08 mia python[1010]: [20180714 17:44:08.403] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 14 17:47:28 mia python[1010]: [20180714 17:47:28.406] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 14 17:50:48 mia python[1010]: [20180714 17:50:48.409] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 14 17:54:08 mia python[1010]: [20180714 17:54:08.413] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 14 17:57:28 mia python[1010]: [20180714 17:57:28.415] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 14 18:00:48 mia python[1010]: [20180714 18:00:48.418] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 14 18:04:08 mia python[1010]: [20180714 18:04:08.420] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2025ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2027ms
+
+
+
+ping: github.com: Name or service not known
