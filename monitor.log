@@ -3503,3 +3503,96 @@ PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
 
 
 ping: github.com: Name or service not known
+
+
+-------------- 07/16/18 06:05:01 --------------
+
+
+ 06:05:01 up  6:14,  0 users,  load average: 0.01, 0.04, 0.06
+
+
+enx0015ff030033: error fetching interface information: Device not found
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::e031:3fff:fecb:60f  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        ether e2:31:3f:cb:06:0f  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 90  bytes 9324 (9.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 54  bytes 16403 (16.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 147  bytes 13112 (13.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sun 2018-07-15 23:50:46 EDT; 6h ago
+ Main PID: 995 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─995 /home/scc/applications/ipopbin/ipop-tincan
+
+Jul 16 06:04:27 mia ipop-tincan[995]: OpenSSLAdapter::OnCloseEvent(-2)
+Jul 16 06:04:27 mia ipop-tincan[995]: [07/16 06:04:27.862062] OnCloseEvent: ONCLOSEEVENT -2
+Jul 16 06:04:42 mia ipop-tincan[995]: Cleanup
+Jul 16 06:04:42 mia ipop-tincan[995]: [07/16 06:04:42.866424] Connect: XMPP CONNECTING
+Jul 16 06:04:42 mia ipop-tincan[995]: OpenSSLAdapter::OnCloseEvent(-2)
+Jul 16 06:04:42 mia ipop-tincan[995]: [07/16 06:04:42.868312] OnCloseEvent: ONCLOSEEVENT -2
+Jul 16 06:04:57 mia ipop-tincan[995]: Cleanup
+Jul 16 06:04:57 mia ipop-tincan[995]: [07/16 06:04:57.870072] Connect: XMPP CONNECTING
+Jul 16 06:04:57 mia ipop-tincan[995]: OpenSSLAdapter::OnCloseEvent(-2)
+Jul 16 06:04:57 mia ipop-tincan[995]: [07/16 06:04:57.872275] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sun 2018-07-15 23:50:46 EDT; 6h ago
+ Main PID: 996 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─996 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jul 16 06:02:57 mia python[996]: [20180716 06:02:57.817] INFO:p2p state: searching
+Jul 16 06:03:12 mia python[996]: [20180716 06:03:12.825] INFO:p2p state: searching
+Jul 16 06:03:27 mia python[996]: [20180716 06:03:27.831] INFO:p2p state: searching
+Jul 16 06:03:42 mia python[996]: [20180716 06:03:42.839] INFO:p2p state: searching
+Jul 16 06:03:57 mia python[996]: [20180716 06:03:57.845] INFO:p2p state: searching
+Jul 16 06:04:07 mia python[996]: [20180716 06:04:07.847] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Jul 16 06:04:12 mia python[996]: [20180716 06:04:12.852] INFO:p2p state: searching
+Jul 16 06:04:27 mia python[996]: [20180716 06:04:27.859] INFO:p2p state: searching
+Jul 16 06:04:42 mia python[996]: [20180716 06:04:42.865] INFO:p2p state: searching
+Jul 16 06:04:57 mia python[996]: [20180716 06:04:57.872] INFO:p2p state: searching
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2028ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2027ms
+
+
+
+ping: github.com: Name or service not known
