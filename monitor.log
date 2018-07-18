@@ -4265,3 +4265,135 @@ rtt min/avg/max/mdev = 38.412/39.883/40.808/1.051 ms
 [ 9529.761759] hid-generic 0003:1410:9031.0002: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-5/input14
 [ 9529.786314] rndis_host 1-5:1.0 enx0015ff030033: renamed from eth0
 [ 9529.825003] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
+
+
+-------------- 07/18/18 18:05:01 --------------
+
+
+ 18:05:01 up 18:14,  0 users,  load average: 0.03, 0.08, 0.13
+
+
+enx0015ff030033: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.71.70.194  netmask 255.255.255.252  broadcast 100.71.70.195
+        inet6 2600:1003:b86e:7fc0:e5b0:d081:c8f6:7ebb  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::5506:e6cc:6337:b6d6  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b84e:aafe:ca14:f319:55aa:3b89  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:03:00:33  txqueuelen 1000  (Ethernet)
+        RX packets 20894  bytes 2556758 (2.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 30367  bytes 5474830 (5.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::bc99:1aff:fe0a:26c5  prefixlen 64  scopeid 0x20<link>
+        ether be:99:1a:0a:26:c5  txqueuelen 1000  (Ethernet)
+        RX packets 73  bytes 10195 (10.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 526  bytes 67409 (67.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 108  bytes 32780 (32.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5691  bytes 272241 (272.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-07-17 23:50:47 EDT; 18h ago
+ Main PID: 1005 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─1005 /home/scc/applications/ipopbin/ipop-tincan
+
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:9/qc8R7I:1:0:stun:udp:174.226.137.176:30404->1L4wtpII:1:0.78:stun:udp:128.227.209.252:41683|CRWI|7239570484935147006|1309]: Timing-out STUN ping RxMxsQjGIYNf after 5000 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:wYujlNW4:1:0:stun:udp:174.226.137.176:30413->qgykemsO:1:0.78:stun:udp:174.226.129.211:9582|CRWS|7239570484934884862|1056]: Timing-out STUN ping +DO9vjQSz6hv after 5001 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:2i3HYlpQ:1:0:stun:udp:174.226.137.176:30409->1L4wtpII:1:0.78:stun:udp:128.227.209.252:41683|CRWI|7239289009958436350|660]: Timing-out STUN ping dDUZRXN+Zf0A after 5000 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:wYujlNW4:1:0:stun:udp:174.226.137.176:30413->mew5EeTy:1:0.86:stun:udp:174.226.129.211:9575|CRWI|7239570485270298110|919]: Timing-out STUN ping n99G+9wuCV0T after 5001 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:9/qc8R7I:1:0:stun:udp:174.226.137.176:30404->1L4wtpII:1:0.78:stun:udp:128.227.209.252:41683|CRWI|7239570484935147006|1309]: Timing-out STUN ping jJVMR4Y4Qrye after 5000 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:xvgWOd/K:1:0:stun:udp:174.226.137.176:30430->qgykemsO:1:0.78:stun:udp:174.226.129.211:9582|CRWS|7239289009958174206|967]: Timing-out STUN ping ETB8F2R8wzNg after 5001 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:2i3HYlpQ:1:0:stun:udp:174.226.137.176:30409->1L4wtpII:1:0.78:stun:udp:128.227.209.252:41683|CRWI|7239289009958436350|660]: Timing-out STUN ping FBCpqMh1cHo+ after 5000 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:wYujlNW4:1:0:stun:udp:174.226.137.176:30413->qgykemsO:1:0.78:stun:udp:174.226.129.211:9582|CRWS|7239570484934884862|1056]: Timing-out STUN ping DpkmtI4ZH8fe after 5000 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:9/qc8R7I:1:0:stun:udp:174.226.137.176:30404->1L4wtpII:1:0.78:stun:udp:128.227.209.252:41683|CRWI|7239570484935147006|1309]: Timing-out STUN ping EURJwpojSn6D after 5001 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:wYujlNW4:1:0:stun:udp:174.226.137.176:30413->mew5EeTy:1:0.86:stun:udp:174.226.129.211:9575|CRWS|7239570485270298110|735]: Timing-out STUN ping dsU4uI2ok52l after 5000 ms
+Jul 18 18:05:01 mia ipop-tincan[1005]: Jingle:Conn[ipop-tincan:2i3HYlpQ:1:0:stun:udp:174.226.137.176:30409->1L4wtpII:1:0.78:stun:udp:128.227.209.252:41683|CRWI|7239289009958436350|660]: Timing-out STUN ping NHFVbs1olV2d after 5000 ms
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-07-17 23:50:47 EDT; 18h ago
+ Main PID: 1006 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─1006 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jul 18 18:04:00 mia python[1006]: [20180718 18:04:00.342] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jul 18 18:04:09 mia python[1006]: [20180718 18:04:09.675] INFO:p2p state: CONNECTED
+Jul 18 18:04:15 mia python[1006]: [20180718 18:04:15.246] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jul 18 18:04:21 mia python[1006]: [20180718 18:04:21.072] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jul 18 18:04:24 mia python[1006]: [20180718 18:04:24.683] INFO:p2p state: CONNECTED
+Jul 18 18:04:30 mia python[1006]: [20180718 18:04:30.340] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jul 18 18:04:36 mia python[1006]: [20180718 18:04:36.112] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jul 18 18:04:39 mia python[1006]: [20180718 18:04:39.691] INFO:p2p state: CONNECTED
+Jul 18 18:04:54 mia python[1006]: [20180718 18:04:54.698] INFO:p2p state: CONNECTED
+Jul 18 18:05:00 mia python[1006]: [20180718 18:05:00.302] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=53 time=139 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=53 time=95.7 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=53 time=94.7 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 94.796/110.077/139.663/20.924 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=234 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 1 received, 66% packet loss, time 2021ms
+rtt min/avg/max/mdev = 234.114/234.114/234.114/0.000 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=1812 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 1 received, 66% packet loss, time 1999ms
+rtt min/avg/max/mdev = 1812.260/1812.260/1812.260/0.000 ms, pipe 2
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=48 time=58.9 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=48 time=64.2 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=48 time=56.3 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 56.349/59.868/64.279/3.304 ms
+
+
+[62596.769211] usb 1-5: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[62596.769217] usb 1-5: Product: MiFi USB730L
+[62596.769222] usb 1-5: Manufacturer: Novatel Wireless
+[62596.769226] usb 1-5: SerialNumber: 0123456789ABCDEF
+[62596.795046] rndis_host 1-5:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-5, RNDIS device, 00:15:ff:03:00:33
+[62596.803187] cdc_acm 1-5:1.12: ttyACM0: USB ACM device
+[62596.812758] hid-generic 0003:1410:9031.0012: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-5/input14
+[62596.842311] rndis_host 1-5:1.0 enx0015ff030033: renamed from eth0
+[62596.875450] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
+[62625.142271] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
