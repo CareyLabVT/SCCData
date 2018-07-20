@@ -4677,3 +4677,148 @@ rtt min/avg/max/mdev = 70.316/71.027/72.420/0.985 ms
 [63808.808550] rndis_host 1-5:1.0 enx0015ff030033: renamed from eth0
 [63808.851409] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
 [63841.705182] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+
+
+-------------- 07/20/18 06:05:01 --------------
+
+
+ 06:05:01 up  6:14,  0 users,  load average: 0.02, 0.05, 0.07
+
+
+enx0015ff030033: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.66.246.161  netmask 255.255.255.252  broadcast 100.66.246.163
+        inet6 2600:1003:b852:4eff:7cb8:1a9b:6e9b:9017  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b852:4eff:f05e:cd19:3ba8:7ecd  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::5506:e6cc:6337:b6d6  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:03:00:33  txqueuelen 1000  (Ethernet)
+        RX packets 189179  bytes 22914295 (22.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 211227  bytes 37165168 (37.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::d4e1:53ff:fec6:ea92  prefixlen 64  scopeid 0x20<link>
+        ether d6:e1:53:c6:ea:92  txqueuelen 1000  (Ethernet)
+        RX packets 221  bytes 24673 (24.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 313  bytes 51284 (51.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 54  bytes 16382 (16.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2351  bytes 109706 (109.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-19 23:50:44 EDT; 6h ago
+ Main PID: 1006 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─1006 /home/scc/applications/ipopbin/ipop-tincan
+
+Jul 20 06:05:00 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWI|7239851959911857662|67]: Timing-out STUN ping dZRj+MmNLW24 after 5001 ms
+Jul 20 06:05:01 mia ipop-tincan[1006]: [07/20 06:05:01.550773] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:01 mia ipop-tincan[1006]: [07/20 06:05:01.550866] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:01 mia ipop-tincan[1006]: [07/20 06:05:01.550903] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:01 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWI|7239851959911857662|70]: Timing-out STUN ping ZDNDZI9rMSVt after 5001 ms
+Jul 20 06:05:02 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWI|7239851959911857662|70]: Timing-out STUN ping l65hdatNXeK4 after 5001 ms
+Jul 20 06:05:03 mia ipop-tincan[1006]: [07/20 06:05:03.552581] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:03 mia ipop-tincan[1006]: [07/20 06:05:03.552636] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:03 mia ipop-tincan[1006]: [07/20 06:05:03.552665] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:03 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWS|7239851959911857662|66]: Timing-out STUN ping IzzFWwqO6g5X after 5000 ms
+Jul 20 06:05:04 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWS|7239851959911857662|65]: Timing-out STUN ping SMJa25JaZ1s7 after 5000 ms
+Jul 20 06:05:04 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWI|7239851959911857662|65]: Timing-out STUN ping Q5V2nFpt0tFz after 5000 ms
+Jul 20 06:05:05 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWI|7239851959911857662|65]: Timing-out STUN ping 1l2NyHBaXR3j after 5000 ms
+Jul 20 06:05:05 mia ipop-tincan[1006]: [07/20 06:05:05.553010] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:05 mia ipop-tincan[1006]: [07/20 06:05:05.553066] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:05 mia ipop-tincan[1006]: [07/20 06:05:05.553095] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:06 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWI|7239851959911857662|66]: Timing-out STUN ping 6XaZiZJhipFB after 5001 ms
+Jul 20 06:05:06 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWI|7239851959911857662|66]: Timing-out STUN ping NRI4TAja8aTx after 5000 ms
+Jul 20 06:05:07 mia ipop-tincan[1006]: Jingle:Conn[ipop-tincan:ntQ2D+ue:1:0:stun:udp:174.226.132.222:54714->zxe45Qt9:1:0.78:stun:udp:128.227.209.252:39146|CRWS|7239851959911857662|65]: Timing-out STUN ping cYlY58Ymzt05 after 5001 ms
+Jul 20 06:05:07 mia ipop-tincan[1006]: [07/20 06:05:07.553659] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:07 mia ipop-tincan[1006]: [07/20 06:05:07.553713] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jul 20 06:05:07 mia ipop-tincan[1006]: [07/20 06:05:07.553741] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-07-19 23:50:44 EDT; 6h ago
+ Main PID: 1007 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─1007 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jul 20 06:04:36 mia python[1007]: HTTP response code:200, msg:{
+Jul 20 06:04:36 mia python[1007]:   "result": "c73f6b93e26e44d09f213ef02922e294",
+Jul 20 06:04:36 mia python[1007]:   "status": "success"
+Jul 20 06:04:36 mia python[1007]: }
+Jul 20 06:04:42 mia python[1007]: [20180720 06:04:42.306] INFO:p2p state: CONNECTED
+Jul 20 06:04:48 mia python[1007]: [20180720 06:04:48.798] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jul 20 06:04:51 mia python[1007]: [20180720 06:04:51.107] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jul 20 06:04:57 mia python[1007]: [20180720 06:04:57.315] INFO:p2p state: CONNECTED
+Jul 20 06:05:03 mia python[1007]: [20180720 06:05:03.809] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jul 20 06:05:06 mia python[1007]: [20180720 06:05:06.100] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=32.2 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=30.2 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=115 time=36.7 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 30.200/33.089/36.780/2.753 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=65.3 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 1 received, 66% packet loss, time 2010ms
+rtt min/avg/max/mdev = 65.350/65.350/65.350/0.000 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=76.4 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=62.7 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=89.8 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 62.783/76.378/89.863/11.060 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=47 time=45.7 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=47 time=40.2 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=47 time=37.5 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 37.552/41.174/45.754/3.424 ms
+
+
+[   26.467936] usb 1-5: New USB device found, idVendor=1410, idProduct=9031
+[   26.467944] usb 1-5: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   26.467950] usb 1-5: Product: MiFi USB730L
+[   26.467955] usb 1-5: Manufacturer: Novatel Wireless
+[   26.467960] usb 1-5: SerialNumber: 0123456789ABCDEF
+[   26.505099] rndis_host 1-5:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-5, RNDIS device, 00:15:ff:03:00:33
+[   26.513645] cdc_acm 1-5:1.12: ttyACM0: USB ACM device
+[   26.517399] hid-generic 0003:1410:9031.0002: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-5/input14
+[   26.540723] rndis_host 1-5:1.0 enx0015ff030033: renamed from eth0
+[   26.579798] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
