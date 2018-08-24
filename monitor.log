@@ -13219,3 +13219,273 @@ rtt min/avg/max/mdev = 36.872/39.826/44.245/3.191 ms
 [   23.824105] snd_hda_intel 0000:00:0e.0: azx_get_response timeout, switching to single_cmd mode: last cmd=0x208f8100
 [   23.824259] azx_single_wait_for_response: 25 callbacks suppressed
 [   23.840698] snd_hda_codec_hdmi hdaudioC0D2: Unable to sync register 0x2f0d00. -5
+
+
+-------------- 08/24/18 13:04:02 --------------
+
+
+ 13:04:02 up 13:13,  2 users,  load average: 0.44, 0.33, 0.18
+
+
+enx0015ff030033: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.119.180.188  netmask 255.255.255.248  broadcast 100.119.180.191
+        inet6 2600:1003:b861:1fd6:783b:3d7a:31b4:4bd  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::5506:e6cc:6337:b6d6  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b861:1fd6:1d74:3471:58e7:6609  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:03:00:33  txqueuelen 1000  (Ethernet)
+        RX packets 204438  bytes 24248181 (24.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 205797  bytes 36263586 (36.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::48b3:85ff:fea8:7aca  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        ether 4a:b3:85:a8:7a:ca  txqueuelen 1000  (Ethernet)
+        RX packets 615  bytes 66997 (66.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 568  bytes 84684 (84.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 75  bytes 17272 (17.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5242  bytes 233061 (233.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-08-23 23:50:47 EDT; 13h ago
+ Main PID: 1025 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─1025 /home/scc/applications/ipopbin/ipop-tincan
+
+Aug 24 13:03:55 mia ipop-tincan[1025]: [08/24 13:03:55.966613] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 13:03:57 mia ipop-tincan[1025]: [08/24 13:03:57.968109] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 13:03:57 mia ipop-tincan[1025]: [08/24 13:03:57.968203] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 13:03:57 mia ipop-tincan[1025]: [08/24 13:03:57.968240] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 13:03:59 mia ipop-tincan[1025]: [08/24 13:03:59.968586] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 13:03:59 mia ipop-tincan[1025]: [08/24 13:03:59.968666] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 13:03:59 mia ipop-tincan[1025]: [08/24 13:03:59.968696] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 13:04:01 mia ipop-tincan[1025]: [08/24 13:04:01.969976] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 13:04:01 mia ipop-tincan[1025]: [08/24 13:04:01.970068] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 13:04:01 mia ipop-tincan[1025]: [08/24 13:04:01.970105] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-08-23 23:50:47 EDT; 13h ago
+ Main PID: 1026 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─1026 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Aug 24 13:03:25 mia python[1026]: [20180824 13:03:25.343] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Aug 24 13:03:29 mia python[1026]: [20180824 13:03:29.435] INFO:p2p state: CONNECTED
+Aug 24 13:03:35 mia python[1026]: [20180824 13:03:35.970] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Aug 24 13:03:39 mia python[1026]: [20180824 13:03:39.441] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Aug 24 13:03:40 mia python[1026]: [20180824 13:03:40.335] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Aug 24 13:03:44 mia python[1026]: [20180824 13:03:44.443] INFO:p2p state: CONNECTED
+Aug 24 13:03:51 mia python[1026]: [20180824 13:03:51.007] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Aug 24 13:03:54 mia python[1026]: [20180824 13:03:54.441] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Aug 24 13:03:55 mia python[1026]: [20180824 13:03:55.351] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Aug 24 13:03:59 mia python[1026]: [20180824 13:03:59.451] INFO:p2p state: CONNECTED
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=116 time=36.3 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=44.8 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=43.9 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 36.376/41.719/44.839/3.795 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=77.1 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=81.4 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=80.8 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 77.142/79.806/81.438/1.899 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=143 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=113 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=125 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 113.811/127.598/143.183/12.058 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=48 time=38.6 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=48 time=51.1 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=48 time=45.5 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 38.613/45.111/51.143/5.125 ms
+
+
+[25677.451310] usb 1-3: New USB device found, idVendor=1410, idProduct=9031
+[25677.451319] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[25677.451325] usb 1-3: Product: MiFi USB730L
+[25677.451330] usb 1-3: Manufacturer: Novatel Wireless
+[25677.451334] usb 1-3: SerialNumber: 0123456789ABCDEF
+[25677.492270] rndis_host 1-3:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-3, RNDIS device, 00:15:ff:03:00:33
+[25677.509230] hid-generic 0003:1410:9031.0003: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[25677.542919] rndis_host 1-3:1.0 enx0015ff030033: renamed from eth0
+[25677.579397] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
+[39749.350960] perf: interrupt took too long (2507 > 2500), lowering kernel.perf_event_max_sample_rate to 79750
+
+
+-------------- 08/24/18 18:05:01 --------------
+
+
+ 18:05:01 up 18:14,  0 users,  load average: 0.04, 0.14, 0.15
+
+
+enx0015ff030033: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.119.180.188  netmask 255.255.255.248  broadcast 100.119.180.191
+        inet6 2600:1003:b861:1fd6:783b:3d7a:31b4:4bd  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::5506:e6cc:6337:b6d6  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b861:1fd6:1d74:3471:58e7:6609  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:03:00:33  txqueuelen 1000  (Ethernet)
+        RX packets 411442  bytes 48843172 (48.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 415579  bytes 73265882 (73.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::48b3:85ff:fea8:7aca  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        ether 4a:b3:85:a8:7a:ca  txqueuelen 1000  (Ethernet)
+        RX packets 1443  bytes 169274 (169.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1012  bytes 147138 (147.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 102  bytes 25461 (25.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7283  bytes 320093 (320.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-08-23 23:50:47 EDT; 18h ago
+ Main PID: 1025 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─1025 /home/scc/applications/ipopbin/ipop-tincan
+
+Aug 24 18:04:55 mia ipop-tincan[1025]: [08/24 18:04:55.456173] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:57 mia ipop-tincan[1025]: [08/24 18:04:57.456918] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:57 mia ipop-tincan[1025]: [08/24 18:04:57.457008] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:57 mia ipop-tincan[1025]: [08/24 18:04:57.457045] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:59 mia ipop-tincan[1025]: [08/24 18:04:59.458637] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:59 mia ipop-tincan[1025]: [08/24 18:04:59.458729] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:59 mia ipop-tincan[1025]: [08/24 18:04:59.458766] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:05:01 mia ipop-tincan[1025]: [08/24 18:05:01.460445] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:05:01 mia ipop-tincan[1025]: [08/24 18:05:01.460539] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:05:01 mia ipop-tincan[1025]: [08/24 18:05:01.460576] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-08-23 23:50:47 EDT; 18h ago
+ Main PID: 1026 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─1026 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Aug 24 18:04:29 mia python[1026]: [20180824 18:04:29.559] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Aug 24 18:04:30 mia python[1026]: [20180824 18:04:30.660] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Aug 24 18:04:39 mia python[1026]: [20180824 18:04:39.268] INFO:p2p state: CONNECTED
+Aug 24 18:04:41 mia python[1026]: [20180824 18:04:41.785] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Aug 24 18:04:44 mia python[1026]: [20180824 18:04:44.550] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Aug 24 18:04:45 mia python[1026]: [20180824 18:04:45.708] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Aug 24 18:04:54 mia python[1026]: [20180824 18:04:54.277] INFO:p2p state: CONNECTED
+Aug 24 18:04:56 mia python[1026]: [20180824 18:04:56.783] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Aug 24 18:04:59 mia python[1026]: [20180824 18:04:59.560] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Aug 24 18:05:00 mia python[1026]: [20180824 18:05:00.808] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=116 time=42.9 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=45.4 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=39.2 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 39.208/42.556/45.464/2.572 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=65.9 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=73.3 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=72.5 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 65.983/70.634/73.382/3.314 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=118 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=140 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=255 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 118.713/171.631/255.557/60.016 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=48 time=61.9 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=48 time=45.1 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=48 time=42.1 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 42.173/49.775/61.972/8.713 ms
+
+
+[25677.451319] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[25677.451325] usb 1-3: Product: MiFi USB730L
+[25677.451330] usb 1-3: Manufacturer: Novatel Wireless
+[25677.451334] usb 1-3: SerialNumber: 0123456789ABCDEF
+[25677.492270] rndis_host 1-3:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-3, RNDIS device, 00:15:ff:03:00:33
+[25677.509230] hid-generic 0003:1410:9031.0003: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[25677.542919] rndis_host 1-3:1.0 enx0015ff030033: renamed from eth0
+[25677.579397] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
+[39749.350960] perf: interrupt took too long (2507 > 2500), lowering kernel.perf_event_max_sample_rate to 79750
+[50064.194280] perf: interrupt took too long (3168 > 3133), lowering kernel.perf_event_max_sample_rate to 63000
