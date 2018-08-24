@@ -27128,3 +27128,138 @@ rtt min/avg/max/mdev = 34.505/35.395/36.793/1.023 ms
 [   16.080992] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
 [   17.532705] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
 [   17.532950] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+
+
+-------------- 08/24/18 18:05:01 --------------
+
+
+ 18:05:01 up 18:14,  0 users,  load average: 0.00, 0.06, 0.08
+
+
+enx0015ff030033: error fetching interface information: Device not found
+enx0015ff025968: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.78.255.183  netmask 255.255.255.240  broadcast 100.78.255.191
+        inet6 fe80::56ac:d60:48df:4b92  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b863:ca3f:58fc:eca4:9a68:bee1  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b863:ca3f:ba72:5e83:764b:6515  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:02:59:68  txqueuelen 1000  (Ethernet)
+        RX packets 666936  bytes 78107592 (78.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 675116  bytes 116932570 (116.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.11  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::786c:f2ff:fe83:56d7  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446  prefixlen 64  scopeid 0x0<global>
+        ether 7a:6c:f2:83:56:d7  txqueuelen 1000  (Ethernet)
+        RX packets 444  bytes 76666 (76.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 226  bytes 74650 (74.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::4077:88d7:cc2:3c09  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:1f:d4:0f  txqueuelen 1000  (Ethernet)
+        RX packets 396  bytes 297276 (297.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9472  bytes 416615 (416.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-08-23 23:50:49 EDT; 18h ago
+ Main PID: 912 (ipop-tincan)
+    Tasks: 4 (limit: 2006)
+   CGroup: /system.slice/ipopTincan.service
+           └─912 /home/scc/applications/ipopbin/ipop-tincan
+
+Aug 24 18:04:54 carina ipop-tincan[912]: [08/24 18:04:54.485190] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:56 carina ipop-tincan[912]: [08/24 18:04:56.485459] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:56 carina ipop-tincan[912]: [08/24 18:04:56.485555] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:56 carina ipop-tincan[912]: [08/24 18:04:56.485593] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:58 carina ipop-tincan[912]: [08/24 18:04:58.486556] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:58 carina ipop-tincan[912]: [08/24 18:04:58.486655] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:04:58 carina ipop-tincan[912]: [08/24 18:04:58.486694] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:05:00 carina ipop-tincan[912]: [08/24 18:05:00.488117] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:05:00 carina ipop-tincan[912]: [08/24 18:05:00.488218] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Aug 24 18:05:00 carina ipop-tincan[912]: [08/24 18:05:00.488257] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2018-08-23 23:50:49 EDT; 18h ago
+ Main PID: 913 (python)
+    Tasks: 11 (limit: 2006)
+   CGroup: /system.slice/ipopController.service
+           └─913 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Aug 24 18:04:29 carina python[913]: [20180824 18:04:29.585] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Aug 24 18:04:30 carina python[913]: [20180824 18:04:30.527] INFO:p2p state: CONNECTED
+Aug 24 18:04:39 carina python[913]: [20180824 18:04:39.374] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Aug 24 18:04:41 carina python[913]: [20180824 18:04:41.835] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Aug 24 18:04:44 carina python[913]: [20180824 18:04:44.587] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Aug 24 18:04:45 carina python[913]: [20180824 18:04:45.536] INFO:p2p state: CONNECTED
+Aug 24 18:04:54 carina python[913]: [20180824 18:04:54.372] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Aug 24 18:04:56 carina python[913]: [20180824 18:04:56.823] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Aug 24 18:04:59 carina python[913]: [20180824 18:04:59.601] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Aug 24 18:05:00 carina python[913]: [20180824 18:05:00.545] INFO:p2p state: CONNECTED
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=256 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=213 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=115 time=90.0 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 90.007/186.500/256.047/70.412 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=138 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=141 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=134 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 134.866/138.193/141.674/2.781 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.084 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.085 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.083/0.084/0.085/0.000 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=47 time=183 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=47 time=74.6 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=47 time=79.8 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 74.687/112.733/183.662/50.198 ms
+
+
+[   15.832834] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[   15.859853] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[   15.866007] IPv6: ADDRCONF(NETDEV_UP): enp3s0: link is not ready
+[   15.893053] IPv6: ADDRCONF(NETDEV_UP): enp3s0: link is not ready
+[   15.903289] IPv6: ADDRCONF(NETDEV_UP): enx0015ff025968: link is not ready
+[   16.080992] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[   17.532705] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
+[   17.532950] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+[38952.437547] perf: interrupt took too long (2528 > 2500), lowering kernel.perf_event_max_sample_rate to 79000
+[52332.536029] perf: interrupt took too long (3172 > 3160), lowering kernel.perf_event_max_sample_rate to 63000
