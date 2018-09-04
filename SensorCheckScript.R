@@ -3,9 +3,8 @@
 
 library(lubridate)
 
-#VAHID: we need to put in paths here but I'm not sure how best to- please help! thank you!
-
 #download data files to working directory
+output_dir <- "~/data/SCCData/daily-email/"
 download.file('https://github.com/CareyLabVT/SCCData/raw/carina-data/FCRmet.csv','FCRmet.csv')
 download.file('https://github.com/CareyLabVT/SCCData/raw/mia-data/Catwalk.csv','Catwalk.csv')
 
@@ -30,7 +29,7 @@ obs<-as.data.frame(obs) #make into DF
 colnames(obs)<-names(metdata[index,c(1,2,3,8,9,10,11,13,15)]) #get column names
 obs$TIMESTAMP<-full_time #now have your array with a proper timedate stamp!
 
-pdf(paste0("MetDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+pdf(paste0(output_dir, "MetDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
 par(mfrow=c(3,2))
 plot(obs$TIMESTAMP,obs$RECORD, main="RECORD", xlab="Time", ylab="Number", type='l')
 plot(obs$TIMESTAMP,obs$BattV, main="Battery", xlab="Time", ylab="Volts", type='l')
@@ -71,7 +70,7 @@ obs1<-as.data.frame(obs1) #make into DF
 obs1[,1] <- full_time1 #now have your array with a proper timedate stamp!
 colnames(obs1)<-names(catdata[index,c(1:39)]) #get column names
 
-pdf(paste0("CatwalkDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+pdf(paste0(output_dir, "CatwalkDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
 par(mfrow=c(3,2))
 
 plot(obs1$TIMESTAMP,obs1$RECORD, main="Campbell Logger Record", xlab="Time", ylab="Number", type='l')
