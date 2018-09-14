@@ -22,10 +22,9 @@ lon <- which.min(abs(lon.dom  - (360 - lake_lon_w))) - 1 #NOMADS indexes start a
 lat <- which.min(abs(lat.dom - lake_lat_n)) - 1 #NOMADS indexes start at 0 
 
 
+#directory = '/home/scc/data/SCCData/NOAA/'
 
-directory = '/home/scc/data/SCCData/NOAA/'
-
-
+directory = '/Users/quinn/Downloads/'
 
 #Get yesterdays 6 am GMT, 12 pm GMT, 6 pm GMT, and todays 12 an GMT runs
 
@@ -68,6 +67,9 @@ for(i in 1:length(urls.out$url)){
         
         #ugrd10m #10 m above ground u-component of wind [m/s] 
         
+        #spfh2m #2 m above specific humidity  [kg/kg] 
+        
+        #pressfc #Surface pressure [pa]
         
         tmp2m <- DODSGrab(model.url, model.run, "tmp2m", time = time, lon = c(lon,lon), 
                           
@@ -97,13 +99,17 @@ for(i in 1:length(urls.out$url)){
                             
                             lat = c(lat,lat),ensembles=c(0,20))
         
+        spfh2m <- DODSGrab(model.url, model.run, "spfh2m", time = time, lon = c(lon,lon), 
+                           
+                           lat = c(lat,lat),ensembles=c(0,20))
         
+        pressfc <- DODSGrab(model.url, model.run, "pressfc", time = time, lon = c(lon,lon), 
+                            
+                            lat = c(lat,lat),ensembles=c(0,20))
         
         forecast_noaa = data.frame(forecast.date = tmp2m$forecast.date,ensembles = tmp2m$ensembles,tmp2m = tmp2m$value, dlwrfsfc= dlwrfsfc$value, dswrfsfc = dswrfsfc$value, pratesfc = pratesfc$value,
                                    
-                                   rh2m = rh2m$value, vgrd10m = vgrd10m$value, ugrd10m = ugrd10m$value)
-        
-        
+                                   rh2m = rh2m$value, vgrd10m = vgrd10m$value, ugrd10m = ugrd10m$value, spfh2m = spfh2m$value, pressfc = pressfc$value)
         
         write.csv(forecast_noaa,paste(directory,run_date,model_list[m],'.csv',sep=''),row.names = FALSE)
       }
@@ -111,5 +117,4 @@ for(i in 1:length(urls.out$url)){
   }
   
 }
-
 
