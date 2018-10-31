@@ -35140,3 +35140,144 @@ rtt min/avg/max/mdev = 32.927/34.155/35.336/0.984 ms
 [   17.625013] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
 [34198.148193] perf: interrupt took too long (2508 > 2500), lowering kernel.perf_event_max_sample_rate to 79500
 [48769.857431] perf: interrupt took too long (3156 > 3135), lowering kernel.perf_event_max_sample_rate to 63250
+
+
+-------------- 10/31/18 04:09:01 --------------
+
+
+ 04:09:01 up  4:18,  0 users,  load average: 0.01, 0.11, 0.10
+
+
+enx0015ff030033: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.104.147.63  netmask 255.255.255.128  broadcast 100.104.147.127
+        inet6 2600:1003:b855:d2f0:1b8a:b80:e4a:254  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b855:d2f0:f1:59a1:ac92:773a  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::5506:e6cc:6337:b6d6  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:03:00:33  txqueuelen 1000  (Ethernet)
+        RX packets 158726  bytes 33787667 (33.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 154557  bytes 26609014 (26.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::f411:40ff:fe18:91cd  prefixlen 64  scopeid 0x20<link>
+        ether f6:11:40:18:91:cd  txqueuelen 1000  (Ethernet)
+        RX packets 11  bytes 957 (957.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 92  bytes 12678 (12.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 115  bytes 15822 (15.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1518  bytes 76235 (76.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-10-30 23:50:43 EDT; 4h 18min ago
+ Main PID: 1033 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─1033 /home/scc/applications/ipopbin/ipop-tincan
+
+Oct 31 04:08:55 mia ipop-tincan[1033]: [10/31 04:08:55.864661] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:08:57 mia ipop-tincan[1033]: [10/31 04:08:57.865465] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:08:57 mia ipop-tincan[1033]: [10/31 04:08:57.865568] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:08:57 mia ipop-tincan[1033]: [10/31 04:08:57.865609] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:08:59 mia ipop-tincan[1033]: [10/31 04:08:59.866065] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:08:59 mia ipop-tincan[1033]: [10/31 04:08:59.866150] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:08:59 mia ipop-tincan[1033]: [10/31 04:08:59.866181] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:09:01 mia ipop-tincan[1033]: [10/31 04:09:01.867355] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:09:01 mia ipop-tincan[1033]: [10/31 04:09:01.867408] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:09:01 mia ipop-tincan[1033]: [10/31 04:09:01.867438] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:09:03 mia ipop-tincan[1033]: [10/31 04:09:03.867750] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:09:03 mia ipop-tincan[1033]: [10/31 04:09:03.867804] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:09:03 mia ipop-tincan[1033]: [10/31 04:09:03.867834] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:09:05 mia ipop-tincan[1033]: [10/31 04:09:05.868323] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:09:05 mia ipop-tincan[1033]: [10/31 04:09:05.868377] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 31 04:09:05 mia ipop-tincan[1033]: [10/31 04:09:05.868407] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-10-30 23:50:43 EDT; 4h 18min ago
+ Main PID: 1034 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─1034 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Oct 31 04:08:20 mia python[1034]: [20181031 04:08:20.156] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Oct 31 04:08:23 mia python[1034]: [20181031 04:08:23.508] INFO:p2p state: CONNECTED
+Oct 31 04:08:25 mia python[1034]: [20181031 04:08:25.706] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Oct 31 04:08:35 mia python[1034]: [20181031 04:08:35.176] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Oct 31 04:08:38 mia python[1034]: [20181031 04:08:38.515] INFO:p2p state: CONNECTED
+Oct 31 04:08:40 mia python[1034]: [20181031 04:08:40.713] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Oct 31 04:08:50 mia python[1034]: [20181031 04:08:50.186] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Oct 31 04:08:53 mia python[1034]: [20181031 04:08:53.522] INFO:p2p state: CONNECTED
+Oct 31 04:08:55 mia python[1034]: [20181031 04:08:55.716] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Oct 31 04:09:05 mia python[1034]: [20181031 04:09:05.187] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=39.4 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=37.5 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=115 time=35.6 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 35.646/37.557/39.470/1.561 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=78.2 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=64.5 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=71.4 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 64.504/71.412/78.244/5.613 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=66.5 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=69.7 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=86.7 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 66.574/74.377/86.766/8.860 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=47 time=69.1 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=47 time=52.9 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=47 time=43.4 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 43.465/55.164/69.120/10.597 ms
+
+
+[ 1017.916464] audit: type=1400 audit(1540958850.361:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/snap/core/5742/usr/lib/snapd/snap-confine" pid=1940 comm="apparmor_parser"
+[ 1017.930700] audit: type=1400 audit(1540958850.377:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/snap/core/5742/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=1940 comm="apparmor_parser"
+[ 1017.941495] audit: type=1400 audit(1540958850.385:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=1942 comm="apparmor_parser"
+[ 1017.947734] audit: type=1400 audit(1540958850.393:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=1944 comm="apparmor_parser"
+[ 1018.648429] audit: type=1400 audit(1540958851.093:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.gnome-calculator" pid=1951 comm="apparmor_parser"
+[ 1018.661621] audit: type=1400 audit(1540958851.105:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.gnome-calculator.gnome-calculator" pid=1956 comm="apparmor_parser"
+[ 1019.392575] audit: type=1400 audit(1540958851.837:55): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.gnome-characters" pid=1963 comm="apparmor_parser"
+[ 1020.022107] audit: type=1400 audit(1540958852.465:56): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=1965 comm="apparmor_parser"
+[ 1020.718974] audit: type=1400 audit(1540958853.165:57): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.gnome-logs" pid=1971 comm="apparmor_parser"
+[ 1021.393853] audit: type=1400 audit(1540958853.837:58): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-logs.gnome-logs" pid=1973 comm="apparmor_parser"
