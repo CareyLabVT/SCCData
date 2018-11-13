@@ -52162,3 +52162,138 @@ rtt min/avg/max/mdev = 34.989/46.268/53.096/8.036 ms
 [   13.469300] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
 [   15.048731] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
 [   15.048974] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+
+
+-------------- 11/13/18 16:09:01 --------------
+
+
+ 16:09:01 up 16:18,  0 users,  load average: 0.19, 0.06, 0.04
+
+
+enx0015ff030033: error fetching interface information: Device not found
+enx0015ff025968: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.91.182.197  netmask 255.255.255.252  broadcast 100.91.182.199
+        inet6 2600:1003:b843:9a23:4475:84cf:8cc7:21d1  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::56ac:d60:48df:4b92  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b843:9a23:f022:d64b:678b:9a61  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:02:59:68  txqueuelen 1000  (Ethernet)
+        RX packets 56224  bytes 6598443 (6.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 57648  bytes 7463934 (7.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.11  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::681d:baff:febb:a6b4  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446  prefixlen 64  scopeid 0x0<global>
+        ether 6a:1d:ba:bb:a6:b4  txqueuelen 1000  (Ethernet)
+        RX packets 28  bytes 2502 (2.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 164  bytes 20040 (20.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::4077:88d7:cc2:3c09  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:1f:d4:0f  txqueuelen 1000  (Ethernet)
+        RX packets 488  bytes 208708 (208.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8654  bytes 387854 (387.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-11-12 23:50:47 EST; 16h ago
+ Main PID: 910 (ipop-tincan)
+    Tasks: 4 (limit: 2006)
+   CGroup: /system.slice/ipopTincan.service
+           └─910 /home/scc/applications/ipopbin/ipop-tincan
+
+Nov 13 16:08:53 carina ipop-tincan[910]: [11/13 16:08:53.465294] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 13 16:08:55 carina ipop-tincan[910]: [11/13 16:08:55.466751] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 13 16:08:55 carina ipop-tincan[910]: [11/13 16:08:55.466833] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 13 16:08:55 carina ipop-tincan[910]: [11/13 16:08:55.466870] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 13 16:08:57 carina ipop-tincan[910]: [11/13 16:08:57.467429] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 13 16:08:57 carina ipop-tincan[910]: [11/13 16:08:57.467521] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 13 16:08:57 carina ipop-tincan[910]: [11/13 16:08:57.467559] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 13 16:08:59 carina ipop-tincan[910]: [11/13 16:08:59.468601] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 13 16:08:59 carina ipop-tincan[910]: [11/13 16:08:59.468701] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 13 16:08:59 carina ipop-tincan[910]: [11/13 16:08:59.468740] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2018-11-12 23:50:47 EST; 16h ago
+ Main PID: 911 (python)
+    Tasks: 11 (limit: 2006)
+   CGroup: /system.slice/ipopController.service
+           └─911 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Nov 13 16:08:15 carina python[911]: [20181113 16:08:15.342] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Nov 13 16:08:17 carina python[911]: [20181113 16:08:17.580] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Nov 13 16:08:24 carina python[911]: [20181113 16:08:24.312] INFO:p2p state: CONNECTED
+Nov 13 16:08:30 carina python[911]: [20181113 16:08:30.347] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Nov 13 16:08:32 carina python[911]: [20181113 16:08:32.585] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Nov 13 16:08:39 carina python[911]: [20181113 16:08:39.319] INFO:p2p state: CONNECTED
+Nov 13 16:08:45 carina python[911]: [20181113 16:08:45.348] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Nov 13 16:08:47 carina python[911]: [20181113 16:08:47.581] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Nov 13 16:08:54 carina python[911]: [20181113 16:08:54.328] INFO:p2p state: CONNECTED
+Nov 13 16:09:00 carina python[911]: [20181113 16:09:00.363] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=43.8 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=37.8 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=115 time=44.4 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 37.812/42.056/44.471/3.010 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=80.1 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=78.5 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=111 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 78.568/89.956/111.104/14.972 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.085 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.079 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.081 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 0.079/0.081/0.085/0.010 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=48 time=37.1 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=48 time=47.7 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=48 time=36.4 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 36.475/40.453/47.750/5.171 ms
+
+
+[52575.066087] usb 1-3: New USB device found, idVendor=1410, idProduct=9030
+[52575.066094] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[52575.066098] usb 1-3: Product: MiFi USB730L
+[52575.066102] usb 1-3: Manufacturer: Novatel Wireless
+[52575.066106] usb 1-3: SerialNumber: 0123456789ABCDEF
+[52575.080417] cdc_ether 1-3:1.0 eth0: register 'cdc_ether' at usb-0000:00:15.0-3, CDC Ethernet Device, 00:15:ff:02:59:68
+[52575.094518] hid-generic 0003:1410:9030.0002: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input2
+[52575.120611] cdc_ether 1-3:1.0 enx0015ff025968: renamed from eth0
+[52575.158023] IPv6: ADDRCONF(NETDEV_UP): enx0015ff025968: link is not ready
+[58069.419664] perf: interrupt took too long (3181 > 3176), lowering kernel.perf_event_max_sample_rate to 62750
