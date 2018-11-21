@@ -40898,3 +40898,144 @@ rtt min/avg/max/mdev = 39.960/52.211/62.677/9.361 ms
 [34432.459116] rndis_host 1-3:1.0 enx0015ff030033: renamed from eth0
 [34432.502502] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
 [44331.624770] perf: interrupt took too long (3170 > 3161), lowering kernel.perf_event_max_sample_rate to 63000
+
+
+-------------- 11/21/18 04:09:01 --------------
+
+
+ 04:09:01 up  4:18,  0 users,  load average: 0.07, 0.17, 0.16
+
+
+enx0015ff030033: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.121.123.30  netmask 255.255.255.252  broadcast 100.121.123.31
+        inet6 2600:1003:b854:c172:c9ea:62ba:aad8:7a93  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b854:c172:82c1:b7a4:7096:9e24  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::5506:e6cc:6337:b6d6  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:03:00:33  txqueuelen 1000  (Ethernet)
+        RX packets 150212  bytes 17752590 (17.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 151306  bytes 26159481 (26.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::6825:ddff:fed7:9cff  prefixlen 64  scopeid 0x20<link>
+        ether 6a:25:dd:d7:9c:ff  txqueuelen 1000  (Ethernet)
+        RX packets 11  bytes 957 (957.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 93  bytes 12748 (12.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 115  bytes 15811 (15.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1460  bytes 73791 (73.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-11-20 23:50:44 EST; 4h 18min ago
+ Main PID: 1049 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─1049 /home/scc/applications/ipopbin/ipop-tincan
+
+Nov 21 04:08:55 mia ipop-tincan[1049]: [11/21 04:08:55.830405] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:08:57 mia ipop-tincan[1049]: [11/21 04:08:57.830922] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:08:57 mia ipop-tincan[1049]: [11/21 04:08:57.831010] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:08:57 mia ipop-tincan[1049]: [11/21 04:08:57.831097] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:08:59 mia ipop-tincan[1049]: [11/21 04:08:59.832612] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:08:59 mia ipop-tincan[1049]: [11/21 04:08:59.832704] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:08:59 mia ipop-tincan[1049]: [11/21 04:08:59.832741] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:09:01 mia ipop-tincan[1049]: [11/21 04:09:01.833076] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:09:01 mia ipop-tincan[1049]: [11/21 04:09:01.833168] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:09:01 mia ipop-tincan[1049]: [11/21 04:09:01.833204] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:09:03 mia ipop-tincan[1049]: [11/21 04:09:03.834243] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:09:03 mia ipop-tincan[1049]: [11/21 04:09:03.834338] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:09:03 mia ipop-tincan[1049]: [11/21 04:09:03.834373] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:09:05 mia ipop-tincan[1049]: [11/21 04:09:05.835990] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:09:05 mia ipop-tincan[1049]: [11/21 04:09:05.836081] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Nov 21 04:09:05 mia ipop-tincan[1049]: [11/21 04:09:05.836119] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2018-11-20 23:50:44 EST; 4h 18min ago
+ Main PID: 1050 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─1050 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Nov 21 04:08:18 mia python[1050]: [20181121 04:08:18.224] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Nov 21 04:08:24 mia python[1050]: [20181121 04:08:24.569] INFO:p2p state: CONNECTED
+Nov 21 04:08:31 mia python[1050]: [20181121 04:08:31.870] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Nov 21 04:08:33 mia python[1050]: [20181121 04:08:33.224] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Nov 21 04:08:39 mia python[1050]: [20181121 04:08:39.576] INFO:p2p state: CONNECTED
+Nov 21 04:08:46 mia python[1050]: [20181121 04:08:46.880] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Nov 21 04:08:48 mia python[1050]: [20181121 04:08:48.233] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Nov 21 04:08:54 mia python[1050]: [20181121 04:08:54.584] INFO:p2p state: CONNECTED
+Nov 21 04:09:01 mia python[1050]: [20181121 04:09:01.878] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Nov 21 04:09:03 mia python[1050]: [20181121 04:09:03.230] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=116 time=36.9 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=36.9 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=44.9 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 36.912/39.615/44.961/3.783 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=81.3 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=81.5 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=69.6 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 69.608/77.491/81.551/5.574 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=59.0 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=68.5 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=72.6 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 59.042/66.758/72.669/5.715 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=48 time=43.9 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=48 time=40.5 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=48 time=38.4 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 38.405/40.965/43.901/2.259 ms
+
+
+[   12.794511] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[   12.804088] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
+[   12.816622] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[   15.796811] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+[   15.797069] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+[   19.192245] snd_hda_intel 0000:00:0e.0: azx_get_response timeout, switching to polling mode: last cmd=0x208f8100
+[   20.196268] snd_hda_intel 0000:00:0e.0: No response from codec, disabling MSI: last cmd=0x208f8100
+[   21.204273] snd_hda_intel 0000:00:0e.0: azx_get_response timeout, switching to single_cmd mode: last cmd=0x208f8100
+[   21.204452] azx_single_wait_for_response: 25 callbacks suppressed
+[   21.221477] snd_hda_codec_hdmi hdaudioC0D2: Unable to sync register 0x2f0d00. -5
