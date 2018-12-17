@@ -75,3 +75,5 @@ Bethany, New George Test
 Bruno,11/08/18 10:45:01
 
 Cayelan, Checking sensor status for Bethany in the field
+
+Bruno,12/17/18 12:30:01
