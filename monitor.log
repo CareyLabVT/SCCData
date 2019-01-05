@@ -53448,3 +53448,138 @@ rtt min/avg/max/mdev = 33.040/34.045/35.808/1.259 ms
 [ 3857.730248] hid-generic 0003:1410:9031.0002: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
 [ 3857.759194] rndis_host 1-3:1.0 enx0015ff030033: renamed from eth0
 [ 3857.804593] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
+
+
+-------------- 01/05/19 16:09:01 --------------
+
+
+ 16:09:01 up 16:16,  0 users,  load average: 0.07, 0.06, 0.07
+
+
+enx0015ff030033: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.127.115.3  netmask 255.255.255.248  broadcast 100.127.115.7
+        inet6 2600:1003:b840:b838:e0de:e49:ba9b:99c9  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b840:b838:9684:ac8b:3ef7:b466  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::5506:e6cc:6337:b6d6  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:03:00:33  txqueuelen 1000  (Ethernet)
+        RX packets 522269  bytes 60554421 (60.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 527091  bytes 91153579 (91.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx0015ff025968: error fetching interface information: Device not found
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.12  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fe80::cc30:5eff:fed9:590a  prefixlen 64  scopeid 0x20<link>
+        inet6 fd50:dbc:41f2:4a3c:b7e5:e403:6281:f1fd  prefixlen 64  scopeid 0x0<global>
+        ether ce:30:5e:d9:59:0a  txqueuelen 1000  (Ethernet)
+        RX packets 27  bytes 2415 (2.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 184  bytes 21492 (21.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a834:fccc:ec83:4d9b  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:20:56:c6  txqueuelen 1000  (Ethernet)
+        RX packets 392  bytes 54028 (54.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6310  bytes 288308 (288.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-01-04 23:52:12 EST; 16h ago
+ Main PID: 1048 (ipop-tincan)
+    Tasks: 4 (limit: 2008)
+   CGroup: /system.slice/ipopTincan.service
+           └─1048 /home/scc/applications/ipopbin/ipop-tincan
+
+Jan 05 16:08:55 mia ipop-tincan[1048]: [01/05 16:08:55.001501] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jan 05 16:08:57 mia ipop-tincan[1048]: [01/05 16:08:57.002864] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jan 05 16:08:57 mia ipop-tincan[1048]: [01/05 16:08:57.002955] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jan 05 16:08:57 mia ipop-tincan[1048]: [01/05 16:08:57.002994] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jan 05 16:08:59 mia ipop-tincan[1048]: [01/05 16:08:59.003676] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jan 05 16:08:59 mia ipop-tincan[1048]: [01/05 16:08:59.003764] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jan 05 16:08:59 mia ipop-tincan[1048]: [01/05 16:08:59.003803] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jan 05 16:09:01 mia ipop-tincan[1048]: [01/05 16:09:01.004969] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jan 05 16:09:01 mia ipop-tincan[1048]: [01/05 16:09:01.005063] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jan 05 16:09:01 mia ipop-tincan[1048]: [01/05 16:09:01.005098] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-01-04 23:52:12 EST; 16h ago
+ Main PID: 1049 (python)
+    Tasks: 11 (limit: 2008)
+   CGroup: /system.slice/ipopController.service
+           └─1049 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jan 05 16:08:15 mia python[1049]: [20190105 16:08:15.514] INFO:p2p state: CONNECTED
+Jan 05 16:08:25 mia python[1049]: [20190105 16:08:25.536] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jan 05 16:08:30 mia python[1049]: [20190105 16:08:30.513] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jan 05 16:08:30 mia python[1049]: [20190105 16:08:30.522] INFO:p2p state: CONNECTED
+Jan 05 16:08:40 mia python[1049]: [20190105 16:08:40.539] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jan 05 16:08:45 mia python[1049]: [20190105 16:08:45.506] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jan 05 16:08:45 mia python[1049]: [20190105 16:08:45.530] INFO:p2p state: CONNECTED
+Jan 05 16:08:55 mia python[1049]: [20190105 16:08:55.564] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jan 05 16:09:00 mia python[1049]: [20190105 16:09:00.516] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jan 05 16:09:00 mia python[1049]: [20190105 16:09:00.538] INFO:p2p state: CONNECTED
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=40.2 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=40.1 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=115 time=35.8 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 35.808/38.722/40.234/2.060 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=79.5 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=83.0 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=72.9 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 72.997/78.544/83.059/4.178 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=83.8 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=91.4 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=83.0 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 83.060/86.095/91.422/3.793 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=49 time=41.3 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=49 time=42.0 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=49 time=30.1 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 30.152/37.861/42.037/5.459 ms
+
+
+[ 3857.693999] usb 1-3: Product: MiFi USB730L
+[ 3857.694004] usb 1-3: Manufacturer: Novatel Wireless
+[ 3857.694009] usb 1-3: SerialNumber: 0123456789ABCDEF
+[ 3857.726322] rndis_host 1-3:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-3, RNDIS device, 00:15:ff:03:00:33
+[ 3857.730248] hid-generic 0003:1410:9031.0002: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[ 3857.759194] rndis_host 1-3:1.0 enx0015ff030033: renamed from eth0
+[ 3857.804593] IPv6: ADDRCONF(NETDEV_UP): enx0015ff030033: link is not ready
+[31254.193575] perf: interrupt took too long (2543 > 2500), lowering kernel.perf_event_max_sample_rate to 78500
+[42469.105361] perf: interrupt took too long (3237 > 3178), lowering kernel.perf_event_max_sample_rate to 61750
+[58505.441134] perf: interrupt took too long (4077 > 4046), lowering kernel.perf_event_max_sample_rate to 49000
