@@ -88,6 +88,13 @@ Vahid, Cron Test 3
 Bruno,01/31/19 13:55:01
 =======
 Vahid, Cron Test 4
+<<<<<<< HEAD
 >>>>>>> 3b078318d616a4adb71caf8e09e58aa55c968fa8
 
 Bruno,01/31/19 14:20:01
+=======
+
+Vahid, Cron Test 5
+>>>>>>> e0e9a9522abf9c7a6259f142f6d8e7e2aef685b9
+
+Bruno,01/31/19 14:30:01
