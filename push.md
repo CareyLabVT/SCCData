@@ -95,6 +95,13 @@ Bruno,01/31/19 14:20:01
 =======
 
 Vahid, Cron Test 5
+<<<<<<< HEAD
 >>>>>>> e0e9a9522abf9c7a6259f142f6d8e7e2aef685b9
 
 Bruno,01/31/19 14:30:01
+=======
+
+Cayelan, checking ice cover in lake 
+>>>>>>> 9938a84e3ca2d924bde66dd85c533f2c54b05762
+
+Bruno,01/31/19 21:25:01
