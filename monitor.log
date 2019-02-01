@@ -73893,3 +73893,135 @@ rtt min/avg/max/mdev = 33.195/37.876/44.007/4.536 ms
 [   13.182000] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
 [   14.756743] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
 [   14.756983] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+
+
+-------------- 02/01/19 16:09:01 --------------
+
+
+ 16:09:01 up 16:18,  0 users,  load average: 0.72, 0.24, 0.14
+
+
+enx0015ff030033: error fetching interface information: Device not found
+enx0015ff025968: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.124.59.229  netmask 255.255.255.252  broadcast 100.124.59.231
+        inet6 2600:1003:b842:782e:30ba:c569:c43d:5312  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::56ac:d60:48df:4b92  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b842:782e:588d:f75b:bf3c:1db7  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:02:59:68  txqueuelen 1000  (Ethernet)
+        RX packets 29  bytes 2916 (2.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 69  bytes 13400 (13.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ipop: flags=4291<UP,BROADCAST,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet 192.168.10.11  netmask 255.255.0.0  broadcast 192.168.255.255
+        inet6 fd50:dbc:41f2:4a3c:a160:b1d9:6c7e:1446  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::3434:99ff:fee2:3d33  prefixlen 64  scopeid 0x20<link>
+        ether 36:34:99:e2:3d:33  txqueuelen 1000  (Ethernet)
+        RX packets 45  bytes 3981 (3.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 221  bytes 22974 (22.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.5  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::4077:88d7:cc2:3c09  prefixlen 64  scopeid 0x20<link>
+        ether 00:01:c0:1f:d4:0f  txqueuelen 1000  (Ethernet)
+        RX packets 497  bytes 218822 (218.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8517  bytes 385712 (385.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device memory 0xc1100000-c111ffff  
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-01-31 23:50:47 EST; 16h ago
+ Main PID: 931 (ipop-tincan)
+    Tasks: 5 (limit: 2006)
+   CGroup: /system.slice/ipopTincan.service
+           └─931 /home/scc/applications/ipopbin/ipop-tincan
+
+Feb 01 16:08:42 carina ipop-tincan[931]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:lbNMVN45:1:0:stun:udp:174.226.160.16:2325->Z1ZJp2ZB:1:0.78:stun:udp:128.227.182.241:60072|CRxI|7239851959911857662|70]: Failed to send STUN ping UTu68iuJ864Y
+Feb 01 16:08:42 carina ipop-tincan[931]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff025968:100.126.119.196/30]]: UDP send of 116 bytes failed with error 22
+Feb 01 16:08:42 carina ipop-tincan[931]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:lbNMVN45:1:0:stun:udp:174.226.160.16:2325->Z1ZJp2ZB:1:0.78:stun:udp:128.227.182.241:60072|CRxI|7239851959911857662|70]: Failed to send STUN ping I3iNf6TQ32yP
+Feb 01 16:08:42 carina ipop-tincan[931]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff025968:100.126.119.196/30]]: UDP send of 112 bytes failed with error 22
+Feb 01 16:08:42 carina ipop-tincan[931]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:GP/MLuRq:1:0:stun:udp:174.226.160.16:2316->vgdI/DEC:1:0.78:stun:udp:174.226.145.241:4908|CRxI|7239851959911595518|66]: Failed to send STUN ping vU8MrHOKL2dX
+Feb 01 16:08:42 carina ipop-tincan[931]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff025968:100.126.119.196/30]]: UDP send of 116 bytes failed with error 22
+Feb 01 16:08:42 carina ipop-tincan[931]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:lbNMVN45:1:0:stun:udp:174.226.160.16:2325->Z1ZJp2ZB:1:0.78:stun:udp:128.227.182.241:60072|CRxI|7239851959911857662|70]: Failed to send STUN ping wDOInWqG4u/g
+Feb 01 16:08:42 carina ipop-tincan[931]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff025968:100.126.119.196/30]]: UDP send of 116 bytes failed with error 22
+Feb 01 16:08:42 carina ipop-tincan[931]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:lbNMVN45:1:0:stun:udp:174.226.160.16:2325->Z1ZJp2ZB:1:0.78:stun:udp:128.227.182.241:60072|CRxI|7239851959911857662|70]: Failed to send STUN ping mQaH0JjoV7gK
+Feb 01 16:08:42 carina ipop-tincan[931]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff025968:100.126.119.196/30]]: UDP send of 112 bytes failed with error 22
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-01-31 23:50:47 EST; 16h ago
+ Main PID: 932 (python)
+    Tasks: 11 (limit: 2006)
+   CGroup: /system.slice/ipopController.service
+           └─932 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Feb 01 16:08:42 carina python[932]: [20190201 16:08:42.957] WARNING:recv illegal tincan_packet: src=0.0.0.0 dst=52.52.153.255
+Feb 01 16:08:42 carina python[932]: [20190201 16:08:42.966] WARNING:recv illegal tincan_packet: src=0.0.0.0 dst=52.52.153.255
+Feb 01 16:08:42 carina python[932]: [20190201 16:08:42.967] WARNING:recv illegal tincan_packet: src=0.0.0.0 dst=52.52.153.255
+Feb 01 16:08:43 carina python[932]: [20190201 16:08:43.642] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=161.96.177.217
+Feb 01 16:08:44 carina python[932]: [20190201 16:08:44.644] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=161.96.177.217
+Feb 01 16:08:54 carina python[932]: [20190201 16:08:54.343] INFO:removed connection: b7e5e4036281f1fdc4e874258965570c822150ec
+Feb 01 16:08:54 carina python[932]: [20190201 16:08:54.343] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+Feb 01 16:08:54 carina python[932]: [20190201 16:08:54.343] INFO:p2p state: DISCONNECTED
+Feb 01 16:08:54 carina python[932]: [20190201 16:08:54.344] INFO:Trimming Link with peer b7e5e4036281f1fdc4e874258965570c822150ec
+Feb 01 16:08:54 carina python[932]: [20190201 16:08:54.345] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=49.0 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=45.2 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=115 time=45.1 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 45.115/46.481/49.064/1.835 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2013ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.081 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.081/0.082/0.083/0.000 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=48 time=43.7 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=48 time=43.3 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=48 time=41.8 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 41.859/42.978/43.738/0.808 ms
+
+
+[58686.187309] usb 1-3: new high-speed USB device number 9 using xhci_hcd
+[58686.344135] usb 1-3: New USB device found, idVendor=1410, idProduct=9030
+[58686.344143] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[58686.344148] usb 1-3: Product: MiFi USB730L
+[58686.344153] usb 1-3: Manufacturer: Novatel Wireless
+[58686.344158] usb 1-3: SerialNumber: 0123456789ABCDEF
+[58686.358440] cdc_ether 1-3:1.0 eth0: register 'cdc_ether' at usb-0000:00:15.0-3, CDC Ethernet Device, 00:15:ff:02:59:68
+[58686.371898] hid-generic 0003:1410:9030.0006: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input2
+[58686.389295] cdc_ether 1-3:1.0 enx0015ff025968: renamed from eth0
+[58686.425179] IPv6: ADDRCONF(NETDEV_UP): enx0015ff025968: link is not ready
