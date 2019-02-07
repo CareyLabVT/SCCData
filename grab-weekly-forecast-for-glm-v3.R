@@ -1,9 +1,10 @@
 if (!"rNOMADS" %in% installed.packages()) install.packages("rNOMADS")
 if (!"RCurl" %in% installed.packages()) install.packages("RCurl")
+if (!"stringr" %in% installed.packages()) install.packages("stringr")
 
 library(rNOMADS)
 library(RCurl)
-
+library(stringr)
 
 #User defined location of interest and directory
 
@@ -21,11 +22,12 @@ lon <- which.min(abs(lon.dom  - (360 - lake_lon_w))) - 1 #NOMADS indexes start a
 lat <- which.min(abs(lat.dom - lake_lat_n)) - 1 #NOMADS indexes start at 0 
 
 #Get yesterdays 6 am GMT, 12 pm GMT, 6 pm GMT, and todays 12 an GMT runs
-urls.out <- GetDODSDates(abbrev = "gens")
+urls.out <- GetDODSDates(abbrev = "gens_bc", https = TRUE)
 
 for(i in 1:length(urls.out$url)){
   
   model.url <- urls.out$url[i]
+  model.url <- str_replace(model.url,"gens_bc","gens")
   run_date <- urls.out$date[i]
   model_list <- c('gep_all_00z', 'gep_all_06z', 'gep_all_12z', 'gep_all_18z')
   
