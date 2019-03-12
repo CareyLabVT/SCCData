@@ -1,5 +1,5 @@
 #script written to create daily figures that are sent to lucky SCC team members :)
-#written by CCC, last edited 27 Aug 2018
+#written by CCC, last edited 12 Mar 2019
 
 library(lubridate)
 
@@ -12,12 +12,12 @@ metheader<-read.csv("FCRmet.csv", skip=1, as.is=T) #get header minus wonky Campb
 metdata<-read.csv("FCRmet.csv", skip=4, header=F) #get data minus wonky Campbell rows
 names(metdata)<-names(metheader) #combine the names to deal with Campbell logger formatting
 
-end.time <- as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")) #gives us current time with rounded minutes
+end.time <- ifelse(Sys.timezone()=="Etc/GMT+4", as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")), with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")), tzone = "Etc/GMT+4")) #gives us current time with rounded minutes in EDT
 start.time <- end.time - days(5) #to give us five days of data for looking at changes
 full_time <- seq(start.time, end.time, by = "min") #create sequence of dates from past 5 days to fill in data
 
 obs <- array(NA,dim=c(length(full_time),9)) #create array that will be filled in with 8 columns
-metdata$TIMESTAMP<-as.POSIXct(strptime(metdata$TIMESTAMP, "%Y-%m-%d %H:%M")) #get dates aligned
+metdata$TIMESTAMP<-as.POSIXct(strptime(metdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+4") #get dates aligned
 
 for(i in 1:length(full_time)){ #this loop looks for matching dates and extracts data from metdata file to obs array
     index = which(metdata$TIMESTAMP==full_time[i])
