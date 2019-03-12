@@ -12,7 +12,7 @@ metheader<-read.csv("FCRmet.csv", skip=1, as.is=T) #get header minus wonky Campb
 metdata<-read.csv("FCRmet.csv", skip=4, header=F) #get data minus wonky Campbell rows
 names(metdata)<-names(metheader) #combine the names to deal with Campbell logger formatting
 
-end.time <- ifelse(Sys.timezone()=="Etc/GMT+4", as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")), with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")), tzone = "Etc/GMT+4")) #gives us current time with rounded minutes in EDT
+end.time <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")), tzone = "Etc/GMT+4") #gives us current time with rounded minutes in EDT
 start.time <- end.time - days(5) #to give us five days of data for looking at changes
 full_time <- seq(start.time, end.time, by = "min") #create sequence of dates from past 5 days to fill in data
 
@@ -48,7 +48,7 @@ catheader<-read.csv("Catwalk.csv", skip=1, as.is=T) #get header minus wonky Camp
 catdata<-read.csv("Catwalk.csv", skip=4, header=F) #get data minus wonky Campbell rows
 names(catdata)<-names(catheader) #combine the names to deal with Campbell logger formatting
 
-end.time1 <- ifelse(Sys.timezone()=="Etc/GMT+4", as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), tzone = "Etc/GMT+4")) #gives us current time with rounded hours in EDT
+end.time1 <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), tzone = "Etc/GMT+4") #gives us current time with rounded hours in EDT
 start.time1 <- end.time1 - days(5) #to give us five days of data for looking at changes
 full_time1 <- seq(start.time1, end.time1, by = "10 min") #create sequence of dates from past 5 days to fill in data
 
