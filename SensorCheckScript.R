@@ -77,7 +77,7 @@ plot(obs1$TIMESTAMP,obs1$RECORD, main="Campbell Logger Record", xlab="Time", yla
 plot(obs1$TIMESTAMP,obs1$BattV, main="Campbell Logger Battery", xlab="Time", ylab="Volts", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_battery, main="EXO Battery", xlab="Time", ylab="Volts", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_cablepower, main="EXO Cable Power", xlab="Time", ylab="Volts", type='l')
-plot(obs1$TIMESTAMP,obs1$EXO_wiper, main="EXO Wiper", xlab="Time", ylab="Volts", type='l')
+plot(obs1$TIMESTAMP,obs1$EXO_depth, main="EXO Depth", xlab="Time", ylab="Meters", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_pressure, main="EXO Pressure", xlab="Time", ylab="psig", type='l')
 
 #par(mar=c(5.1, 4.1, 4.1, 2.1), mgp=c(3, 1, 0), las=0)
