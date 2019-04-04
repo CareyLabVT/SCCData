@@ -1,6 +1,7 @@
 #script written to create daily figures that are sent to lucky SCC team members :)
-#written by CCC, last edited 27 Aug 2018
+#written by CCC, last edited 12 Feb 2019 by Vahid-Dan
 
+if (!"lubridate" %in% installed.packages()) install.packages("lubridate")
 library(lubridate)
 
 #download data files to working directory
@@ -75,6 +76,9 @@ par(mfrow=c(3,2))
 
 plot(obs1$TIMESTAMP,obs1$RECORD, main="Campbell Logger Record", xlab="Time", ylab="Number", type='l')
 plot(obs1$TIMESTAMP,obs1$BattV, main="Campbell Logger Battery", xlab="Time", ylab="Volts", type='l')
+if(min(na.omit(obs1$BattV))<11.5){
+  mtext("Battery Charge Low", side = 3, col="red")
+}
 plot(obs1$TIMESTAMP,obs1$EXO_battery, main="EXO Battery", xlab="Time", ylab="Volts", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_cablepower, main="EXO Cable Power", xlab="Time", ylab="Volts", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_wiper, main="EXO Wiper", xlab="Time", ylab="Volts", type='l')
