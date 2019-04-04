@@ -1,5 +1,9 @@
 #script written to create daily figures that are sent to lucky SCC team members :)
+<<<<<<< HEAD
 #written by CCC, last edited 12 Feb 2019 by Vahid-Dan
+=======
+#written by CCC, last edited 12 Mar 2019
+>>>>>>> be2b2c6d908554fade86f11d2645d8b0e8729ed2
 
 if (!"lubridate" %in% installed.packages()) install.packages("lubridate")
 library(lubridate)
@@ -13,12 +17,12 @@ metheader<-read.csv("FCRmet.csv", skip=1, as.is=T) #get header minus wonky Campb
 metdata<-read.csv("FCRmet.csv", skip=4, header=F) #get data minus wonky Campbell rows
 names(metdata)<-names(metheader) #combine the names to deal with Campbell logger formatting
 
-end.time <- as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")) #gives us current time with rounded minutes
+end.time <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")), tzone = "Etc/GMT+4") #gives us current time with rounded minutes in EDT
 start.time <- end.time - days(5) #to give us five days of data for looking at changes
 full_time <- seq(start.time, end.time, by = "min") #create sequence of dates from past 5 days to fill in data
 
 obs <- array(NA,dim=c(length(full_time),9)) #create array that will be filled in with 8 columns
-metdata$TIMESTAMP<-as.POSIXct(strptime(metdata$TIMESTAMP, "%Y-%m-%d %H:%M")) #get dates aligned
+metdata$TIMESTAMP<-as.POSIXct(strptime(metdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+4") #get dates aligned
 
 for(i in 1:length(full_time)){ #this loop looks for matching dates and extracts data from metdata file to obs array
     index = which(metdata$TIMESTAMP==full_time[i])
@@ -49,12 +53,12 @@ catheader<-read.csv("Catwalk.csv", skip=1, as.is=T) #get header minus wonky Camp
 catdata<-read.csv("Catwalk.csv", skip=4, header=F) #get data minus wonky Campbell rows
 names(catdata)<-names(catheader) #combine the names to deal with Campbell logger formatting
 
-end.time1 <- as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")) #gives us current time with rounded hours
+end.time1 <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), tzone = "Etc/GMT+4") #gives us current time with rounded hours in EDT
 start.time1 <- end.time1 - days(5) #to give us five days of data for looking at changes
 full_time1 <- seq(start.time1, end.time1, by = "10 min") #create sequence of dates from past 5 days to fill in data
 
 obs1 <- array(NA,dim=c(length(full_time1),39)) #create array that will be filled in with 39 columns (the entire size of the array)
-catdata$TIMESTAMP<-as.POSIXct(strptime(catdata$TIMESTAMP, "%Y-%m-%d %H:%M")) #get dates aligned
+catdata$TIMESTAMP<-as.POSIXct(strptime(catdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+4") #get dates aligned
 
 for(j in 5:ncol(catdata)){
   catdata[,j]<-as.numeric(levels(catdata[,j]))[catdata[,j]]#need to set all columns to numeric values
@@ -81,7 +85,7 @@ if(min(na.omit(obs1$BattV))<11.5){
 }
 plot(obs1$TIMESTAMP,obs1$EXO_battery, main="EXO Battery", xlab="Time", ylab="Volts", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_cablepower, main="EXO Cable Power", xlab="Time", ylab="Volts", type='l')
-plot(obs1$TIMESTAMP,obs1$EXO_wiper, main="EXO Wiper", xlab="Time", ylab="Volts", type='l')
+plot(obs1$TIMESTAMP,obs1$EXO_depth, main="EXO Depth", xlab="Time", ylab="Meters", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_pressure, main="EXO Pressure", xlab="Time", ylab="psig", type='l')
 
 #par(mar=c(5.1, 4.1, 4.1, 2.1), mgp=c(3, 1, 0), las=0)
