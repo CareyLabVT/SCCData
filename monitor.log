@@ -687,3 +687,127 @@ rtt min/avg/max/mdev = 9.072/9.136/9.200/0.122 ms
 [30325.026236] audit: type=1400 audit(1555042563.428:46): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=10684 comm="apparmor_parser"
 [67288.867756] do_IRQ: 1.44 No irq handler for vector
 [88334.178258] perf: interrupt took too long (7802 > 7792), lowering kernel.perf_event_max_sample_rate to 25500
+
+
+-------------- 04/14/19 02:09:01 EST -0500 --------------
+
+
+ 02:09:01 up 2 days, 11:18,  1 user,  load average: 0.33, 0.17, 0.17
+
+
+Device "enx0015ff030033" does not exist.
+Device "enx0015ff025968" does not exist.
+5: ipop: <BROADCAST,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether ae:80:b1:6c:53:eb brd ff:ff:ff:ff:ff:ff
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:01:c0:23:f1:47 brd ff:ff:ff:ff:ff:ff
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-11 14:50:57 EST; 2 days ago
+ Main PID: 1594 (watchdog)
+    Tasks: 1 (limit: 4359)
+   CGroup: /system.slice/watchdog.service
+           └─1594 /usr/sbin/watchdog
+
+Apr 11 14:50:57 diana watchdog[1594]: interface: no interface to check
+Apr 11 14:50:57 diana watchdog[1594]: temperature: no sensors to check
+Apr 11 14:50:57 diana watchdog[1594]: no test binary files
+Apr 11 14:50:57 diana watchdog[1594]: no repair binary files
+Apr 11 14:50:57 diana watchdog[1594]: error retry time-out = 60 seconds
+Apr 11 14:50:57 diana watchdog[1594]: repair attempts = 1
+Apr 11 14:50:57 diana watchdog[1594]: alive=/dev/watchdog heartbeat=[none] to=root no_act=no force=no
+Apr 11 14:50:57 diana watchdog[1594]: watchdog now set to 60 seconds
+Apr 11 14:50:57 diana watchdog[1594]: hardware watchdog identity: iTCO_wdt
+Apr 11 14:50:57 diana systemd[1]: Started watchdog daemon.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-11 14:50:48 EST; 2 days ago
+ Main PID: 891 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─891 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 14 02:08:57 diana ipop-tincan[891]: [04/14 02:08:57.939626] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 14 02:08:59 diana ipop-tincan[891]: [04/14 02:08:59.941003] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 14 02:08:59 diana ipop-tincan[891]: [04/14 02:08:59.941102] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 14 02:08:59 diana ipop-tincan[891]: [04/14 02:08:59.941137] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 14 02:09:01 diana ipop-tincan[891]: Error(stunport.cc:106): Binding request timed out from 192.168.1.5:40348 (eno1)
+Apr 14 02:09:01 diana ipop-tincan[891]: Error(stunport.cc:106): Binding request timed out from 172.29.81.33:50084 (wlp1s0)
+Apr 14 02:09:01 diana ipop-tincan[891]: Error(stunport.cc:106): Binding request timed out from 172.29.81.33:42128 (wlp1s0)
+Apr 14 02:09:01 diana ipop-tincan[891]: [04/14 02:09:01.941659] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 14 02:09:01 diana ipop-tincan[891]: [04/14 02:09:01.941729] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 14 02:09:01 diana ipop-tincan[891]: [04/14 02:09:01.941748] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-11 14:50:48 EST; 2 days ago
+ Main PID: 892 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─892 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 14 02:08:34 diana python[892]: [20190414 02:08:34.675] INFO:p2p state: CONNECTED
+Apr 14 02:08:34 diana python[892]: [20190414 02:08:34.679] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Apr 14 02:08:40 diana python[892]: [20190414 02:08:40.416] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Apr 14 02:08:41 diana python[892]: [20190414 02:08:41.804] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Apr 14 02:08:46 diana python[892]: [20190414 02:08:46.671] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Apr 14 02:08:49 diana python[892]: [20190414 02:08:49.683] INFO:p2p state: CONNECTED
+Apr 14 02:08:49 diana python[892]: [20190414 02:08:49.717] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Apr 14 02:08:55 diana python[892]: [20190414 02:08:55.419] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Apr 14 02:08:55 diana python[892]: [20190414 02:08:55.792] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Apr 14 02:09:01 diana python[892]: [20190414 02:09:01.685] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=121 time=8.78 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=121 time=8.80 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=121 time=8.85 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 8.783/8.813/8.850/0.027 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=34.1 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=34.0 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=33.6 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 33.610/33.925/34.129/0.225 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.044 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.082 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2050ms
+rtt min/avg/max/mdev = 0.044/0.069/0.083/0.020 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=54 time=9.16 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=54 time=9.16 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=54 time=9.15 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 9.151/9.161/9.169/0.078 ms
+
+
+[30320.934138] audit: type=1400 audit(1555042559.335:39): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=10660 comm="apparmor_parser"
+[30320.935604] audit: type=1400 audit(1555042559.335:40): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=10661 comm="apparmor_parser"
+[30323.962144] audit: type=1400 audit(1555042562.364:41): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-system-monitor.gnome-system-monitor" pid=10679 comm="apparmor_parser"
+[30324.992841] audit: type=1400 audit(1555042563.392:42): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-system-monitor" pid=10678 comm="apparmor_parser"
+[30325.017882] audit: type=1400 audit(1555042563.420:43): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6673/usr/lib/snapd/snap-confine" pid=10681 comm="apparmor_parser"
+[30325.017889] audit: type=1400 audit(1555042563.420:44): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6673/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=10681 comm="apparmor_parser"
+[30325.024858] audit: type=1400 audit(1555042563.424:45): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=10683 comm="apparmor_parser"
+[30325.026236] audit: type=1400 audit(1555042563.428:46): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=10684 comm="apparmor_parser"
+[67288.867756] do_IRQ: 1.44 No irq handler for vector
+[88334.178258] perf: interrupt took too long (7802 > 7792), lowering kernel.perf_event_max_sample_rate to 25500
