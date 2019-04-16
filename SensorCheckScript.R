@@ -13,12 +13,14 @@ metheader<-read.csv("FCRmet.csv", skip=1, as.is=T) #get header minus wonky Campb
 metdata<-read.csv("FCRmet.csv", skip=4, header=F) #get data minus wonky Campbell rows
 names(metdata)<-names(metheader) #combine the names to deal with Campbell logger formatting
 
-end.time <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")), tzone = "Etc/GMT+4") #gives us current time with rounded minutes in EDT
+end.time <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H:%M")), tzone = "Etc/GMT+5") #gives us current time with rounded minutes in EDT
 start.time <- end.time - days(5) #to give us five days of data for looking at changes
 full_time <- seq(start.time, end.time, by = "min") #create sequence of dates from past 5 days to fill in data
 
 obs <- array(NA,dim=c(length(full_time),9)) #create array that will be filled in with 8 columns
-metdata$TIMESTAMP<-as.POSIXct(strptime(metdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+4") #get dates aligned
+met_timechange=max(which(metdata$TIMESTAMP=="2019-04-15 10:19:00")) #shows time point when met station was switched from GMT -4 to GMT -5
+metdata$TIMESTAMP<-as.POSIXct(strptime(metdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
+metdata$TIMESTAMP[c(1:met_timechange-1)]<-with_tz(force_tz(metdata$TIMESTAMP[c(1:met_timechange-1)],"Etc/GMT+4"), "Etc/GMT+5") #pre time change data gets assigned proper timezone then corrected to GMT -5 to match the rest of the data set
 
 for(i in 1:length(full_time)){ #this loop looks for matching dates and extracts data from metdata file to obs array
     index = which(metdata$TIMESTAMP==full_time[i])
@@ -49,12 +51,14 @@ catheader<-read.csv("Catwalk.csv", skip=1, as.is=T) #get header minus wonky Camp
 catdata<-read.csv("Catwalk.csv", skip=4, header=F) #get data minus wonky Campbell rows
 names(catdata)<-names(catheader) #combine the names to deal with Campbell logger formatting
 
-end.time1 <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), tzone = "Etc/GMT+4") #gives us current time with rounded hours in EDT
+end.time1 <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), tzone = "Etc/GMT+5") #gives us current time with rounded hours in EDT
 start.time1 <- end.time1 - days(5) #to give us five days of data for looking at changes
 full_time1 <- seq(start.time1, end.time1, by = "10 min") #create sequence of dates from past 5 days to fill in data
 
 obs1 <- array(NA,dim=c(length(full_time1),39)) #create array that will be filled in with 39 columns (the entire size of the array)
-catdata$TIMESTAMP<-as.POSIXct(strptime(catdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+4") #get dates aligned
+cat_timechange=max(which(catdata$TIMESTAMP=="2019-04-15 10:00:00"))
+catdata$TIMESTAMP<-as.POSIXct(strptime(catdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
+catdata$TIMESTAMP[c(1:cat_timechange-1)]<-with_tz(force_tz(catdata$TIMESTAMP[c(1:cat_timechange-1)],"Etc/GMT+4"), "Etc/GMT+5") #pre time change data gets assigned proper timezone then corrected to GMT -5 to match the rest of the data set
 
 for(j in 5:ncol(catdata)){
   catdata[,j]<-as.numeric(levels(catdata[,j]))[catdata[,j]]#need to set all columns to numeric values
