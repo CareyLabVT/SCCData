@@ -21,6 +21,7 @@ obs <- array(NA,dim=c(length(full_time),9)) #create array that will be filled in
 met_timechange=max(which(metdata$TIMESTAMP=="2019-04-15 10:19:00")) #shows time point when met station was switched from GMT -4 to GMT -5
 metdata$TIMESTAMP<-as.POSIXct(strptime(metdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
 metdata$TIMESTAMP[c(1:met_timechange-1)]<-with_tz(force_tz(metdata$TIMESTAMP[c(1:met_timechange-1)],"Etc/GMT+4"), "Etc/GMT+5") #pre time change data gets assigned proper timezone then corrected to GMT -5 to match the rest of the data set
+metdata=metdata[-c(met_timechange-1),]
 
 for(i in 1:length(full_time)){ #this loop looks for matching dates and extracts data from metdata file to obs array
     index = which(metdata$TIMESTAMP==full_time[i])
