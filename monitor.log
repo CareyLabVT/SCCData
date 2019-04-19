@@ -1302,3 +1302,125 @@ rtt min/avg/max/mdev = 47.583/54.725/59.168/5.103 ms
 [   11.173418] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
 [   11.186103] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
 [   11.200055] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+
+
+-------------- 04/19/19 02:09:01 EST -0500 --------------
+
+
+ 02:09:01 up 11:20,  0 users,  load average: 1.01, 1.04, 1.00
+
+
+Device "enx0015ff030033" does not exist.
+Device "enx0015ff025968" does not exist.
+28: enx0015ff080733: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 00:15:ff:08:07:33 brd ff:ff:ff:ff:ff:ff
+6: ipop: <BROADCAST,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether d6:ef:1c:4c:a4:bc brd ff:ff:ff:ff:ff:ff
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:01:c0:23:f1:47 brd ff:ff:ff:ff:ff:ff
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-18 14:48:50 EST; 11h ago
+ Main PID: 897 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─897 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 19 02:09:03 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping nyRwqIJe+KUx
+Apr 19 02:09:03 diana ipop-tincan[897]: Error(stunport.cc:106): Binding request timed out from 10.244.153.105:40325 (enx0015ff080733)
+Apr 19 02:09:03 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 02:09:03 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping OV4YpI7Ccip+
+Apr 19 02:09:03 diana ipop-tincan[897]: Error(stunport.cc:359): sendto : [0x00000016] Invalid argument
+Apr 19 02:09:03 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 02:09:03 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping Iz4u8gKmFu2O
+Apr 19 02:09:03 diana ipop-tincan[897]: Error(stunport.cc:359): sendto : [0x00000016] Invalid argument
+Apr 19 02:09:03 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 02:09:03 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping Va3lufFqtOcX
+Apr 19 02:09:03 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 02:09:03 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping BlS89n6YjcOY
+Apr 19 02:09:04 diana ipop-tincan[897]: Error(stunport.cc:359): sendto : [0x00000016] Invalid argument
+Apr 19 02:09:04 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 02:09:04 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping e0bk9XpryZpH
+Apr 19 02:09:04 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 02:09:04 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping SDe2egYHp1//
+Apr 19 02:09:04 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 02:09:04 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping Da6bXDmpjXWF
+Apr 19 02:09:04 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 02:09:04 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping AK1W/TjXlhWj
+Apr 19 02:09:04 diana ipop-tincan[897]: Error(stunport.cc:359): sendto : [0x00000016] Invalid argument
+Apr 19 02:09:04 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 02:09:04 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping 6MKVvThRZBRw
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-18 14:48:50 EST; 11h ago
+ Main PID: 898 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─898 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 19 02:08:32 diana python[898]: [20190419 02:08:32.286] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Apr 19 02:08:37 diana python[898]: [20190419 02:08:37.250] INFO:p2p state: CONNECTED
+Apr 19 02:08:47 diana python[898]: [20190419 02:08:47.340] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Apr 19 02:08:52 diana python[898]: [20190419 02:08:52.255] INFO:p2p state: CONNECTED
+Apr 19 02:08:57 diana python[898]: [20190419 02:08:57.885] INFO:Succesfully reported status to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 19 02:08:57 diana python[898]: HTTP response code:200, msg:{
+Apr 19 02:08:57 diana python[898]:   "result": "8a4925c35c5544dab744857471174110",
+Apr 19 02:08:57 diana python[898]:   "status": "success"
+Apr 19 02:08:57 diana python[898]: }
+Apr 19 02:09:02 diana python[898]: [20190419 02:09:02.273] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=116 time=1121 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=326 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=252 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2005ms
+rtt min/avg/max/mdev = 252.832/566.891/1121.815/393.526 ms, pipe 2
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2037ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.039 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.056 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.055 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.039/0.050/0.056/0.007 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=46 time=722 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=46 time=291 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=46 time=117 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 117.959/377.257/722.089/253.943 ms
+
+
+[40164.960448] usb 1-4: New USB device found, idVendor=1410, idProduct=9031, bcdDevice= 3.10
+[40164.960452] usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[40164.960454] usb 1-4: Product: MiFi USB730L
+[40164.960456] usb 1-4: Manufacturer: Novatel Wireless
+[40164.960457] usb 1-4: SerialNumber: 0123456789ABCDEF
+[40164.994741] cdc_ether 1-4:1.0 eth0: register 'cdc_ether' at usb-0000:00:15.0-4, CDC Ethernet Device, 00:15:ff:08:07:33
+[40165.003807] cdc_acm 1-4:1.12: ttyACM0: USB ACM device
+[40165.006678] hid-generic 0003:1410:9031.0017: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-4/input14
+[40165.037713] cdc_ether 1-4:1.0 enx0015ff080733: renamed from eth0
+[40165.072978] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
