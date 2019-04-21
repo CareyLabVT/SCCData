@@ -1532,3 +1532,343 @@ rtt min/avg/max/mdev = 108.725/191.403/354.545/115.362 ms
 [82391.294824] hid-generic 0003:1410:9031.0027: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-4/input14
 [82391.321556] cdc_ether 1-4:1.0 enx0015ff080733: renamed from eth0
 [82391.366632] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+
+
+-------------- 04/19/19 14:02:59 EST -0500 --------------
+
+
+ 14:02:59 up 23:14,  1 user,  load average: 0.87, 0.99, 1.09
+
+
+Device "enx0015ff030033" does not exist.
+Device "enx0015ff025968" does not exist.
+44: enx0015ff080733: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 00:15:ff:08:07:33 brd ff:ff:ff:ff:ff:ff
+6: ipop: <BROADCAST,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether d6:ef:1c:4c:a4:bc brd ff:ff:ff:ff:ff:ff
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:01:c0:23:f1:47 brd ff:ff:ff:ff:ff:ff
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-18 14:48:50 EST; 23h ago
+ Main PID: 897 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─897 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 19 14:02:58 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 14:02:58 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping epZOMhJgjSds
+Apr 19 14:02:58 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 14:02:58 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping TdT9tssY33jU
+Apr 19 14:02:59 diana ipop-tincan[897]: Error(stunport.cc:359): sendto : [0x00000016] Invalid argument
+Apr 19 14:02:59 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 14:02:59 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping NyfuXSex/E9T
+Apr 19 14:02:59 diana ipop-tincan[897]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.244.153.104/30]]: UDP send of 116 bytes failed with error 22
+Apr 19 14:02:59 diana ipop-tincan[897]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:uXyCJwva:1:0:stun:udp:97.47.68.27:10289->+1i6h0Fs:1:0.78:stun:udp:128.227.214.208:45271|CRxI|7240414909865278974|2602]: Failed to send STUN ping 7BAJvuh4ie+1
+Apr 19 14:02:59 diana ipop-tincan[897]: Error(stunport.cc:359): sendto : [0x00000016] Invalid argument
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-18 14:48:50 EST; 23h ago
+ Main PID: 898 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─898 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 19 14:02:11 diana python[898]: [20190419 14:02:11.431] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Apr 19 14:02:14 diana python[898]: [20190419 14:02:14.765] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Apr 19 14:02:21 diana python[898]: [20190419 14:02:21.275] INFO:p2p state: CONNECTED
+Apr 19 14:02:26 diana python[898]: [20190419 14:02:26.418] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Apr 19 14:02:30 diana python[898]: [20190419 14:02:29.741] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Apr 19 14:02:36 diana python[898]: [20190419 14:02:36.280] INFO:p2p state: CONNECTED
+Apr 19 14:02:41 diana python[898]: [20190419 14:02:41.594] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Apr 19 14:02:44 diana python[898]: [20190419 14:02:44.745] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Apr 19 14:02:51 diana python[898]: [20190419 14:02:51.285] INFO:p2p state: CONNECTED
+Apr 19 14:02:56 diana python[898]: [20190419 14:02:56.438] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=266 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=68.0 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=83.2 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 68.003/139.137/266.182/90.049 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2050ms
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=222 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=308 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=228 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 222.681/253.251/308.802/39.348 ms
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=212 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=302 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=232 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 1999ms
+rtt min/avg/max/mdev = 212.144/248.940/302.418/38.697 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.052 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.055 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.069 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2039ms
+rtt min/avg/max/mdev = 0.052/0.058/0.069/0.011 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=48 time=95.9 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=48 time=97.8 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=48 time=96.8 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 95.933/96.890/97.890/0.876 ms
+
+
+[82391.258570] usb 1-4: New USB device found, idVendor=1410, idProduct=9031, bcdDevice= 3.10
+[82391.258572] usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[82391.258574] usb 1-4: Product: MiFi USB730L
+[82391.258576] usb 1-4: Manufacturer: Novatel Wireless
+[82391.258577] usb 1-4: SerialNumber: 0123456789ABCDEF
+[82391.279025] cdc_ether 1-4:1.0 eth0: register 'cdc_ether' at usb-0000:00:15.0-4, CDC Ethernet Device, 00:15:ff:08:07:33
+[82391.285050] cdc_acm 1-4:1.12: ttyACM0: USB ACM device
+[82391.294824] hid-generic 0003:1410:9031.0027: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-4/input14
+[82391.321556] cdc_ether 1-4:1.0 enx0015ff080733: renamed from eth0
+[82391.366632] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+
+
+-------------- 04/20/19 02:09:01 EST -0500 --------------
+
+
+ 02:09:01 up 11:58,  0 users,  load average: 0.07, 0.14, 0.10
+
+
+Device "enx0015ff030033" does not exist.
+Device "enx0015ff025968" does not exist.
+4: enx0015ff080733: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 00:15:ff:08:07:33 brd ff:ff:ff:ff:ff:ff
+6: ipop: <BROADCAST,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 6a:48:c1:68:8e:6e brd ff:ff:ff:ff:ff:ff
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:01:c0:23:f1:47 brd ff:ff:ff:ff:ff:ff
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-04-19 14:10:37 EST; 11h ago
+ Main PID: 895 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─895 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 20 02:08:25 diana ipop-tincan[895]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 20 02:08:25 diana ipop-tincan[895]: [04/20 02:08:25.546579] OnCloseEvent: ONCLOSEEVENT -2
+Apr 20 02:08:40 diana ipop-tincan[895]: Cleanup
+Apr 20 02:08:40 diana ipop-tincan[895]: [04/20 02:08:40.544534] Connect: XMPP CONNECTING
+Apr 20 02:08:40 diana ipop-tincan[895]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 20 02:08:40 diana ipop-tincan[895]: [04/20 02:08:40.552172] OnCloseEvent: ONCLOSEEVENT -2
+Apr 20 02:08:55 diana ipop-tincan[895]: Cleanup
+Apr 20 02:08:55 diana ipop-tincan[895]: [04/20 02:08:55.550627] Connect: XMPP CONNECTING
+Apr 20 02:08:55 diana ipop-tincan[895]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 20 02:08:55 diana ipop-tincan[895]: [04/20 02:08:55.558599] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-04-19 14:10:37 EST; 11h ago
+ Main PID: 896 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─896 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 20 02:06:55 diana python[896]: [20190420 02:06:55.503] INFO:p2p state: searching
+Apr 20 02:07:10 diana python[896]: [20190420 02:07:10.508] INFO:p2p state: searching
+Apr 20 02:07:20 diana python[896]: [20190420 02:07:20.989] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 20 02:07:25 diana python[896]: [20190420 02:07:25.514] INFO:p2p state: searching
+Apr 20 02:07:40 diana python[896]: [20190420 02:07:40.520] INFO:p2p state: searching
+Apr 20 02:07:55 diana python[896]: [20190420 02:07:55.525] INFO:p2p state: searching
+Apr 20 02:08:10 diana python[896]: [20190420 02:08:10.531] INFO:p2p state: searching
+Apr 20 02:08:25 diana python[896]: [20190420 02:08:25.537] INFO:p2p state: searching
+Apr 20 02:08:40 diana python[896]: [20190420 02:08:40.543] INFO:p2p state: searching
+Apr 20 02:08:55 diana python[896]: [20190420 02:08:55.549] INFO:p2p state: searching
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2031ms
+
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2029ms
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2026ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.059 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.084 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.059/0.075/0.084/0.013 ms
+
+
+ping: github.com: Name or service not known
+
+
+[    8.725903] Bluetooth: BNEP filters: protocol multicast
+[    8.725910] Bluetooth: BNEP socket layer initialized
+[    9.627453] IPv6: ADDRCONF(NETDEV_UP): eno1: link is not ready
+[    9.667198] IPv6: ADDRCONF(NETDEV_UP): eno1: link is not ready
+[    9.679961] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[    9.717518] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[    9.731857] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[    9.746801] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[   11.392724] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+[   11.392974] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+
+
+-------------- 04/21/19 02:09:01 EST -0500 --------------
+
+
+ 02:09:01 up 1 day, 11:58,  0 users,  load average: 0.29, 0.17, 0.11
+
+
+Device "enx0015ff030033" does not exist.
+Device "enx0015ff025968" does not exist.
+4: enx0015ff080733: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 00:15:ff:08:07:33 brd ff:ff:ff:ff:ff:ff
+6: ipop: <BROADCAST,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 6a:48:c1:68:8e:6e brd ff:ff:ff:ff:ff:ff
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:01:c0:23:f1:47 brd ff:ff:ff:ff:ff:ff
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-04-19 14:10:37 EST; 1 day 11h ago
+ Main PID: 895 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─895 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 21 02:08:29 diana ipop-tincan[895]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 21 02:08:29 diana ipop-tincan[895]: [04/21 02:08:29.679961] OnCloseEvent: ONCLOSEEVENT -2
+Apr 21 02:08:44 diana ipop-tincan[895]: Cleanup
+Apr 21 02:08:44 diana ipop-tincan[895]: [04/21 02:08:44.678166] Connect: XMPP CONNECTING
+Apr 21 02:08:44 diana ipop-tincan[895]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 21 02:08:44 diana ipop-tincan[895]: [04/21 02:08:44.687913] OnCloseEvent: ONCLOSEEVENT -2
+Apr 21 02:08:59 diana ipop-tincan[895]: Cleanup
+Apr 21 02:08:59 diana ipop-tincan[895]: [04/21 02:08:59.683778] Connect: XMPP CONNECTING
+Apr 21 02:08:59 diana ipop-tincan[895]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 21 02:08:59 diana ipop-tincan[895]: [04/21 02:08:59.690613] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-04-19 14:10:37 EST; 1 day 11h ago
+ Main PID: 896 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─896 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 21 02:06:59 diana python[896]: [20190421 02:06:59.635] INFO:p2p state: searching
+Apr 21 02:07:14 diana python[896]: [20190421 02:07:14.641] INFO:p2p state: searching
+Apr 21 02:07:25 diana python[896]: [20190421 02:07:25.712] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 21 02:07:29 diana python[896]: [20190421 02:07:29.647] INFO:p2p state: searching
+Apr 21 02:07:44 diana python[896]: [20190421 02:07:44.652] INFO:p2p state: searching
+Apr 21 02:07:59 diana python[896]: [20190421 02:07:59.658] INFO:p2p state: searching
+Apr 21 02:08:14 diana python[896]: [20190421 02:08:14.664] INFO:p2p state: searching
+Apr 21 02:08:29 diana python[896]: [20190421 02:08:29.670] INFO:p2p state: searching
+Apr 21 02:08:44 diana python[896]: [20190421 02:08:44.676] INFO:p2p state: searching
+Apr 21 02:08:59 diana python[896]: [20190421 02:08:59.682] INFO:p2p state: searching
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2051ms
+
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2026ms
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2027ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.084 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.082 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.084 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.082/0.083/0.084/0.007 ms
+
+
+ping: github.com: Name or service not known
+
+
+[    9.679961] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[    9.717518] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[    9.731857] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[    9.746801] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[   11.392724] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+[   11.392974] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+[47140.976820] perf: interrupt took too long (2518 > 2500), lowering kernel.perf_event_max_sample_rate to 79250
+[63374.518590] perf: interrupt took too long (3206 > 3147), lowering kernel.perf_event_max_sample_rate to 62250
+[89048.096908] perf: interrupt took too long (4015 > 4007), lowering kernel.perf_event_max_sample_rate to 49750
+[125872.050576] perf: interrupt took too long (5027 > 5018), lowering kernel.perf_event_max_sample_rate to 39750
