@@ -1872,3 +1872,111 @@ ping: github.com: Name or service not known
 [63374.518590] perf: interrupt took too long (3206 > 3147), lowering kernel.perf_event_max_sample_rate to 62250
 [89048.096908] perf: interrupt took too long (4015 > 4007), lowering kernel.perf_event_max_sample_rate to 49750
 [125872.050576] perf: interrupt took too long (5027 > 5018), lowering kernel.perf_event_max_sample_rate to 39750
+
+
+-------------- 04/22/19 02:09:01 EST -0500 --------------
+
+
+ 02:09:01 up 2 days, 11:58,  0 users,  load average: 0.72, 0.90, 0.98
+
+
+Device "enx0015ff030033" does not exist.
+Device "enx0015ff025968" does not exist.
+13: enx0015ff080733: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 00:15:ff:08:07:33 brd ff:ff:ff:ff:ff:ff
+6: ipop: <BROADCAST,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 1000
+    link/ether 6a:48:c1:68:8e:6e brd ff:ff:ff:ff:ff:ff
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:01:c0:23:f1:47 brd ff:ff:ff:ff:ff:ff
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-04-19 14:10:37 EST; 2 days ago
+ Main PID: 895 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─895 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 22 02:09:01 diana ipop-tincan[895]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.249.32.152/30]]: UDP send of 116 bytes failed with error 22
+Apr 22 02:09:01 diana ipop-tincan[895]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:2bHvXZ/U:1:0:stun:udp:97.47.65.157:9932->MKsxVEeq:1:0.78:stun:udp:174.226.128.158:8868|CRxI|7239851959911857663|2437]: Failed to send STUN ping 522wa/U1wHLa
+Apr 22 02:09:01 diana ipop-tincan[895]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.249.32.152/30]]: UDP send of 116 bytes failed with error 22
+Apr 22 02:09:01 diana ipop-tincan[895]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:2bHvXZ/U:1:0:stun:udp:97.47.65.157:9932->xt8DC4Gi:1:0.86:stun:udp:174.226.128.158:8888|CRxI|7240414910200430078|-]: Failed to send STUN ping GR6aGHXRgpM/
+Apr 22 02:09:01 diana ipop-tincan[895]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.249.32.152/30]]: UDP send of 116 bytes failed with error 22
+Apr 22 02:09:01 diana ipop-tincan[895]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:2bHvXZ/U:1:0:stun:udp:97.47.65.157:9932->MKsxVEeq:1:0.78:stun:udp:174.226.128.158:8868|CRxI|7239851959911857663|2437]: Failed to send STUN ping fSBLcsflYws6
+Apr 22 02:09:01 diana ipop-tincan[895]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.249.32.152/30]]: UDP send of 116 bytes failed with error 22
+Apr 22 02:09:01 diana ipop-tincan[895]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:2bHvXZ/U:1:0:stun:udp:97.47.65.157:9932->xt8DC4Gi:1:0.86:stun:udp:174.226.128.158:8888|CRxI|7240414910200430078|-]: Failed to send STUN ping Rm7XRNheF2my
+Apr 22 02:09:01 diana ipop-tincan[895]: Error(stunport.cc:226): Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff080733:10.249.32.152/30]]: UDP send of 116 bytes failed with error 22
+Apr 22 02:09:01 diana ipop-tincan[895]: Warning(port.cc:940): Jingle:Conn[ipop-tincan:2bHvXZ/U:1:0:stun:udp:97.47.65.157:9932->MKsxVEeq:1:0.78:stun:udp:174.226.128.158:8868|CRxI|7239851959911857663|2437]: Failed to send STUN ping Q4bRMrv7Q6zc
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-04-19 14:10:37 EST; 2 days ago
+ Main PID: 896 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─896 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 22 02:06:43 diana python[896]: [20190422 02:06:43.230] INFO:p2p state: CONNECTED
+Apr 22 02:06:58 diana python[896]: [20190422 02:06:58.234] INFO:p2p state: CONNECTED
+Apr 22 02:07:13 diana python[896]: [20190422 02:07:13.240] INFO:p2p state: CONNECTED
+Apr 22 02:07:28 diana python[896]: [20190422 02:07:28.245] INFO:p2p state: CONNECTED
+Apr 22 02:07:43 diana python[896]: [20190422 02:07:43.250] INFO:p2p state: CONNECTED
+Apr 22 02:07:58 diana python[896]: [20190422 02:07:58.255] INFO:p2p state: CONNECTED
+Apr 22 02:08:13 diana python[896]: [20190422 02:08:13.260] INFO:p2p state: CONNECTED
+Apr 22 02:08:28 diana python[896]: [20190422 02:08:28.265] INFO:p2p state: CONNECTED
+Apr 22 02:08:43 diana python[896]: [20190422 02:08:43.270] INFO:p2p state: CONNECTED
+Apr 22 02:08:58 diana python[896]: [20190422 02:08:58.275] INFO:p2p state: CONNECTED
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2053ms
+
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2026ms
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2029ms
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2029ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.052 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.062 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.056 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.052/0.056/0.062/0.009 ms
+
+
+ping: github.com: Name or service not known
+
+
+[166703.412874] usb 1-4: New USB device found, idVendor=1410, idProduct=9031, bcdDevice= 3.10
+[166703.412878] usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[166703.412881] usb 1-4: Product: MiFi USB730L
+[166703.412883] usb 1-4: Manufacturer: Novatel Wireless
+[166703.412884] usb 1-4: SerialNumber: 0123456789ABCDEF
+[166703.453448] rndis_host 1-4:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-4, RNDIS device, 00:15:ff:08:07:33
+[166703.459064] cdc_acm 1-4:1.12: ttyACM0: USB ACM device
+[166703.463096] hid-generic 0003:1410:9031.0008: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-4/input14
+[166703.491299] rndis_host 1-4:1.0 enx0015ff080733: renamed from eth0
+[166703.531329] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
