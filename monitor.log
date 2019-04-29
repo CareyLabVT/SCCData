@@ -7158,3 +7158,1433 @@ rtt min/avg/max/mdev = 96.367/110.998/133.979/16.455 ms
 [115158.143757] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
 [115158.174562] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
 [115187.227931] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+
+
+#########################################################
+
+############## 04/27/19 12:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 12:00:01 up 1 day, 12:01,  0 users,  load average: 0.00, 0.06, 0.13
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 1 day 12h ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 27 11:59:19 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 27 11:59:19 diana ipop-tincan[901]: [04/27 11:59:19.253355] OnCloseEvent: ONCLOSEEVENT -2
+Apr 27 11:59:34 diana ipop-tincan[901]: Cleanup
+Apr 27 11:59:34 diana ipop-tincan[901]: [04/27 11:59:34.265996] Connect: XMPP CONNECTING
+Apr 27 11:59:34 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 27 11:59:34 diana ipop-tincan[901]: [04/27 11:59:34.267592] OnCloseEvent: ONCLOSEEVENT -2
+Apr 27 11:59:49 diana ipop-tincan[901]: Cleanup
+Apr 27 11:59:49 diana ipop-tincan[901]: [04/27 11:59:49.280238] Connect: XMPP CONNECTING
+Apr 27 11:59:49 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 27 11:59:49 diana ipop-tincan[901]: [04/27 11:59:49.281931] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 1 day 12h ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 27 11:36:50 diana python[902]: [20190427 11:36:50.621] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+Apr 27 11:36:50 diana python[902]: [20190427 11:36:50.622] INFO:p2p state: DISCONNECTED
+Apr 27 11:36:50 diana python[902]: [20190427 11:36:50.623] INFO:Trimming Link with peer b7e5e4036281f1fdc4e874258965570c822150ec
+Apr 27 11:36:50 diana python[902]: [20190427 11:36:50.625] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+Apr 27 11:40:36 diana python[902]: [20190427 11:40:36.543] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 11:44:06 diana python[902]: [20190427 11:44:06.555] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 11:47:36 diana python[902]: [20190427 11:47:36.566] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 11:51:06 diana python[902]: [20190427 11:51:06.577] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 11:54:36 diana python[902]: [20190427 11:54:36.589] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 11:58:06 diana python[902]: [20190427 11:58:06.600] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2032ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.057 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.084 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2054ms
+rtt min/avg/max/mdev = 0.057/0.074/0.084/0.014 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.182754] cdc_acm 1-3:1.12: ttyACM0: USB ACM device
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+
+
+#########################################################
+
+############## 04/27/19 18:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 18:00:01 up 1 day, 18:01,  0 users,  load average: 0.05, 0.08, 0.09
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 1 day 18h ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 27 17:59:30 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 27 17:59:30 diana ipop-tincan[901]: [04/27 17:59:30.113106] OnCloseEvent: ONCLOSEEVENT -2
+Apr 27 17:59:45 diana ipop-tincan[901]: Cleanup
+Apr 27 17:59:45 diana ipop-tincan[901]: [04/27 17:59:45.117412] Connect: XMPP CONNECTING
+Apr 27 17:59:45 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 27 17:59:45 diana ipop-tincan[901]: [04/27 17:59:45.119386] OnCloseEvent: ONCLOSEEVENT -2
+Apr 27 18:00:00 diana ipop-tincan[901]: Cleanup
+Apr 27 18:00:00 diana ipop-tincan[901]: [04/27 18:00:00.122436] Connect: XMPP CONNECTING
+Apr 27 18:00:00 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 27 18:00:00 diana ipop-tincan[901]: [04/27 18:00:00.124266] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 1 day 18h ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 27 17:27:07 diana python[902]: [20190427 17:27:07.611] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 17:30:37 diana python[902]: [20190427 17:30:37.623] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 17:34:07 diana python[902]: [20190427 17:34:07.631] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 17:37:37 diana python[902]: [20190427 17:37:37.638] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 17:41:07 diana python[902]: [20190427 17:41:07.650] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 17:44:37 diana python[902]: [20190427 17:44:37.662] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 17:48:07 diana python[902]: [20190427 17:48:07.673] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 17:51:37 diana python[902]: [20190427 17:51:37.681] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 17:55:07 diana python[902]: [20190427 17:55:07.693] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 17:58:37 diana python[902]: [20190427 17:58:37.704] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2051ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2025ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.059 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.081 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.081 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.059/0.073/0.081/0.014 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+[143894.595157] perf: interrupt took too long (6303 > 6278), lowering kernel.perf_event_max_sample_rate to 31500
+
+
+#########################################################
+
+############## 04/28/19 00:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 00:00:01 up 2 days, 1 min,  0 users,  load average: 0.06, 0.11, 0.05
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 27 23:59:24 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 27 23:59:24 diana ipop-tincan[901]: [04/27 23:59:24.123532] OnCloseEvent: ONCLOSEEVENT -2
+Apr 27 23:59:39 diana ipop-tincan[901]: Cleanup
+Apr 27 23:59:39 diana ipop-tincan[901]: [04/27 23:59:39.128892] Connect: XMPP CONNECTING
+Apr 27 23:59:39 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 27 23:59:39 diana ipop-tincan[901]: [04/27 23:59:39.131035] OnCloseEvent: ONCLOSEEVENT -2
+Apr 27 23:59:54 diana ipop-tincan[901]: Cleanup
+Apr 27 23:59:54 diana ipop-tincan[901]: [04/27 23:59:54.137647] Connect: XMPP CONNECTING
+Apr 27 23:59:54 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 27 23:59:54 diana ipop-tincan[901]: [04/27 23:59:54.139918] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 27 23:27:38 diana python[902]: [20190427 23:27:38.726] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 23:31:08 diana python[902]: [20190427 23:31:08.737] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 23:34:38 diana python[902]: [20190427 23:34:38.749] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 23:38:08 diana python[902]: [20190427 23:38:08.761] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 23:41:38 diana python[902]: [20190427 23:41:38.772] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 23:45:08 diana python[902]: [20190427 23:45:08.783] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 23:48:38 diana python[902]: [20190427 23:48:38.794] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 23:52:08 diana python[902]: [20190427 23:52:08.806] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 23:55:38 diana python[902]: [20190427 23:55:38.817] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 27 23:59:08 diana python[902]: [20190427 23:59:08.829] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2026ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.056 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.081 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2054ms
+rtt min/avg/max/mdev = 0.056/0.073/0.082/0.012 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+[143894.595157] perf: interrupt took too long (6303 > 6278), lowering kernel.perf_event_max_sample_rate to 31500
+
+
+#########################################################
+
+############## 04/28/19 02:09:01 EST -0500 ##############
+
+#########################################################
+
+
+ 02:09:01 up 2 days,  2:10,  0 users,  load average: 0.00, 0.03, 0.01
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 28 02:08:27 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 02:08:27 diana ipop-tincan[901]: [04/28 02:08:27.331148] OnCloseEvent: ONCLOSEEVENT -2
+Apr 28 02:08:42 diana ipop-tincan[901]: Cleanup
+Apr 28 02:08:42 diana ipop-tincan[901]: [04/28 02:08:42.336277] Connect: XMPP CONNECTING
+Apr 28 02:08:42 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 02:08:42 diana ipop-tincan[901]: [04/28 02:08:42.338262] OnCloseEvent: ONCLOSEEVENT -2
+Apr 28 02:08:57 diana ipop-tincan[901]: Cleanup
+Apr 28 02:08:57 diana ipop-tincan[901]: [04/28 02:08:57.342009] Connect: XMPP CONNECTING
+Apr 28 02:08:57 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 02:08:57 diana ipop-tincan[901]: [04/28 02:08:57.344014] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 28 01:37:09 diana python[902]: [20190428 01:37:09.143] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 01:40:39 diana python[902]: [20190428 01:40:39.155] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 01:44:09 diana python[902]: [20190428 01:44:09.166] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 01:47:39 diana python[902]: [20190428 01:47:39.171] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 01:51:09 diana python[902]: [20190428 01:51:09.183] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 01:54:39 diana python[902]: [20190428 01:54:39.194] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 01:58:09 diana python[902]: [20190428 01:58:09.206] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 02:01:39 diana python[902]: [20190428 02:01:39.217] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 02:05:09 diana python[902]: [20190428 02:05:09.229] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 02:08:39 diana python[902]: [20190428 02:08:39.240] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2052ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.059 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.081 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2054ms
+rtt min/avg/max/mdev = 0.059/0.074/0.083/0.012 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+[143894.595157] perf: interrupt took too long (6303 > 6278), lowering kernel.perf_event_max_sample_rate to 31500
+
+
+#########################################################
+
+############## 04/28/19 06:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 06:00:01 up 2 days,  6:01,  0 users,  load average: 0.00, 0.01, 0.00
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 28 05:59:18 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 05:59:18 diana ipop-tincan[901]: [04/28 05:59:18.089176] OnCloseEvent: ONCLOSEEVENT -2
+Apr 28 05:59:33 diana ipop-tincan[901]: Cleanup
+Apr 28 05:59:33 diana ipop-tincan[901]: [04/28 05:59:33.093404] Connect: XMPP CONNECTING
+Apr 28 05:59:33 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 05:59:33 diana ipop-tincan[901]: [04/28 05:59:33.095498] OnCloseEvent: ONCLOSEEVENT -2
+Apr 28 05:59:48 diana ipop-tincan[901]: Cleanup
+Apr 28 05:59:48 diana ipop-tincan[901]: [04/28 05:59:48.099894] Connect: XMPP CONNECTING
+Apr 28 05:59:48 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 05:59:48 diana ipop-tincan[901]: [04/28 05:59:48.101654] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 28 05:28:09 diana python[902]: [20190428 05:28:09.877] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 05:31:39 diana python[902]: [20190428 05:31:39.889] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 05:35:09 diana python[902]: [20190428 05:35:09.900] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 05:38:39 diana python[902]: [20190428 05:38:39.911] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 05:42:09 diana python[902]: [20190428 05:42:09.919] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 05:45:39 diana python[902]: [20190428 05:45:39.930] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 05:49:09 diana python[902]: [20190428 05:49:09.939] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 05:52:39 diana python[902]: [20190428 05:52:39.950] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 05:56:09 diana python[902]: [20190428 05:56:09.961] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 05:59:39 diana python[902]: [20190428 05:59:39.973] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2039ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2029ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.059 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.084 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2054ms
+rtt min/avg/max/mdev = 0.059/0.075/0.084/0.013 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+[143894.595157] perf: interrupt took too long (6303 > 6278), lowering kernel.perf_event_max_sample_rate to 31500
+
+
+#########################################################
+
+############## 04/28/19 12:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 12:00:01 up 2 days, 12:01,  0 users,  load average: 0.05, 0.07, 0.08
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 28 11:59:27 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 11:59:27 diana ipop-tincan[901]: [04/28 11:59:27.061171] OnCloseEvent: ONCLOSEEVENT -2
+Apr 28 11:59:42 diana ipop-tincan[901]: Cleanup
+Apr 28 11:59:42 diana ipop-tincan[901]: [04/28 11:59:42.067284] Connect: XMPP CONNECTING
+Apr 28 11:59:42 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 11:59:42 diana ipop-tincan[901]: [04/28 11:59:42.070006] OnCloseEvent: ONCLOSEEVENT -2
+Apr 28 11:59:57 diana ipop-tincan[901]: Cleanup
+Apr 28 11:59:57 diana ipop-tincan[901]: [04/28 11:59:57.073293] Connect: XMPP CONNECTING
+Apr 28 11:59:57 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 11:59:57 diana ipop-tincan[901]: [04/28 11:59:57.075100] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 28 11:25:10 diana python[902]: [20190428 11:25:10.971] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 11:28:40 diana python[902]: [20190428 11:28:40.982] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 11:32:10 diana python[902]: [20190428 11:32:10.995] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 11:35:41 diana python[902]: [20190428 11:35:41.007] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 11:39:11 diana python[902]: [20190428 11:39:11.019] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 11:42:41 diana python[902]: [20190428 11:42:41.027] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 11:46:11 diana python[902]: [20190428 11:46:11.039] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 11:49:41 diana python[902]: [20190428 11:49:41.050] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 11:53:11 diana python[902]: [20190428 11:53:11.062] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 11:56:41 diana python[902]: [20190428 11:56:41.073] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2024ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.061 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2054ms
+rtt min/avg/max/mdev = 0.061/0.075/0.083/0.012 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+[143894.595157] perf: interrupt took too long (6303 > 6278), lowering kernel.perf_event_max_sample_rate to 31500
+
+
+#########################################################
+
+############## 04/28/19 18:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 18:00:01 up 2 days, 18:01,  0 users,  load average: 0.04, 0.04, 0.01
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 28 17:59:21 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 17:59:21 diana ipop-tincan[901]: [04/28 17:59:21.028618] OnCloseEvent: ONCLOSEEVENT -2
+Apr 28 17:59:36 diana ipop-tincan[901]: Cleanup
+Apr 28 17:59:36 diana ipop-tincan[901]: [04/28 17:59:36.027465] Connect: XMPP CONNECTING
+Apr 28 17:59:36 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 17:59:36 diana ipop-tincan[901]: [04/28 17:59:36.029189] OnCloseEvent: ONCLOSEEVENT -2
+Apr 28 17:59:51 diana ipop-tincan[901]: Cleanup
+Apr 28 17:59:51 diana ipop-tincan[901]: [04/28 17:59:51.038252] Connect: XMPP CONNECTING
+Apr 28 17:59:51 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 17:59:51 diana ipop-tincan[901]: [04/28 17:59:51.040313] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 2 days ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 28 17:25:42 diana python[902]: [20190428 17:25:42.039] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 17:29:12 diana python[902]: [20190428 17:29:12.047] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 17:32:42 diana python[902]: [20190428 17:32:42.059] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 17:36:12 diana python[902]: [20190428 17:36:12.071] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 17:39:42 diana python[902]: [20190428 17:39:42.083] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 17:43:12 diana python[902]: [20190428 17:43:12.087] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 17:46:42 diana python[902]: [20190428 17:46:42.099] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 17:50:12 diana python[902]: [20190428 17:50:12.111] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 17:53:42 diana python[902]: [20190428 17:53:42.122] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 17:57:12 diana python[902]: [20190428 17:57:12.133] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2042ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.051 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.082 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2053ms
+rtt min/avg/max/mdev = 0.051/0.071/0.082/0.017 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+[143894.595157] perf: interrupt took too long (6303 > 6278), lowering kernel.perf_event_max_sample_rate to 31500
+
+
+#########################################################
+
+############## 04/29/19 00:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 00:00:01 up 3 days, 1 min,  0 users,  load average: 0.00, 0.00, 0.00
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 3 days ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 28 23:59:30 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 23:59:30 diana ipop-tincan[901]: [04/28 23:59:30.052374] OnCloseEvent: ONCLOSEEVENT -2
+Apr 28 23:59:45 diana ipop-tincan[901]: Cleanup
+Apr 28 23:59:45 diana ipop-tincan[901]: [04/28 23:59:45.055937] Connect: XMPP CONNECTING
+Apr 28 23:59:45 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 28 23:59:45 diana ipop-tincan[901]: [04/28 23:59:45.058272] OnCloseEvent: ONCLOSEEVENT -2
+Apr 29 00:00:00 diana ipop-tincan[901]: Cleanup
+Apr 29 00:00:00 diana ipop-tincan[901]: [04/29 00:00:00.061368] Connect: XMPP CONNECTING
+Apr 29 00:00:00 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 00:00:00 diana ipop-tincan[901]: [04/29 00:00:00.064529] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 3 days ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 28 23:26:13 diana python[902]: [20190428 23:26:13.177] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 23:29:43 diana python[902]: [20190428 23:29:43.189] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 23:33:13 diana python[902]: [20190428 23:33:13.200] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 23:36:43 diana python[902]: [20190428 23:36:43.211] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 23:40:13 diana python[902]: [20190428 23:40:13.223] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 23:43:43 diana python[902]: [20190428 23:43:43.231] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 23:47:13 diana python[902]: [20190428 23:47:13.239] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 23:50:43 diana python[902]: [20190428 23:50:43.251] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 23:54:13 diana python[902]: [20190428 23:54:13.262] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 28 23:57:43 diana python[902]: [20190428 23:57:43.272] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2040ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.049 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2053ms
+rtt min/avg/max/mdev = 0.049/0.071/0.083/0.017 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+[143894.595157] perf: interrupt took too long (6303 > 6278), lowering kernel.perf_event_max_sample_rate to 31500
+
+
+#########################################################
+
+############## 04/29/19 02:09:02 EST -0500 ##############
+
+#########################################################
+
+
+ 02:09:02 up 3 days,  2:10,  0 users,  load average: 0.04, 0.18, 0.18
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 3 days ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 29 02:08:19 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 02:08:19 diana ipop-tincan[901]: [04/29 02:08:18.271793] OnCloseEvent: ONCLOSEEVENT -2
+Apr 29 02:08:33 diana ipop-tincan[901]: Cleanup
+Apr 29 02:08:33 diana ipop-tincan[901]: [04/29 02:08:33.275573] Connect: XMPP CONNECTING
+Apr 29 02:08:33 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 02:08:33 diana ipop-tincan[901]: [04/29 02:08:33.277277] OnCloseEvent: ONCLOSEEVENT -2
+Apr 29 02:08:48 diana ipop-tincan[901]: Cleanup
+Apr 29 02:08:48 diana ipop-tincan[901]: [04/29 02:08:48.282134] Connect: XMPP CONNECTING
+Apr 29 02:08:48 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 02:08:48 diana ipop-tincan[901]: [04/29 02:08:48.284681] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 3 days ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 29 01:35:43 diana python[902]: [20190429 01:35:43.561] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 01:39:13 diana python[902]: [20190429 01:39:13.573] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 01:42:43 diana python[902]: [20190429 01:42:43.581] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 01:46:13 diana python[902]: [20190429 01:46:13.587] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 01:49:43 diana python[902]: [20190429 01:49:43.598] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 01:53:13 diana python[902]: [20190429 01:53:13.609] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 01:56:43 diana python[902]: [20190429 01:56:43.621] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 02:00:13 diana python[902]: [20190429 02:00:13.632] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 02:03:43 diana python[902]: [20190429 02:03:43.644] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 02:07:13 diana python[902]: [20190429 02:07:13.655] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2053ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.056 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.056/0.073/0.083/0.015 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+[143894.595157] perf: interrupt took too long (6303 > 6278), lowering kernel.perf_event_max_sample_rate to 31500
+
+
+#########################################################
+
+############## 04/29/19 06:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 06:00:01 up 3 days,  6:01,  0 users,  load average: 0.24, 0.19, 0.17
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 3 days ago
+ Main PID: 901 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─901 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 29 05:59:24 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 05:59:24 diana ipop-tincan[901]: [04/29 05:59:24.041139] OnCloseEvent: ONCLOSEEVENT -2
+Apr 29 05:59:39 diana ipop-tincan[901]: Cleanup
+Apr 29 05:59:39 diana ipop-tincan[901]: [04/29 05:59:39.043438] Connect: XMPP CONNECTING
+Apr 29 05:59:39 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 05:59:39 diana ipop-tincan[901]: [04/29 05:59:39.045102] OnCloseEvent: ONCLOSEEVENT -2
+Apr 29 05:59:54 diana ipop-tincan[901]: Cleanup
+Apr 29 05:59:54 diana ipop-tincan[901]: [04/29 05:59:54.050254] Connect: XMPP CONNECTING
+Apr 29 05:59:54 diana ipop-tincan[901]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 05:59:54 diana ipop-tincan[901]: [04/29 05:59:54.052813] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-04-25 23:58:32 EST; 3 days ago
+ Main PID: 902 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─902 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 29 05:26:44 diana python[902]: [20190429 05:26:44.271] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 05:30:14 diana python[902]: [20190429 05:30:14.282] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 05:33:44 diana python[902]: [20190429 05:33:44.294] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 05:37:14 diana python[902]: [20190429 05:37:14.304] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 05:40:44 diana python[902]: [20190429 05:40:44.315] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 05:44:14 diana python[902]: [20190429 05:44:14.323] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 05:47:44 diana python[902]: [20190429 05:47:44.328] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 05:51:14 diana python[902]: [20190429 05:51:14.339] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 05:54:44 diana python[902]: [20190429 05:54:44.350] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 29 05:58:14 diana python[902]: [20190429 05:58:14.362] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2032ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.084 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2032ms
+rtt min/avg/max/mdev = 0.082/0.083/0.084/0.000 ms
+
+
+ping: github.com: Name or service not known
+
+
+[125895.184492] hid-generic 0003:1410:9031.0022: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[125895.211681] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[125895.254134] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[125923.764699] IPv6: ipv6_create_tempaddr: regeneration time exceeded - disabled temporary address support
+[128478.473149] usb 1-3: USB disconnect, device number 37
+[128478.473330] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[128478.473586] xhci_hcd 0000:00:15.0: WARN Cannot submit Set TR Deq Ptr
+[128478.473589] xhci_hcd 0000:00:15.0: A Set TR Deq Ptr command is pending.
+[128478.473597] xhci_hcd 0000:00:15.0: WARN Set TR Deq Ptr cmd failed due to incorrect slot or ep state.
+[143894.595157] perf: interrupt took too long (6303 > 6278), lowering kernel.perf_event_max_sample_rate to 31500
+
+
+#########################################################
+
+############## 04/29/19 11:18:08 EST -0500 ##############
+
+#########################################################
+
+
+ 11:18:08 up 3 min,  0 users,  load average: 0.12, 0.20, 0.09
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-04-29 11:15:08 EST; 3min 0s ago
+ Main PID: 871 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─871 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 29 11:17:39 diana ipop-tincan[871]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 11:17:39 diana ipop-tincan[871]: [04/29 11:17:39.350750] OnCloseEvent: ONCLOSEEVENT -2
+Apr 29 11:17:54 diana ipop-tincan[871]: Cleanup
+Apr 29 11:17:54 diana ipop-tincan[871]: [04/29 11:17:54.356995] Connect: XMPP CONNECTING
+Apr 29 11:17:54 diana ipop-tincan[871]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 11:17:54 diana ipop-tincan[871]: [04/29 11:17:54.358895] OnCloseEvent: ONCLOSEEVENT -2
+Apr 29 11:18:09 diana ipop-tincan[871]: Cleanup
+Apr 29 11:18:09 diana ipop-tincan[871]: [04/29 11:18:09.372902] Connect: XMPP CONNECTING
+Apr 29 11:18:09 diana ipop-tincan[871]: OpenSSLAdapter::OnCloseEvent(-2)
+Apr 29 11:18:09 diana ipop-tincan[871]: [04/29 11:18:09.374323] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-04-29 11:15:08 EST; 3min 3s ago
+ Main PID: 872 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─872 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 29 11:15:54 diana python[872]: [20190429 11:15:54.721] INFO:p2p state: searching
+Apr 29 11:16:09 diana python[872]: [20190429 11:16:09.727] INFO:p2p state: searching
+Apr 29 11:16:24 diana python[872]: [20190429 11:16:24.734] INFO:p2p state: searching
+Apr 29 11:16:39 diana python[872]: [20190429 11:16:39.740] INFO:p2p state: searching
+Apr 29 11:16:54 diana python[872]: [20190429 11:16:54.745] INFO:p2p state: searching
+Apr 29 11:17:09 diana python[872]: [20190429 11:17:09.751] INFO:p2p state: searching
+Apr 29 11:17:24 diana python[872]: [20190429 11:17:24.757] INFO:p2p state: searching
+Apr 29 11:17:39 diana python[872]: [20190429 11:17:39.762] INFO:p2p state: searching
+Apr 29 11:17:54 diana python[872]: [20190429 11:17:54.770] INFO:p2p state: searching
+Apr 29 11:18:09 diana python[872]: [20190429 11:18:09.776] INFO:p2p state: searching
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2026ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.059 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.059/0.075/0.083/0.011 ms
+
+
+ping: github.com: Name or service not known
+
+
+[    9.084148] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    9.084150] Bluetooth: BNEP filters: protocol multicast
+[    9.084160] Bluetooth: BNEP socket layer initialized
+[    9.997422] IPv6: ADDRCONF(NETDEV_UP): eno1: link is not ready
+[   10.026498] IPv6: ADDRCONF(NETDEV_UP): eno1: link is not ready
+[   10.037285] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[   10.064494] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[   10.075209] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[   11.672711] igb 0000:03:00.0 eno1: igb: eno1 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+[   11.672956] IPv6: ADDRCONF(NETDEV_CHANGE): eno1: link becomes ready
