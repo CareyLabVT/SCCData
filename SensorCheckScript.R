@@ -8,6 +8,7 @@ library(lubridate)
 output_dir <- "~/data/SCCData/daily-email/"
 download.file('https://github.com/CareyLabVT/SCCData/raw/carina-data/FCRmet.csv','FCRmet.csv')
 download.file('https://github.com/CareyLabVT/SCCData/raw/mia-data/Catwalk.csv','Catwalk.csv')
+download.file('https://github.com/CareyLabVT/SCCData/raw/diana-data/FCRweir.csv','FCRweir.csv')
 
 metheader<-read.csv("FCRmet.csv", skip=1, as.is=T) #get header minus wonky Campbell rows
 metdata<-read.csv("FCRmet.csv", skip=4, header=F) #get data minus wonky Campbell rows
@@ -133,4 +134,39 @@ legend("right",c("0.1m","1m", "2m", "3m", "4m", "5m", "6m", "7m","8m", "9m"),
        text.col=c("firebrick4", "firebrick1", "DarkOrange1", "gold", "greenyellow", "medium sea green", "sea green",
              "DeepSkyBlue4", "blue2", "blue4"), cex=1, y.intersp=1, x.intersp=0.001, inset=c(0,0), xpd=T, bty='n')
 
+dev.off() #file made!
+
+
+weirheader<-read.csv("FCRweir.csv", skip=1, as.is=T) #get header minus wonky Campbell rows
+weirdata<-read.csv("FCRweir.csv", skip=4, header=F) #get data minus wonky Campbell rows
+names(weirdata)<-names(weirheader) #combine the names to deal with Campbell logger formatting
+
+end.time2 <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), tzone = "Etc/GMT+5") #gives us current time with rounded minutes in EDT
+start.time2 <- end.time2 - days(5) #to give us five days of data for looking at changes
+full_time2 <- seq(start.time2, end.time2, by = "15 min") #create sequence of dates from past 5 days to fill in data
+
+obs2 <- array(NA,dim=c(length(full_time2),7)) #create array that will be filled in with 8 columns
+weirdata$TIMESTAMP<-as.POSIXct(strptime(weirdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
+
+#get columns
+for(i in 1:length(full_time2)){ #this loop looks for matching dates and extracts data from metdata file to obs array
+  index = which(weirdata$TIMESTAMP==full_time2[i])
+  if(length(index)>0){
+    obs2[i,] <- unlist(weirdata[index,c(1:7)])
+  }
+}
+obs2<-as.data.frame(obs2) #make into DF
+colnames(obs2)<-names(weirdata[index,c(1:7)]) #get column names
+obs2$TIMESTAMP<-full_time2 #now have your array with a proper timedate stamp!
+
+pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+par(mfrow=c(3,2))
+plot(obs2$TIMESTAMP,obs2$RECORD, main="RECORD", xlab="Time", ylab="Number", type='l')
+plot(obs2$TIMESTAMP,obs2$BattV, main="Battery", xlab="Time", ylab="Volts", type='l')
+if(min(na.omit(obs2$BattV))<11.5){
+  mtext("Battery Charge Low", side = 3, col="red")
+}
+plot(obs2$TIMESTAMP,obs2$AirTemp_C, main="Air Temp", xlab="Time", ylab="degrees C", type='l')
+plot(obs2$TIMESTAMP,obs2$Lvl_psi, main="Water Level", xlab="Time", ylab="psi", type='l')
+plot(obs2$TIMESTAMP,obs2$wtr_weir, main="Water Temp", xlab="Time", ylab="degrees C", type='l')
 dev.off() #file made!
