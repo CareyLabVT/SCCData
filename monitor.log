@@ -17865,3 +17865,1794 @@ rtt min/avg/max/mdev = 108.551/109.532/110.129/0.749 ms
 [43826.616298] hid-generic 0003:1410:9031.0017: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
 [43826.649035] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
 [43826.684748] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+
+
+#########################################################
+
+############## 05/14/19 06:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 06:00:01 up 16:12,  0 users,  load average: 0.13, 0.07, 0.08
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+enx0015ff080733:
+10.248.110.225/30
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.248.110.225  netmask 255.255.255.252  broadcast 10.248.110.227
+        inet6 fe80::7292:b4e5:871b:cfeb  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 4842  bytes 565279 (565.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7741  bytes 1388390 (1.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 16h ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 14 05:59:54 diana ipop-tincan[969]: [05/14 05:59:54.136428] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 05:59:56 diana ipop-tincan[969]: [05/14 05:59:56.137174] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 05:59:56 diana ipop-tincan[969]: [05/14 05:59:56.137287] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 05:59:56 diana ipop-tincan[969]: [05/14 05:59:56.137332] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 05:59:58 diana ipop-tincan[969]: [05/14 05:59:58.137816] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 05:59:58 diana ipop-tincan[969]: [05/14 05:59:58.137930] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 05:59:58 diana ipop-tincan[969]: [05/14 05:59:58.137975] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 06:00:00 diana ipop-tincan[969]: [05/14 06:00:00.138624] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 06:00:00 diana ipop-tincan[969]: [05/14 06:00:00.138731] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 06:00:00 diana ipop-tincan[969]: [05/14 06:00:00.138775] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 16h ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 14 05:59:44 diana python[970]: [20190514 05:59:44.024] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+May 14 05:59:44 diana python[970]: [20190514 05:59:44.026] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+May 14 05:59:44 diana python[970]: [20190514 05:59:44.027] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+May 14 05:59:44 diana python[970]: [20190514 05:59:44.028] INFO:p2p state: CONNECTED
+May 14 05:59:44 diana python[970]: [20190514 05:59:44.290] INFO:recv con_ack (successor): 249ee114d182cfc3279a919454c017d547b13651
+May 14 05:59:44 diana python[970]: [20190514 05:59:44.291] INFO:Creating Link with peer
+May 14 05:59:46 diana python[970]: [20190514 05:59:46.082] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+May 14 05:59:53 diana python[970]: [20190514 05:59:53.102] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+May 14 05:59:59 diana python[970]: [20190514 05:59:59.035] INFO:p2p state: CONNECTED
+May 14 06:00:01 diana python[970]: [20190514 06:00:01.090] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=49 time=106 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=49 time=123 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=49 time=100 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 100.269/110.124/123.840/10.002 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2049ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=215 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=297 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=194 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 194.660/235.712/297.217/44.297 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=188 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=279 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=167 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 167.650/212.126/279.834/48.658 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.053 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.069 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2026ms
+rtt min/avg/max/mdev = 0.053/0.068/0.083/0.014 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=48 time=181 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=48 time=199 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=48 time=162 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 162.952/181.088/199.182/14.794 ms
+
+
+[57419.749377] usb 1-3: New USB device found, idVendor=1410, idProduct=9031, bcdDevice= 3.10
+[57419.749385] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[57419.749391] usb 1-3: Product: MiFi USB730L
+[57419.749396] usb 1-3: Manufacturer: Novatel Wireless
+[57419.749401] usb 1-3: SerialNumber: 0123456789ABCDEF
+[57419.789252] rndis_host 1-3:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-3, RNDIS device, 00:15:ff:08:07:33
+[57419.804715] cdc_acm 1-3:1.12: ttyACM0: USB ACM device
+[57419.809013] hid-generic 0003:1410:9031.001D: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[57419.835505] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[57419.868458] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+
+
+#########################################################
+
+############## 05/14/19 12:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 12:00:01 up 22:12,  0 users,  load average: 0.25, 0.17, 0.15
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+enx0015ff080733:
+10.246.131.83/29
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.246.131.83  netmask 255.255.255.248  broadcast 10.246.131.87
+        inet6 fe80::7292:b4e5:871b:cfeb  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 1966  bytes 235394 (235.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2064  bytes 365167 (365.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 22h ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 14 11:59:58 diana ipop-tincan[969]: [05/14 11:59:58.447946] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 11:59:58 diana ipop-tincan[969]: Jingle:Net[enx0015ff080733:10.246.131.80/29]: Allocation Phase=SslTcp
+May 14 11:59:58 diana ipop-tincan[969]: Jingle:Net[eno1:192.168.1.0/24]: Allocation Phase=SslTcp
+May 14 11:59:58 diana ipop-tincan[969]: All candidates gathered for ipop-tincan:1:0
+May 14 11:59:58 diana ipop-tincan[969]: Transport: ipop-tincan, component 1 allocation complete
+May 14 11:59:58 diana ipop-tincan[969]: Transport: ipop-tincan allocation complete
+May 14 11:59:58 diana ipop-tincan[969]: [05/14 11:59:58.497747] SendToPeer: XMPP SEND uid 249ee114d182cfc3279a919454c017d547b13651 data 03:E5:B6:A4:25:52:80:6C:9D:4D:4E:E2:C2:FC:D1:2B:6C:89:49:8B +yqzVGur:1:udp:192.168.1.5:52906:2121867007:R6tT9wJ5yHhzzKXD:fABgI73oZGYxALfwJXmomFbi:local:eno1:0:211156821 333SUORL:1:udp:97.47.88.11:8120:1685659391:BRgG4qnjAeHwkUjt:aqn279qeFYR+pOVQtIcTbif5:stun:eno1:0:2781507712 C///Jsx4:1:tcp:192.168.1.5:43267:1517887231:I1aJu1BXeZaFTgGn:P7+AA2IbgBNgiWsgFE7mtcaT:local:eno1:0:1108738981 IGyShuno:1:udp:10.246.131.83:55956:2121932543:hLd0AEjuDzBkGlcY:LBrll4RdCHkYPUDIA+bgPPnI:local:enx0015ff080733:0:1706121587 PMWT8LhU:1:tcp:10.246.131.83:46917:1517952767:gzyksIEiGu0s3oiY:Z8ut9p52zMR56lGXK+kClyrY:local:enx0015ff080733:0:724739459 tgda1Njr:1:udp:97.47.88.11:8099:1685724927:MIw2vGOKF5fOqSPq:Vo6RZiuIXWk3lxKtZ+tUCN9Q:stun:enx0015ff080733:0:3841548231 type con_resp
+May 14 12:00:00 diana ipop-tincan[969]: [05/14 12:00:00.449632] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 12:00:00 diana ipop-tincan[969]: [05/14 12:00:00.449741] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 12:00:00 diana ipop-tincan[969]: [05/14 12:00:00.449786] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 22h ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 14 11:59:40 diana python[970]: [20190514 11:59:40.226] INFO:p2p state: CONNECTED
+May 14 11:59:43 diana python[970]: [20190514 11:59:43.199] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+May 14 11:59:50 diana python[970]: [20190514 11:59:50.399] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+May 14 11:59:55 diana python[970]: [20190514 11:59:55.234] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+May 14 11:59:55 diana python[970]: [20190514 11:59:55.235] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+May 14 11:59:55 diana python[970]: [20190514 11:59:55.236] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+May 14 11:59:55 diana python[970]: [20190514 11:59:55.238] INFO:p2p state: CONNECTED
+May 14 11:59:55 diana python[970]: [20190514 11:59:55.490] INFO:recv con_ack (successor): 249ee114d182cfc3279a919454c017d547b13651
+May 14 11:59:55 diana python[970]: [20190514 11:59:55.491] INFO:Creating Link with peer
+May 14 11:59:58 diana python[970]: [20190514 11:59:58.213] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=49 time=90.8 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=49 time=74.9 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=49 time=68.1 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 68.193/77.988/90.829/9.494 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2030ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=705 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=271 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=202 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 202.352/393.223/705.696/222.754 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=165 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=228 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=232 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 165.172/208.849/232.916/30.937 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.062 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2047ms
+rtt min/avg/max/mdev = 0.062/0.076/0.083/0.009 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=46 time=146 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=46 time=151 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=46 time=119 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 119.097/139.314/151.944/14.446 ms
+
+
+[79515.065622] usb 1-3: New USB device found, idVendor=1410, idProduct=9031, bcdDevice= 3.10
+[79515.065630] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[79515.065635] usb 1-3: Product: MiFi USB730L
+[79515.065640] usb 1-3: Manufacturer: Novatel Wireless
+[79515.065645] usb 1-3: SerialNumber: 0123456789ABCDEF
+[79515.122888] rndis_host 1-3:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-3, RNDIS device, 00:15:ff:08:07:33
+[79515.134386] cdc_acm 1-3:1.12: ttyACM0: USB ACM device
+[79515.136451] hid-generic 0003:1410:9031.0027: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[79515.169849] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[79515.203651] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+
+
+#########################################################
+
+############## 05/14/19 18:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 18:00:01 up 1 day,  4:12,  0 users,  load average: 0.22, 0.15, 0.11
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+enx0015ff080733:
+10.225.78.214/30
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.225.78.214  netmask 255.255.255.252  broadcast 10.225.78.215
+        inet6 fe80::7292:b4e5:871b:cfeb  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 60470  bytes 6880421 (6.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 67335  bytes 11451256 (11.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 4h ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 14 17:59:55 diana ipop-tincan[969]: [05/14 17:59:55.468083] SendToPeer: XMPP SEND uid b7e5e4036281f1fdc4e874258965570c822150ec data 03:E5:B6:A4:25:52:80:6C:9D:4D:4E:E2:C2:FC:D1:2B:6C:89:49:8B CL4qg468:1:udp:97.47.72.77:8713:1685724927:s70oZolDDGdGp7bk:lR5SqO4H89VYg//OSmrcuoZV:stun:enx0015ff080733:0:3373501941 PrmEogbX:1:udp:10.225.78.214:52357:2121932543:qiBwJLXGUDtlRim8:fIEBz5c3qO9JTqlRCWu76aKf:local:enx0015ff080733:0:1213958977 Zvw/EH/k:1:udp:192.168.1.5:58725:2121867007:PYQAQSLPzDqD3fAT:7N3w+ZklLEhiadx4A7H0cVYE:local:eno1:0:211156821 al+ymaI8:1:tcp:10.225.78.214:36571:1517952767:piC/raMtzvR676hM:GgfCWmTxgFQY8jeusmVRSXw9:local:enx0015ff080733:0:114849713 lyEFjhHd:1:udp:97.47.72.77:8732:1685659391:TZz2NI3VpCnZkG+W:3Ek8My3ff2xPi9RCcYFGj8sP:stun:eno1:0:2781507712 q/RvbPMy:1:tcp:192.168.1.5:33173:1517887231:T3Bwg5asRoA5o2Du:y2It6n83iIEGb+7kU8RiyDWw:local:eno1:0:1108738981 type con_resp
+May 14 17:59:56 diana ipop-tincan[969]: [05/14 17:59:56.140736] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 17:59:56 diana ipop-tincan[969]: [05/14 17:59:56.140839] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 17:59:56 diana ipop-tincan[969]: [05/14 17:59:56.140883] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 17:59:58 diana ipop-tincan[969]: [05/14 17:59:58.142552] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 17:59:58 diana ipop-tincan[969]: [05/14 17:59:58.142659] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 17:59:58 diana ipop-tincan[969]: [05/14 17:59:58.142703] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 18:00:00 diana ipop-tincan[969]: [05/14 18:00:00.144033] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 18:00:00 diana ipop-tincan[969]: [05/14 18:00:00.144140] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+May 14 18:00:00 diana ipop-tincan[969]: [05/14 18:00:00.144185] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 4h ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 14 17:59:51 diana python[970]: [20190514 17:59:51.839] INFO:Trimming Link with peer b7e5e4036281f1fdc4e874258965570c822150ec
+May 14 17:59:52 diana python[970]: [20190514 17:59:51.842] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+May 14 17:59:52 diana python[970]: [20190514 17:59:51.842] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+May 14 17:59:52 diana python[970]: [20190514 17:59:51.843] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+May 14 17:59:52 diana python[970]: [20190514 17:59:51.844] INFO:sent con_req (successor): b7e5e4036281f1fdc4e874258965570c822150ec
+May 14 17:59:52 diana python[970]: [20190514 17:59:51.845] INFO:p2p state: CONNECTED
+May 14 17:59:52 diana python[970]: [20190514 17:59:52.094] INFO:recv con_ack (successor): 249ee114d182cfc3279a919454c017d547b13651
+May 14 17:59:52 diana python[970]: [20190514 17:59:52.097] INFO:Creating Link with peer
+May 14 17:59:52 diana python[970]: [20190514 17:59:52.460] INFO:recv con_ack (successor): b7e5e4036281f1fdc4e874258965570c822150ec
+May 14 17:59:52 diana python[970]: [20190514 17:59:52.462] INFO:Creating Link with peer
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=48 time=145 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=48 time=97.6 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=48 time=114 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 97.655/119.191/145.836/20.000 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2044ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=147 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=206 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=313 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 147.232/222.340/313.156/68.644 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2033ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.088 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2056ms
+rtt min/avg/max/mdev = 0.083/0.084/0.088/0.010 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=48 time=106 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=48 time=194 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=48 time=148 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+rtt min/avg/max/mdev = 106.636/149.940/194.284/35.789 ms
+
+
+[90719.423319] usb 1-3: New USB device found, idVendor=1410, idProduct=9031, bcdDevice= 3.10
+[90719.423327] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[90719.423333] usb 1-3: Product: MiFi USB730L
+[90719.423338] usb 1-3: Manufacturer: Novatel Wireless
+[90719.423343] usb 1-3: SerialNumber: 0123456789ABCDEF
+[90719.450670] rndis_host 1-3:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-3, RNDIS device, 00:15:ff:08:07:33
+[90719.458202] cdc_acm 1-3:1.12: ttyACM0: USB ACM device
+[90719.460660] hid-generic 0003:1410:9031.0030: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-3/input14
+[90719.482238] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[90719.518234] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+
+
+#########################################################
+
+############## 05/15/19 00:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 00:00:01 up 1 day, 10:12,  0 users,  load average: 0.04, 0.14, 0.11
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 10h ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 14 23:59:23 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 14 23:59:23 diana ipop-tincan[969]: [05/14 23:59:23.117784] OnCloseEvent: ONCLOSEEVENT -2
+May 14 23:59:38 diana ipop-tincan[969]: Cleanup
+May 14 23:59:38 diana ipop-tincan[969]: [05/14 23:59:38.122907] Connect: XMPP CONNECTING
+May 14 23:59:38 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 14 23:59:38 diana ipop-tincan[969]: [05/14 23:59:38.124883] OnCloseEvent: ONCLOSEEVENT -2
+May 14 23:59:53 diana ipop-tincan[969]: Cleanup
+May 14 23:59:53 diana ipop-tincan[969]: [05/14 23:59:53.129046] Connect: XMPP CONNECTING
+May 14 23:59:53 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 14 23:59:53 diana ipop-tincan[969]: [05/14 23:59:53.130912] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 10h ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 14 23:25:08 diana python[970]: [20190514 23:25:08.701] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 14 23:28:38 diana python[970]: [20190514 23:28:38.710] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 14 23:32:08 diana python[970]: [20190514 23:32:08.721] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 14 23:35:38 diana python[970]: [20190514 23:35:38.733] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 14 23:39:08 diana python[970]: [20190514 23:39:08.744] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 14 23:42:38 diana python[970]: [20190514 23:42:38.755] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 14 23:46:08 diana python[970]: [20190514 23:46:08.766] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 14 23:49:38 diana python[970]: [20190514 23:49:38.778] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 14 23:53:08 diana python[970]: [20190514 23:53:08.789] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 14 23:56:38 diana python[970]: [20190514 23:56:38.800] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2028ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.060 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.066 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2054ms
+rtt min/avg/max/mdev = 0.060/0.069/0.083/0.013 ms
+
+
+ping: github.com: Name or service not known
+
+
+[113535.812924] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[113535.846534] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[115535.057484] audit: type=1400 audit(1557888771.571:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=26995 comm="apparmor_parser"
+[115536.173057] audit: type=1400 audit(1557888772.687:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=26994 comm="apparmor_parser"
+[115536.211470] audit: type=1400 audit(1557888772.727:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine" pid=26997 comm="apparmor_parser"
+[115536.211479] audit: type=1400 audit(1557888772.727:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=26997 comm="apparmor_parser"
+[115536.219845] audit: type=1400 audit(1557888772.735:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=26999 comm="apparmor_parser"
+[115536.221344] audit: type=1400 audit(1557888772.735:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=27000 comm="apparmor_parser"
+[115896.158454] usb 1-3: USB disconnect, device number 56
+[115896.158702] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+
+
+#########################################################
+
+############## 05/15/19 02:09:01 EST -0500 ##############
+
+#########################################################
+
+
+ 02:09:01 up 1 day, 12:21,  0 users,  load average: 0.00, 0.00, 0.00
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 12h ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 15 02:08:26 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 02:08:26 diana ipop-tincan[969]: [05/15 02:08:26.104192] OnCloseEvent: ONCLOSEEVENT -2
+May 15 02:08:41 diana ipop-tincan[969]: Cleanup
+May 15 02:08:41 diana ipop-tincan[969]: [05/15 02:08:41.108165] Connect: XMPP CONNECTING
+May 15 02:08:41 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 02:08:41 diana ipop-tincan[969]: [05/15 02:08:41.110023] OnCloseEvent: ONCLOSEEVENT -2
+May 15 02:08:56 diana ipop-tincan[969]: Cleanup
+May 15 02:08:56 diana ipop-tincan[969]: [05/15 02:08:56.113985] Connect: XMPP CONNECTING
+May 15 02:08:56 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 02:08:56 diana ipop-tincan[969]: [05/15 02:08:56.115873] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 12h ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 15 01:34:39 diana python[970]: [20190515 01:34:39.109] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 01:38:09 diana python[970]: [20190515 01:38:09.121] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 01:41:39 diana python[970]: [20190515 01:41:39.133] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 01:45:09 diana python[970]: [20190515 01:45:09.138] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 01:48:39 diana python[970]: [20190515 01:48:39.150] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 01:52:09 diana python[970]: [20190515 01:52:09.162] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 01:55:39 diana python[970]: [20190515 01:55:39.173] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 01:59:09 diana python[970]: [20190515 01:59:09.180] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 02:02:39 diana python[970]: [20190515 02:02:39.191] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 02:06:09 diana python[970]: [20190515 02:06:09.198] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2026ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.039 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2026ms
+rtt min/avg/max/mdev = 0.039/0.068/0.083/0.021 ms
+
+
+ping: github.com: Name or service not known
+
+
+[113535.812924] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[113535.846534] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[115535.057484] audit: type=1400 audit(1557888771.571:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=26995 comm="apparmor_parser"
+[115536.173057] audit: type=1400 audit(1557888772.687:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=26994 comm="apparmor_parser"
+[115536.211470] audit: type=1400 audit(1557888772.727:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine" pid=26997 comm="apparmor_parser"
+[115536.211479] audit: type=1400 audit(1557888772.727:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=26997 comm="apparmor_parser"
+[115536.219845] audit: type=1400 audit(1557888772.735:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=26999 comm="apparmor_parser"
+[115536.221344] audit: type=1400 audit(1557888772.735:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=27000 comm="apparmor_parser"
+[115896.158454] usb 1-3: USB disconnect, device number 56
+[115896.158702] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+
+
+#########################################################
+
+############## 05/15/19 06:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 06:00:01 up 1 day, 16:12,  0 users,  load average: 0.01, 0.02, 0.00
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 16h ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 15 05:59:31 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 05:59:31 diana ipop-tincan[969]: [05/15 05:59:31.260625] OnCloseEvent: ONCLOSEEVENT -2
+May 15 05:59:46 diana ipop-tincan[969]: Cleanup
+May 15 05:59:46 diana ipop-tincan[969]: [05/15 05:59:46.264113] Connect: XMPP CONNECTING
+May 15 05:59:46 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 05:59:46 diana ipop-tincan[969]: [05/15 05:59:46.266036] OnCloseEvent: ONCLOSEEVENT -2
+May 15 06:00:01 diana ipop-tincan[969]: Cleanup
+May 15 06:00:01 diana ipop-tincan[969]: [05/15 06:00:01.268463] Connect: XMPP CONNECTING
+May 15 06:00:01 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 06:00:01 diana ipop-tincan[969]: [05/15 06:00:01.270385] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 16h ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 15 05:25:39 diana python[970]: [20190515 05:25:39.823] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 05:29:09 diana python[970]: [20190515 05:29:09.830] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 05:32:39 diana python[970]: [20190515 05:32:39.841] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 05:36:09 diana python[970]: [20190515 05:36:09.853] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 05:39:39 diana python[970]: [20190515 05:39:39.864] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 05:43:09 diana python[970]: [20190515 05:43:09.875] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 05:46:39 diana python[970]: [20190515 05:46:39.887] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 05:50:09 diana python[970]: [20190515 05:50:09.899] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 05:53:39 diana python[970]: [20190515 05:53:39.910] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 05:57:09 diana python[970]: [20190515 05:57:09.922] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2038ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.060 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2054ms
+rtt min/avg/max/mdev = 0.060/0.075/0.083/0.012 ms
+
+
+ping: github.com: Name or service not known
+
+
+[113535.812924] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[113535.846534] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[115535.057484] audit: type=1400 audit(1557888771.571:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=26995 comm="apparmor_parser"
+[115536.173057] audit: type=1400 audit(1557888772.687:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=26994 comm="apparmor_parser"
+[115536.211470] audit: type=1400 audit(1557888772.727:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine" pid=26997 comm="apparmor_parser"
+[115536.211479] audit: type=1400 audit(1557888772.727:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=26997 comm="apparmor_parser"
+[115536.219845] audit: type=1400 audit(1557888772.735:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=26999 comm="apparmor_parser"
+[115536.221344] audit: type=1400 audit(1557888772.735:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=27000 comm="apparmor_parser"
+[115896.158454] usb 1-3: USB disconnect, device number 56
+[115896.158702] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+
+
+#########################################################
+
+############## 05/15/19 12:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 12:00:01 up 1 day, 22:12,  0 users,  load average: 0.41, 0.20, 0.11
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 22h ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 15 11:59:22 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 11:59:22 diana ipop-tincan[969]: [05/15 11:59:22.419874] OnCloseEvent: ONCLOSEEVENT -2
+May 15 11:59:37 diana ipop-tincan[969]: Cleanup
+May 15 11:59:37 diana ipop-tincan[969]: [05/15 11:59:37.420736] Connect: XMPP CONNECTING
+May 15 11:59:37 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 11:59:37 diana ipop-tincan[969]: [05/15 11:59:37.422828] OnCloseEvent: ONCLOSEEVENT -2
+May 15 11:59:52 diana ipop-tincan[969]: Cleanup
+May 15 11:59:52 diana ipop-tincan[969]: [05/15 11:59:52.423697] Connect: XMPP CONNECTING
+May 15 11:59:52 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 11:59:52 diana ipop-tincan[969]: [05/15 11:59:52.425721] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 1 day 22h ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 15 11:26:10 diana python[970]: [20190515 11:26:10.963] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 11:29:40 diana python[970]: [20190515 11:29:40.974] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 11:33:10 diana python[970]: [20190515 11:33:10.985] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 11:36:40 diana python[970]: [20190515 11:36:40.996] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 11:40:11 diana python[970]: [20190515 11:40:11.006] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 11:43:41 diana python[970]: [20190515 11:43:41.017] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 11:47:11 diana python[970]: [20190515 11:47:11.028] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 11:50:41 diana python[970]: [20190515 11:50:41.040] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 11:54:11 diana python[970]: [20190515 11:54:11.051] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 11:57:41 diana python[970]: [20190515 11:57:41.063] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2030ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2056ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.059 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.059/0.075/0.083/0.011 ms
+
+
+ping: github.com: Name or service not known
+
+
+[113535.812924] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[113535.846534] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[115535.057484] audit: type=1400 audit(1557888771.571:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=26995 comm="apparmor_parser"
+[115536.173057] audit: type=1400 audit(1557888772.687:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=26994 comm="apparmor_parser"
+[115536.211470] audit: type=1400 audit(1557888772.727:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine" pid=26997 comm="apparmor_parser"
+[115536.211479] audit: type=1400 audit(1557888772.727:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=26997 comm="apparmor_parser"
+[115536.219845] audit: type=1400 audit(1557888772.735:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=26999 comm="apparmor_parser"
+[115536.221344] audit: type=1400 audit(1557888772.735:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=27000 comm="apparmor_parser"
+[115896.158454] usb 1-3: USB disconnect, device number 56
+[115896.158702] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+
+
+#########################################################
+
+############## 05/15/19 18:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 18:00:01 up 2 days,  4:12,  0 users,  load average: 0.33, 0.31, 0.22
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 15 17:59:29 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 17:59:29 diana ipop-tincan[969]: [05/15 17:59:29.043273] OnCloseEvent: ONCLOSEEVENT -2
+May 15 17:59:44 diana ipop-tincan[969]: Cleanup
+May 15 17:59:44 diana ipop-tincan[969]: [05/15 17:59:44.046625] Connect: XMPP CONNECTING
+May 15 17:59:44 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 17:59:44 diana ipop-tincan[969]: [05/15 17:59:44.049096] OnCloseEvent: ONCLOSEEVENT -2
+May 15 17:59:59 diana ipop-tincan[969]: Cleanup
+May 15 17:59:59 diana ipop-tincan[969]: [05/15 17:59:59.053934] Connect: XMPP CONNECTING
+May 15 17:59:59 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 17:59:59 diana ipop-tincan[969]: [05/15 17:59:59.056159] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 15 17:26:42 diana python[970]: [20190515 17:26:42.117] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 17:30:12 diana python[970]: [20190515 17:30:12.128] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 17:33:42 diana python[970]: [20190515 17:33:42.140] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 17:37:12 diana python[970]: [20190515 17:37:12.152] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 17:40:42 diana python[970]: [20190515 17:40:42.164] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 17:44:12 diana python[970]: [20190515 17:44:12.175] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 17:47:42 diana python[970]: [20190515 17:47:42.182] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 17:51:12 diana python[970]: [20190515 17:51:12.193] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 17:54:42 diana python[970]: [20190515 17:54:42.205] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 17:58:12 diana python[970]: [20190515 17:58:12.216] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2038ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2026ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.053 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.079 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.086 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2053ms
+rtt min/avg/max/mdev = 0.053/0.072/0.086/0.017 ms
+
+
+ping: github.com: Name or service not known
+
+
+[113535.812924] rndis_host 1-3:1.0 enx0015ff080733: renamed from eth0
+[113535.846534] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[115535.057484] audit: type=1400 audit(1557888771.571:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=26995 comm="apparmor_parser"
+[115536.173057] audit: type=1400 audit(1557888772.687:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=26994 comm="apparmor_parser"
+[115536.211470] audit: type=1400 audit(1557888772.727:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine" pid=26997 comm="apparmor_parser"
+[115536.211479] audit: type=1400 audit(1557888772.727:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=26997 comm="apparmor_parser"
+[115536.219845] audit: type=1400 audit(1557888772.735:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=26999 comm="apparmor_parser"
+[115536.221344] audit: type=1400 audit(1557888772.735:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=27000 comm="apparmor_parser"
+[115896.158454] usb 1-3: USB disconnect, device number 56
+[115896.158702] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+
+
+#########################################################
+
+############## 05/16/19 00:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 00:00:01 up 2 days, 10:12,  0 users,  load average: 0.00, 0.00, 0.00
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 15 23:59:23 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 23:59:23 diana ipop-tincan[969]: [05/15 23:59:23.140362] OnCloseEvent: ONCLOSEEVENT -2
+May 15 23:59:38 diana ipop-tincan[969]: Cleanup
+May 15 23:59:38 diana ipop-tincan[969]: [05/15 23:59:38.151418] Connect: XMPP CONNECTING
+May 15 23:59:38 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 23:59:38 diana ipop-tincan[969]: [05/15 23:59:38.153632] OnCloseEvent: ONCLOSEEVENT -2
+May 15 23:59:53 diana ipop-tincan[969]: Cleanup
+May 15 23:59:53 diana ipop-tincan[969]: [05/15 23:59:53.157652] Connect: XMPP CONNECTING
+May 15 23:59:53 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 15 23:59:53 diana ipop-tincan[969]: [05/15 23:59:53.159521] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 15 23:27:13 diana python[970]: [20190515 23:27:13.248] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 23:30:43 diana python[970]: [20190515 23:30:43.260] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 23:34:13 diana python[970]: [20190515 23:34:13.271] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 23:37:43 diana python[970]: [20190515 23:37:43.282] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 23:41:13 diana python[970]: [20190515 23:41:13.294] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 23:44:43 diana python[970]: [20190515 23:44:43.304] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 23:48:13 diana python[970]: [20190515 23:48:13.315] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 23:51:43 diana python[970]: [20190515 23:51:43.327] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 23:55:13 diana python[970]: [20190515 23:55:13.334] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 15 23:58:43 diana python[970]: [20190515 23:58:43.343] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2035ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.038 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.086 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.085 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2054ms
+rtt min/avg/max/mdev = 0.038/0.069/0.086/0.024 ms
+
+
+ping: github.com: Name or service not known
+
+
+[113535.846534] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[115535.057484] audit: type=1400 audit(1557888771.571:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=26995 comm="apparmor_parser"
+[115536.173057] audit: type=1400 audit(1557888772.687:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=26994 comm="apparmor_parser"
+[115536.211470] audit: type=1400 audit(1557888772.727:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine" pid=26997 comm="apparmor_parser"
+[115536.211479] audit: type=1400 audit(1557888772.727:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=26997 comm="apparmor_parser"
+[115536.219845] audit: type=1400 audit(1557888772.735:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=26999 comm="apparmor_parser"
+[115536.221344] audit: type=1400 audit(1557888772.735:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=27000 comm="apparmor_parser"
+[115896.158454] usb 1-3: USB disconnect, device number 56
+[115896.158702] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[204479.756321] perf: interrupt took too long (6274 > 6271), lowering kernel.perf_event_max_sample_rate to 31750
+
+
+#########################################################
+
+############## 05/16/19 02:09:01 EST -0500 ##############
+
+#########################################################
+
+
+ 02:09:01 up 2 days, 12:21,  0 users,  load average: 0.00, 0.01, 0.01
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 16 02:08:26 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 16 02:08:26 diana ipop-tincan[969]: [05/16 02:08:26.387843] OnCloseEvent: ONCLOSEEVENT -2
+May 16 02:08:41 diana ipop-tincan[969]: Cleanup
+May 16 02:08:41 diana ipop-tincan[969]: [05/16 02:08:41.392101] Connect: XMPP CONNECTING
+May 16 02:08:41 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 16 02:08:41 diana ipop-tincan[969]: [05/16 02:08:41.394454] OnCloseEvent: ONCLOSEEVENT -2
+May 16 02:08:56 diana ipop-tincan[969]: Cleanup
+May 16 02:08:56 diana ipop-tincan[969]: [05/16 02:08:56.398370] Connect: XMPP CONNECTING
+May 16 02:08:56 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 16 02:08:56 diana ipop-tincan[969]: [05/16 02:08:56.400845] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 16 01:36:43 diana python[970]: [20190516 01:36:43.664] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 01:40:13 diana python[970]: [20190516 01:40:13.676] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 01:43:43 diana python[970]: [20190516 01:43:43.687] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 01:47:13 diana python[970]: [20190516 01:47:13.698] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 01:50:43 diana python[970]: [20190516 01:50:43.709] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 01:54:13 diana python[970]: [20190516 01:54:13.720] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 01:57:43 diana python[970]: [20190516 01:57:43.733] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 02:01:13 diana python[970]: [20190516 02:01:13.744] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 02:04:43 diana python[970]: [20190516 02:04:43.755] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 02:08:13 diana python[970]: [20190516 02:08:13.767] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2053ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.050 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.066 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2053ms
+rtt min/avg/max/mdev = 0.050/0.066/0.083/0.015 ms
+
+
+ping: github.com: Name or service not known
+
+
+[113535.846534] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[115535.057484] audit: type=1400 audit(1557888771.571:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=26995 comm="apparmor_parser"
+[115536.173057] audit: type=1400 audit(1557888772.687:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=26994 comm="apparmor_parser"
+[115536.211470] audit: type=1400 audit(1557888772.727:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine" pid=26997 comm="apparmor_parser"
+[115536.211479] audit: type=1400 audit(1557888772.727:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=26997 comm="apparmor_parser"
+[115536.219845] audit: type=1400 audit(1557888772.735:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=26999 comm="apparmor_parser"
+[115536.221344] audit: type=1400 audit(1557888772.735:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=27000 comm="apparmor_parser"
+[115896.158454] usb 1-3: USB disconnect, device number 56
+[115896.158702] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[204479.756321] perf: interrupt took too long (6274 > 6271), lowering kernel.perf_event_max_sample_rate to 31750
+
+
+#########################################################
+
+############## 05/16/19 06:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 06:00:01 up 2 days, 16:12,  0 users,  load average: 0.00, 0.01, 0.00
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 16 05:59:17 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 16 05:59:17 diana ipop-tincan[969]: [05/16 05:59:17.203179] OnCloseEvent: ONCLOSEEVENT -2
+May 16 05:59:32 diana ipop-tincan[969]: Cleanup
+May 16 05:59:32 diana ipop-tincan[969]: [05/16 05:59:32.207225] Connect: XMPP CONNECTING
+May 16 05:59:32 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 16 05:59:32 diana ipop-tincan[969]: [05/16 05:59:32.209417] OnCloseEvent: ONCLOSEEVENT -2
+May 16 05:59:47 diana ipop-tincan[969]: Cleanup
+May 16 05:59:47 diana ipop-tincan[969]: [05/16 05:59:47.213484] Connect: XMPP CONNECTING
+May 16 05:59:47 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 16 05:59:47 diana ipop-tincan[969]: [05/16 05:59:47.215332] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 16 05:27:44 diana python[970]: [20190516 05:27:44.382] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 05:31:14 diana python[970]: [20190516 05:31:14.393] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 05:34:44 diana python[970]: [20190516 05:34:44.405] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 05:38:14 diana python[970]: [20190516 05:38:14.416] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 05:41:44 diana python[970]: [20190516 05:41:44.423] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 05:45:14 diana python[970]: [20190516 05:45:14.435] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 05:48:44 diana python[970]: [20190516 05:48:44.446] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 05:52:14 diana python[970]: [20190516 05:52:14.457] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 05:55:44 diana python[970]: [20190516 05:55:44.469] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 05:59:14 diana python[970]: [20190516 05:59:14.480] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2024ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2053ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.052 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.079 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.084 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2025ms
+rtt min/avg/max/mdev = 0.052/0.071/0.084/0.017 ms
+
+
+ping: github.com: Name or service not known
+
+
+[113535.846534] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[115535.057484] audit: type=1400 audit(1557888771.571:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=26995 comm="apparmor_parser"
+[115536.173057] audit: type=1400 audit(1557888772.687:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=26994 comm="apparmor_parser"
+[115536.211470] audit: type=1400 audit(1557888772.727:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine" pid=26997 comm="apparmor_parser"
+[115536.211479] audit: type=1400 audit(1557888772.727:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=26997 comm="apparmor_parser"
+[115536.219845] audit: type=1400 audit(1557888772.735:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=26999 comm="apparmor_parser"
+[115536.221344] audit: type=1400 audit(1557888772.735:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=27000 comm="apparmor_parser"
+[115896.158454] usb 1-3: USB disconnect, device number 56
+[115896.158702] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[204479.756321] perf: interrupt took too long (6274 > 6271), lowering kernel.perf_event_max_sample_rate to 31750
+
+
+#########################################################
+
+############## 05/16/19 12:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 12:00:01 up 2 days, 22:12,  0 users,  load average: 0.52, 0.23, 0.14
+
+
+reboot   system boot  4.18.0-17-generi Mon May 13 13:47   still running
+reboot   system boot  4.18.0-17-generi Mon May 13 13:02   still running
+reboot   system boot  4.18.0-17-generi Mon May  6 12:44 - 13:49  (01:04)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:21 - 12:44  (00:23)
+reboot   system boot  4.18.0-17-generi Mon May  6 12:15 - 12:44  (00:29)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:36 - 12:44  (01:07)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:18 - 12:44  (01:26)
+reboot   system boot  4.18.0-17-generi Mon May  6 11:12 - 12:44  (01:32)
+reboot   system boot  4.18.0-17-generi Mon May  6 01:57 - 08:15  (06:17)
+reboot   system boot  4.18.0-17-generi Sun May  5 01:57 - 08:15  (06:17)
+
+
+
+
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 969 (ipop-tincan)
+    Tasks: 4 (limit: 4359)
+   CGroup: /system.slice/ipopTincan.service
+           └─969 /home/scc/applications/ipopbin/ipop-tincan
+
+May 16 11:59:26 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 16 11:59:26 diana ipop-tincan[969]: [05/16 11:59:26.275203] OnCloseEvent: ONCLOSEEVENT -2
+May 16 11:59:41 diana ipop-tincan[969]: Cleanup
+May 16 11:59:41 diana ipop-tincan[969]: [05/16 11:59:41.279124] Connect: XMPP CONNECTING
+May 16 11:59:41 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 16 11:59:41 diana ipop-tincan[969]: [05/16 11:59:41.281367] OnCloseEvent: ONCLOSEEVENT -2
+May 16 11:59:56 diana ipop-tincan[969]: Cleanup
+May 16 11:59:56 diana ipop-tincan[969]: [05/16 11:59:56.281926] Connect: XMPP CONNECTING
+May 16 11:59:56 diana ipop-tincan[969]: OpenSSLAdapter::OnCloseEvent(-2)
+May 16 11:59:56 diana ipop-tincan[969]: [05/16 11:59:56.283811] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-05-13 13:47:26 EST; 2 days ago
+ Main PID: 970 (python)
+    Tasks: 11 (limit: 4359)
+   CGroup: /system.slice/ipopController.service
+           └─970 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+May 16 11:28:15 diana python[970]: [20190516 11:28:15.502] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 11:31:45 diana python[970]: [20190516 11:31:45.514] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 11:35:15 diana python[970]: [20190516 11:35:15.526] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 11:38:45 diana python[970]: [20190516 11:38:45.534] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 11:42:15 diana python[970]: [20190516 11:42:15.545] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 11:45:45 diana python[970]: [20190516 11:45:45.558] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 11:49:15 diana python[970]: [20190516 11:49:15.570] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 11:52:45 diana python[970]: [20190516 11:52:45.578] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 11:56:15 diana python[970]: [20190516 11:56:15.589] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+May 16 11:59:45 diana python[970]: [20190516 11:59:45.596] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+
+
+connect: Network is unreachable
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2033ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.060 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.085 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.076 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2054ms
+rtt min/avg/max/mdev = 0.060/0.073/0.085/0.014 ms
+
+
+ping: github.com: Name or service not known
+
+
+[113535.846534] IPv6: ADDRCONF(NETDEV_UP): enx0015ff080733: link is not ready
+[115535.057484] audit: type=1400 audit(1557888771.571:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.gnome-characters.gnome-characters" pid=26995 comm="apparmor_parser"
+[115536.173057] audit: type=1400 audit(1557888772.687:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.gnome-characters" pid=26994 comm="apparmor_parser"
+[115536.211470] audit: type=1400 audit(1557888772.727:51): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine" pid=26997 comm="apparmor_parser"
+[115536.211479] audit: type=1400 audit(1557888772.727:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/core/6818/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=26997 comm="apparmor_parser"
+[115536.219845] audit: type=1400 audit(1557888772.735:53): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.core" pid=26999 comm="apparmor_parser"
+[115536.221344] audit: type=1400 audit(1557888772.735:54): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.core.hook.configure" pid=27000 comm="apparmor_parser"
+[115896.158454] usb 1-3: USB disconnect, device number 56
+[115896.158702] rndis_host 1-3:1.0 enx0015ff080733: unregister 'rndis_host' usb-0000:00:15.0-3, RNDIS device
+[204479.756321] perf: interrupt took too long (6274 > 6271), lowering kernel.perf_event_max_sample_rate to 31750
