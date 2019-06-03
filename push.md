@@ -119,3 +119,5 @@ Bethany, checking for missing MET data
 Bruno,02/08/19 10:50:01
 
 Bethany, test maintenance log
+
+Bethany, checking DO for SSS
