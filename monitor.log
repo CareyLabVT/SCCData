@@ -36928,3 +36928,883 @@ rtt min/avg/max/mdev = 7.236/7.293/7.353/0.109 ms
 [821090.995269] ata1.00: retrying FLUSH 0xe7 Emask 0x10
 [821090.995940] ahci 0000:00:12.0: port does not support device sleep
 [821090.996050] ata1: EH complete
+
+
+#########################################################
+
+############## 06/03/19 06:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 06:00:01 up 9 days, 22:25,  0 users,  load average: 0.14, 0.16, 0.17
+
+
+
+wtmp begins Sat Jun  1 18:59:08 2019
+
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 8087:0a2b Intel Corp. 
+Bus 001 Device 002: ID 04b4:6570 Cypress Semiconductor Corp. 
+Bus 001 Device 020: ID 1410:9031 Novatel Wireless 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+
+
+
+
+enx0015ff080733:
+100.91.107.52/29
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.91.107.52  netmask 255.255.255.248  broadcast 100.91.107.55
+        inet6 2600:1003:b84f:c72c:cdd8:29cb:4df1:e1a1  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:e1e0:511f:5cbe:a21c  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::7292:b4e5:871b:cfeb  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b84f:c72c:2912:3f75:2595:7990  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:2185:a756:df2a:cd7  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:ce8:e5e6:9682:119c  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 37673  bytes 2620323 (2.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 110918  bytes 32821529 (32.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+128.173.186.29/22
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 2 days ago
+ Main PID: 984 (ipop-tincan)
+    Tasks: 4 (limit: 4358)
+   CGroup: /system.slice/ipopTincan.service
+           └─984 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 03 05:59:56 diana ipop-tincan[984]: [06/03 05:59:56.712150] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 05:59:56 diana ipop-tincan[984]: [06/03 05:59:56.712198] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 05:59:56 diana ipop-tincan[984]: Error(stunport.cc:106): Binding request timed out from 100.91.107.52:56165 (enx0015ff080733)
+Jun 03 05:59:58 diana ipop-tincan[984]: [06/03 05:59:58.713907] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 05:59:58 diana ipop-tincan[984]: [06/03 05:59:58.714014] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 05:59:58 diana ipop-tincan[984]: [06/03 05:59:58.714061] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 06:00:00 diana ipop-tincan[984]: [06/03 06:00:00.715862] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 06:00:00 diana ipop-tincan[984]: [06/03 06:00:00.715968] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 06:00:00 diana ipop-tincan[984]: [06/03 06:00:00.716015] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 06:00:01 diana ipop-tincan[984]: Error(stunport.cc:106): Binding request timed out from 100.91.107.52:56813 (enx0015ff080733)
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 2 days ago
+ Main PID: 985 (python)
+    Tasks: 11 (limit: 4358)
+   CGroup: /system.slice/ipopController.service
+           └─985 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 03 05:59:42 diana python[985]: [20190603 05:59:42.359] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 05:59:42 diana python[985]: [20190603 05:59:42.359] INFO:p2p state: CONNECTED
+Jun 03 05:59:42 diana python[985]: [20190603 05:59:42.404] INFO:recv con_ack (successor): 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 05:59:42 diana python[985]: [20190603 05:59:42.406] INFO:Creating Link with peer
+Jun 03 05:59:45 diana python[985]: [20190603 05:59:45.153] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Jun 03 05:59:48 diana python[985]: [20190603 05:59:48.492] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 03 05:59:52 diana python[985]: [20190603 05:59:52.958] INFO:sent tincan_packet (exact): 90aa44756bd2f4fc2390f903a6f25f43216b0790
+Jun 03 05:59:56 diana python[985]: [20190603 05:59:56.156] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Jun 03 05:59:56 diana python[985]: [20190603 05:59:56.958] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jun 03 05:59:57 diana python[985]: [20190603 05:59:57.365] INFO:p2p state: CONNECTED
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=55 time=6.92 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=55 time=6.98 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=55 time=6.99 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 6.927/6.969/6.999/0.030 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2036ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=54.3 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=53.3 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=73.8 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 53.394/60.519/73.828/9.418 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=42.5 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=50.5 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=64.7 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 42.519/52.610/64.713/9.173 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.041 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.082 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.079 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.041/0.067/0.082/0.019 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=53 time=7.16 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=53 time=7.26 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=53 time=7.39 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 7.169/7.276/7.394/0.092 ms
+
+
+[821090.108669] ata1.00: failed command: FLUSH CACHE
+[821090.108681] ata1.00: cmd e7/00:00:00:00:00/00:00:00:00:00/a0 tag 24
+                         res 40/00:bc:20:6e:85/00:00:03:00:00/40 Emask 0x10 (ATA bus error)
+[821090.108683] ata1.00: status: { DRDY }
+[821090.108691] ata1: hard resetting link
+[821090.984632] ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[821090.995261] ata1.00: configured for UDMA/133
+[821090.995269] ata1.00: retrying FLUSH 0xe7 Emask 0x10
+[821090.995940] ahci 0000:00:12.0: port does not support device sleep
+[821090.996050] ata1: EH complete
+
+
+#########################################################
+
+############## 06/03/19 12:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 12:00:01 up 10 days,  4:25,  0 users,  load average: 0.18, 0.19, 0.18
+
+
+
+wtmp begins Sat Jun  1 18:59:08 2019
+
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 8087:0a2b Intel Corp. 
+Bus 001 Device 002: ID 04b4:6570 Cypress Semiconductor Corp. 
+Bus 001 Device 020: ID 1410:9031 Novatel Wireless 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+
+
+
+
+enx0015ff080733:
+100.91.107.52/29
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.91.107.52  netmask 255.255.255.248  broadcast 100.91.107.55
+        inet6 2600:1003:b84f:c72c:cdd8:29cb:4df1:e1a1  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:e1e0:511f:5cbe:a21c  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::7292:b4e5:871b:cfeb  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b84f:c72c:2912:3f75:2595:7990  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:2185:a756:df2a:cd7  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:ce8:e5e6:9682:119c  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 40592  bytes 2820266 (2.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 119447  bytes 35353925 (35.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+128.173.186.29/22
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 3 days ago
+ Main PID: 984 (ipop-tincan)
+    Tasks: 4 (limit: 4358)
+   CGroup: /system.slice/ipopTincan.service
+           └─984 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 03 11:59:57 diana ipop-tincan[984]: Adding allocated port for ipop-tincan
+Jun 03 11:59:57 diana ipop-tincan[984]: Jingle:Port[ipop-tincan:1:0:local:Net[enp2s0:128.173.184.0/22]]: Added port to allocator
+Jun 03 11:59:57 diana ipop-tincan[984]: [06/03 11:59:57.873887] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:59:57 diana ipop-tincan[984]: [06/03 11:59:57.873993] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:59:57 diana ipop-tincan[984]: [06/03 11:59:57.874042] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:59:58 diana ipop-tincan[984]: Jingle:Net[enx0015ff080733:100.91.107.48/29]: Allocation Phase=SslTcp
+Jun 03 11:59:58 diana ipop-tincan[984]: Jingle:Net[enp2s0:128.173.184.0/22]: Allocation Phase=SslTcp
+Jun 03 11:59:59 diana ipop-tincan[984]: [06/03 11:59:59.875334] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:59:59 diana ipop-tincan[984]: [06/03 11:59:59.875440] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:59:59 diana ipop-tincan[984]: [06/03 11:59:59.875486] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 3 days ago
+ Main PID: 985 (python)
+    Tasks: 11 (limit: 4358)
+   CGroup: /system.slice/ipopController.service
+           └─985 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 03 11:59:50 diana python[985]: [20190603 11:59:50.437] INFO:sent tincan_packet (exact): 90aa44756bd2f4fc2390f903a6f25f43216b0790
+Jun 03 11:59:54 diana python[985]: [20190603 11:59:54.179] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jun 03 11:59:54 diana python[985]: [20190603 11:59:54.967] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 11:59:54 diana python[985]: [20190603 11:59:54.969] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 11:59:54 diana python[985]: [20190603 11:59:54.971] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 11:59:54 diana python[985]: [20190603 11:59:54.973] INFO:p2p state: CONNECTED
+Jun 03 11:59:55 diana python[985]: [20190603 11:59:55.017] INFO:recv con_ack (successor): 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 11:59:55 diana python[985]: [20190603 11:59:55.018] INFO:Creating Link with peer
+Jun 03 11:59:55 diana python[985]: [20190603 11:59:55.150] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Jun 03 12:00:00 diana python[985]: [20190603 12:00:00.723] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=55 time=6.91 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=55 time=6.97 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=55 time=6.97 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 6.910/6.953/6.979/0.030 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2050ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=127 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=117 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=125 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 117.336/123.584/127.554/4.490 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=61.1 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=59.5 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=57.8 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 57.801/59.496/61.124/1.357 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.058 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.076 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2045ms
+rtt min/avg/max/mdev = 0.058/0.072/0.083/0.012 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=53 time=7.20 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=53 time=7.25 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=53 time=7.27 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 7.205/7.243/7.273/0.028 ms
+
+
+[821090.108669] ata1.00: failed command: FLUSH CACHE
+[821090.108681] ata1.00: cmd e7/00:00:00:00:00/00:00:00:00:00/a0 tag 24
+                         res 40/00:bc:20:6e:85/00:00:03:00:00/40 Emask 0x10 (ATA bus error)
+[821090.108683] ata1.00: status: { DRDY }
+[821090.108691] ata1: hard resetting link
+[821090.984632] ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[821090.995261] ata1.00: configured for UDMA/133
+[821090.995269] ata1.00: retrying FLUSH 0xe7 Emask 0x10
+[821090.995940] ahci 0000:00:12.0: port does not support device sleep
+[821090.996050] ata1: EH complete
+
+
+#########################################################
+
+############## 06/03/19 18:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 18:00:01 up 10 days, 10:25,  0 users,  load average: 0.37, 0.26, 0.20
+
+
+
+wtmp begins Sat Jun  1 18:59:08 2019
+
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 8087:0a2b Intel Corp. 
+Bus 001 Device 002: ID 04b4:6570 Cypress Semiconductor Corp. 
+Bus 001 Device 020: ID 1410:9031 Novatel Wireless 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+
+
+
+
+enx0015ff080733:
+100.91.107.52/29
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.91.107.52  netmask 255.255.255.248  broadcast 100.91.107.55
+        inet6 2600:1003:b84f:c72c:cdd8:29cb:4df1:e1a1  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:e1e0:511f:5cbe:a21c  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::7292:b4e5:871b:cfeb  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b84f:c72c:2912:3f75:2595:7990  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:2185:a756:df2a:cd7  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:ce8:e5e6:9682:119c  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 43556  bytes 3024525 (3.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 128055  bytes 38006305 (38.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+128.173.186.29/22
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 3 days ago
+ Main PID: 984 (ipop-tincan)
+    Tasks: 4 (limit: 4358)
+   CGroup: /system.slice/ipopTincan.service
+           └─984 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 03 17:59:56 diana ipop-tincan[984]: Error(stunport.cc:106): Binding request timed out from 100.91.107.52:56165 (enx0015ff080733)
+Jun 03 17:59:57 diana ipop-tincan[984]: [06/03 17:59:57.047844] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 17:59:57 diana ipop-tincan[984]: [06/03 17:59:57.047955] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 17:59:57 diana ipop-tincan[984]: [06/03 17:59:57.048003] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 17:59:59 diana ipop-tincan[984]: [06/03 17:59:59.049595] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 17:59:59 diana ipop-tincan[984]: [06/03 17:59:59.049702] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 17:59:59 diana ipop-tincan[984]: [06/03 17:59:59.049750] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 18:00:01 diana ipop-tincan[984]: [06/03 18:00:01.050686] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 18:00:01 diana ipop-tincan[984]: [06/03 18:00:01.050792] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 18:00:01 diana ipop-tincan[984]: [06/03 18:00:01.050891] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 3 days ago
+ Main PID: 985 (python)
+    Tasks: 11 (limit: 4358)
+   CGroup: /system.slice/ipopController.service
+           └─985 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 03 17:59:34 diana python[985]: [20190603 17:59:34.153] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Jun 03 17:59:34 diana python[985]: [20190603 17:59:34.153] WARNING:recv illegal tincan_packet: src=192.168.10.13 dst=224.0.0.251
+Jun 03 17:59:37 diana python[985]: [20190603 17:59:37.400] INFO:p2p state: CONNECTED
+Jun 03 17:59:42 diana python[985]: [20190603 17:59:42.867] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 03 17:59:45 diana python[985]: [20190603 17:59:45.153] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Jun 03 17:59:45 diana python[985]: [20190603 17:59:45.153] WARNING:recv illegal tincan_packet: src=192.168.10.13 dst=224.0.0.251
+Jun 03 17:59:52 diana python[985]: [20190603 17:59:52.408] INFO:p2p state: CONNECTED
+Jun 03 17:59:55 diana python[985]: [20190603 17:59:55.153] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Jun 03 17:59:55 diana python[985]: [20190603 17:59:55.154] WARNING:recv illegal tincan_packet: src=192.168.10.13 dst=224.0.0.251
+Jun 03 17:59:57 diana python[985]: [20190603 17:59:57.870] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=55 time=6.92 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=55 time=6.95 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=55 time=6.94 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 6.929/6.944/6.959/0.097 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2042ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=97.7 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=98.7 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=96.6 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 96.633/97.702/98.741/0.860 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.060 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.074 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2026ms
+rtt min/avg/max/mdev = 0.060/0.072/0.083/0.011 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=53 time=7.22 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=53 time=7.30 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=53 time=7.30 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 7.222/7.276/7.306/0.079 ms
+
+
+[891888.242510] ata1.00: failed command: FLUSH CACHE
+[891888.242519] ata1.00: cmd e7/00:00:00:00:00/00:00:00:00:00/a0 tag 31
+                         res 40/00:f4:e0:8d:85/00:00:03:00:00/40 Emask 0x10 (ATA bus error)
+[891888.242522] ata1.00: status: { DRDY }
+[891888.242528] ata1: hard resetting link
+[891889.114470] ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[891889.125003] ata1.00: configured for UDMA/133
+[891889.125013] ata1.00: retrying FLUSH 0xe7 Emask 0x10
+[891889.125599] ahci 0000:00:12.0: port does not support device sleep
+[891889.125656] ata1: EH complete
+
+
+#########################################################
+
+############## 06/04/19 00:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 00:00:01 up 10 days, 16:25,  0 users,  load average: 0.44, 0.28, 0.21
+
+
+
+wtmp begins Sat Jun  1 18:59:08 2019
+
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 8087:0a2b Intel Corp. 
+Bus 001 Device 002: ID 04b4:6570 Cypress Semiconductor Corp. 
+Bus 001 Device 020: ID 1410:9031 Novatel Wireless 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+
+
+
+
+enx0015ff080733:
+100.91.107.52/29
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.91.107.52  netmask 255.255.255.248  broadcast 100.91.107.55
+        inet6 2600:1003:b84f:c72c:cdd8:29cb:4df1:e1a1  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:b5e4:ad33:ade0:2657  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:e1e0:511f:5cbe:a21c  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::7292:b4e5:871b:cfeb  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b84f:c72c:2912:3f75:2595:7990  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:2185:a756:df2a:cd7  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:ce8:e5e6:9682:119c  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:ce8:e5e6:9682:119c  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 46381  bytes 3221854 (3.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 136487  bytes 40710487 (40.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+128.173.186.29/22
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 3 days ago
+ Main PID: 984 (ipop-tincan)
+    Tasks: 4 (limit: 4358)
+   CGroup: /system.slice/ipopTincan.service
+           └─984 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 03 23:59:58 diana ipop-tincan[984]: Transport: ipop-tincan, component 1 allocation complete
+Jun 03 23:59:58 diana ipop-tincan[984]: Transport: ipop-tincan allocation complete
+Jun 03 23:59:58 diana ipop-tincan[984]: [06/03 23:59:58.893978] SendToPeer: XMPP SEND uid 249ee114d182cfc3279a919454c017d547b13651 data C6:79:1A:82:E2:D0:CD:DB:F9:A8:4E:1E:B8:82:52:88:A9:F7:3B:0D 3n0DAZe6:1:udp:100.91.107.52:34128:2121801471:BxuVnmw8U+MERh2n:rS3k1T3puHFIHpjRRXbayszP:local:enx0015ff080733:0:4240616158 6ZD/aPn2:1:udp:128.173.186.29:41372:2121735935:RTSi34lMke4eJg5B:/BWJJBnvs+ObbDk7Jd1Gc6Jg:local:enp2s0:0:3165892737 G4kZpF17:1:tcp:100.91.107.52:57155:1517821695:aPJXcmZL2A3t3LN5:wEiQsNTxv7M+2eJF8oQcJb7U:local:enx0015ff080733:0:2990626350 Uul+hIhi:1:tcp:128.173.186.29:46937:1517756159:KkqndKilOa8sSfiT:NJM8Ib/mVAcK2jL3Q+OmeJd4:local:enp2s0:0:4063251569 rnipmcDx:1:udp:128.173.186.29:52765:1685528319:AZWvWHb8oXqtTtKt:8zbgVCXTBv6/hMNUOHu5URXw:stun:enp2s0:0:1883148050 type con_resp
+Jun 03 23:59:59 diana ipop-tincan[984]: [06/03 23:59:59.453334] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 23:59:59 diana ipop-tincan[984]: [06/03 23:59:59.453440] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 23:59:59 diana ipop-tincan[984]: [06/03 23:59:59.453487] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 00:00:01 diana ipop-tincan[984]: Error(stunport.cc:106): Binding request timed out from 100.91.107.52:44626 (enx0015ff080733)
+Jun 04 00:00:01 diana ipop-tincan[984]: [06/04 00:00:01.454606] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 00:00:01 diana ipop-tincan[984]: [06/04 00:00:01.454665] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 00:00:01 diana ipop-tincan[984]: [06/04 00:00:01.454683] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 3 days ago
+ Main PID: 985 (python)
+    Tasks: 11 (limit: 4358)
+   CGroup: /system.slice/ipopController.service
+           └─985 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 03 23:59:45 diana python[985]: [20190603 23:59:45.878] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 03 23:59:49 diana python[985]: [20190603 23:59:49.311] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 23:59:49 diana python[985]: [20190603 23:59:49.312] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 23:59:49 diana python[985]: [20190603 23:59:49.314] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 23:59:49 diana python[985]: [20190603 23:59:49.315] INFO:p2p state: CONNECTED
+Jun 03 23:59:49 diana python[985]: [20190603 23:59:49.360] INFO:recv con_ack (successor): 249ee114d182cfc3279a919454c017d547b13651
+Jun 03 23:59:49 diana python[985]: [20190603 23:59:49.361] INFO:Creating Link with peer
+Jun 03 23:59:52 diana python[985]: [20190603 23:59:52.155] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Jun 03 23:59:52 diana python[985]: [20190603 23:59:52.156] WARNING:recv illegal tincan_packet: src=192.168.10.13 dst=224.0.0.251
+Jun 04 00:00:00 diana python[985]: [20190604 00:00:00.888] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=55 time=6.89 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=55 time=6.96 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=55 time=6.97 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 6.892/6.943/6.973/0.036 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2040ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=49.8 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=41.5 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=49.6 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 41.572/47.049/49.895/3.878 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.051 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.082 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2042ms
+rtt min/avg/max/mdev = 0.051/0.071/0.082/0.017 ms
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=53 time=7.14 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=53 time=7.28 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=53 time=7.26 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 7.149/7.234/7.288/0.115 ms
+
+
+[891888.242510] ata1.00: failed command: FLUSH CACHE
+[891888.242519] ata1.00: cmd e7/00:00:00:00:00/00:00:00:00:00/a0 tag 31
+                         res 40/00:f4:e0:8d:85/00:00:03:00:00/40 Emask 0x10 (ATA bus error)
+[891888.242522] ata1.00: status: { DRDY }
+[891888.242528] ata1: hard resetting link
+[891889.114470] ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[891889.125003] ata1.00: configured for UDMA/133
+[891889.125013] ata1.00: retrying FLUSH 0xe7 Emask 0x10
+[891889.125599] ahci 0000:00:12.0: port does not support device sleep
+[891889.125656] ata1: EH complete
+
+
+#########################################################
+
+############## 06/04/19 02:09:01 EST -0500 ##############
+
+#########################################################
+
+
+ 02:09:01 up 10 days, 18:34,  0 users,  load average: 0.22, 0.23, 0.20
+
+
+
+wtmp begins Sat Jun  1 18:59:08 2019
+
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 8087:0a2b Intel Corp. 
+Bus 001 Device 002: ID 04b4:6570 Cypress Semiconductor Corp. 
+Bus 001 Device 020: ID 1410:9031 Novatel Wireless 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+
+
+
+
+enx0015ff080733:
+100.91.107.52/29
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.91.107.52  netmask 255.255.255.248  broadcast 100.91.107.55
+        inet6 2600:1003:b84f:c72c:cdd8:29cb:4df1:e1a1  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:b5e4:ad33:ade0:2657  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:e1e0:511f:5cbe:a21c  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::7292:b4e5:871b:cfeb  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b84f:c72c:2912:3f75:2595:7990  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:2185:a756:df2a:cd7  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:ce8:e5e6:9682:119c  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:c72c:ce8:e5e6:9682:119c  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 47385  bytes 3291092 (3.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 139472  bytes 41676711 (41.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+128.173.186.29/22
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 3 days ago
+ Main PID: 984 (ipop-tincan)
+    Tasks: 4 (limit: 4358)
+   CGroup: /system.slice/ipopTincan.service
+           └─984 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 04 02:08:56 diana ipop-tincan[984]: [06/04 02:08:56.925615] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 02:08:56 diana ipop-tincan[984]: [06/04 02:08:56.925728] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 02:08:56 diana ipop-tincan[984]: [06/04 02:08:56.925775] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 02:08:58 diana ipop-tincan[984]: [06/04 02:08:58.927171] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 02:08:58 diana ipop-tincan[984]: [06/04 02:08:58.927275] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 02:08:58 diana ipop-tincan[984]: [06/04 02:08:58.927321] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 02:08:59 diana ipop-tincan[984]: Error(stunport.cc:106): Binding request timed out from 100.91.107.52:44626 (enx0015ff080733)
+Jun 04 02:09:00 diana ipop-tincan[984]: [06/04 02:09:00.928626] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 02:09:00 diana ipop-tincan[984]: [06/04 02:09:00.928733] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 04 02:09:00 diana ipop-tincan[984]: [06/04 02:09:00.928779] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-05-24 07:35:08 EST; 1 weeks 3 days ago
+ Main PID: 985 (python)
+    Tasks: 11 (limit: 4358)
+   CGroup: /system.slice/ipopController.service
+           └─985 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 04 02:08:47 diana python[985]: [20190604 02:08:47.150] WARNING:recv illegal tincan_packet: src=192.168.10.13 dst=224.0.0.251
+Jun 04 02:08:50 diana python[985]: [20190604 02:08:50.008] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 04 02:08:53 diana python[985]: [20190604 02:08:53.609] INFO:removed connection: 249ee114d182cfc3279a919454c017d547b13651
+Jun 04 02:08:53 diana python[985]: [20190604 02:08:53.611] INFO:Trimming Link with peer 249ee114d182cfc3279a919454c017d547b13651
+Jun 04 02:08:53 diana python[985]: [20190604 02:08:53.613] INFO:sent con_req (successor): 249ee114d182cfc3279a919454c017d547b13651
+Jun 04 02:08:53 diana python[985]: [20190604 02:08:53.613] INFO:p2p state: CONNECTED
+Jun 04 02:08:53 diana python[985]: [20190604 02:08:53.673] INFO:recv con_ack (successor): 249ee114d182cfc3279a919454c017d547b13651
+Jun 04 02:08:53 diana python[985]: [20190604 02:08:53.676] INFO:Creating Link with peer
+Jun 04 02:08:58 diana python[985]: [20190604 02:08:58.155] WARNING:recv illegal tincan_packet: src=65.242.74.60 dst=254.102.184.178
+Jun 04 02:08:58 diana python[985]: [20190604 02:08:58.156] WARNING:recv illegal tincan_packet: src=192.168.10.13 dst=224.0.0.251
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=55 time=6.91 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=55 time=6.95 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=55 time=6.91 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 6.918/6.931/6.958/0.097 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2034ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2054ms
+
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=44.4 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=43.3 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=43.1 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 43.103/43.618/44.413/0.570 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.057 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2049ms
+rtt min/avg/max/mdev = 0.057/0.074/0.083/0.014 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=53 time=7.11 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=53 time=7.25 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=53 time=7.26 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 7.117/7.212/7.268/0.096 ms
+
+
+[926087.473333] ata1.00: failed command: FLUSH CACHE
+[926087.473342] ata1.00: cmd e7/00:00:00:00:00/00:00:00:00:00/a0 tag 24
+                         res 40/00:bc:90:9b:85/00:00:03:00:00/40 Emask 0x10 (ATA bus error)
+[926087.473344] ata1.00: status: { DRDY }
+[926087.473351] ata1: hard resetting link
+[926088.349296] ata1: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+[926088.359815] ata1.00: configured for UDMA/133
+[926088.359825] ata1.00: retrying FLUSH 0xe7 Emask 0x10
+[926088.360415] ahci 0000:00:12.0: port does not support device sleep
+[926088.360472] ata1: EH complete
