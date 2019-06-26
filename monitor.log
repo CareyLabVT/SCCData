@@ -68171,3 +68171,351 @@ rtt min/avg/max/mdev = 37.387/55.238/76.891/16.351 ms
 [    9.409912] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
 [   11.104728] igb 0000:03:00.0 eno1: igb: eno1 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
 [   11.104986] IPv6: ADDRCONF(NETDEV_CHANGE): eno1: link becomes ready
+
+
+#########################################################
+
+############## 06/26/19 06:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 06:00:01 up  6:09,  0 users,  load average: 0.01, 0.16, 0.17
+
+
+reboot   system boot  4.18.0-22-generi Tue Jun 25 23:50   still running
+reboot   system boot  4.18.0-22-generi Mon Jun 24 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-22-generi Sun Jun 23 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-22-generi Sat Jun 22 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-22-generi Fri Jun 21 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-22-generi Thu Jun 20 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-21-generi Wed Jun 19 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-21-generi Tue Jun 18 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-21-generi Mon Jun 17 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-21-generi Mon Jun 17 13:36 - 23:50  (10:13)
+
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 8087:0a2b Intel Corp. 
+Bus 001 Device 003: ID 04b4:6570 Cypress Semiconductor Corp. 
+Bus 001 Device 002: ID 1410:9030 Novatel Wireless 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+
+
+enx0015ff025968:
+100.77.143.209/30
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2019-06-25 23:50:38 EST; 6h ago
+ Main PID: 954 (ipop-tincan)
+    Tasks: 4 (limit: 4358)
+   CGroup: /system.slice/ipopTincan.service
+           └─954 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 26 05:59:54 diana ipop-tincan[954]: [06/26 05:59:54.923991] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 05:59:56 diana ipop-tincan[954]: [06/26 05:59:56.925081] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 05:59:56 diana ipop-tincan[954]: [06/26 05:59:56.925194] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 05:59:56 diana ipop-tincan[954]: [06/26 05:59:56.925239] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 05:59:58 diana ipop-tincan[954]: [06/26 05:59:58.926577] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 05:59:58 diana ipop-tincan[954]: [06/26 05:59:58.926689] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 05:59:58 diana ipop-tincan[954]: [06/26 05:59:58.926733] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 06:00:00 diana ipop-tincan[954]: [06/26 06:00:00.928615] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 06:00:00 diana ipop-tincan[954]: [06/26 06:00:00.928723] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 06:00:00 diana ipop-tincan[954]: [06/26 06:00:00.928767] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2019-06-25 23:50:38 EST; 6h ago
+ Main PID: 955 (python)
+    Tasks: 11 (limit: 4358)
+   CGroup: /system.slice/ipopController.service
+           └─955 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 26 05:59:32 diana python[955]: [20190626 05:59:32.162] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 26 05:59:37 diana python[955]: [20190626 05:59:37.433] INFO:p2p state: CONNECTED
+Jun 26 05:59:38 diana python[955]: [20190626 05:59:38.895] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jun 26 05:59:38 diana python[955]: [20190626 05:59:38.919] INFO:recv ping: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jun 26 05:59:39 diana python[955]: [20190626 05:59:39.229] INFO:recv ping: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jun 26 05:59:39 diana python[955]: [20190626 05:59:39.257] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jun 26 05:59:47 diana python[955]: [20190626 05:59:47.157] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 26 05:59:52 diana python[955]: [20190626 05:59:52.439] INFO:p2p state: CONNECTED
+Jun 26 05:59:53 diana python[955]: [20190626 05:59:53.871] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jun 26 05:59:54 diana python[955]: [20190626 05:59:54.270] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=49 time=47.1 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=49 time=46.6 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=49 time=63.4 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 46.614/52.422/63.463/7.814 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=79.1 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=99.8 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=77.8 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 77.811/85.590/99.826/10.086 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=300 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=106 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=111 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 106.858/172.768/300.416/90.277 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=96.8 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=101 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=85.4 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 85.464/94.646/101.667/6.798 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.043 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.082 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2030ms
+rtt min/avg/max/mdev = 0.043/0.069/0.082/0.018 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=48 time=74.9 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=48 time=61.0 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=48 time=74.1 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 61.076/70.053/74.917/6.362 ms
+
+
+[    7.898841] Bluetooth: BNEP filters: protocol multicast
+[    7.898853] Bluetooth: BNEP socket layer initialized
+[    9.316798] IPv6: ADDRCONF(NETDEV_UP): eno1: link is not ready
+[    9.341261] IPv6: ADDRCONF(NETDEV_UP): eno1: link is not ready
+[    9.351727] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[    9.379510] IPv6: ADDRCONF(NETDEV_UP): enp2s0: link is not ready
+[    9.392676] IPv6: ADDRCONF(NETDEV_UP): enx0015ff025968: link is not ready
+[    9.409912] IPv6: ADDRCONF(NETDEV_UP): wlp1s0: link is not ready
+[   11.104728] igb 0000:03:00.0 eno1: igb: eno1 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX
+[   11.104986] IPv6: ADDRCONF(NETDEV_CHANGE): eno1: link becomes ready
+
+
+#########################################################
+
+############## 06/26/19 12:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 12:00:01 up 12:09,  0 users,  load average: 0.49, 0.21, 0.12
+
+
+reboot   system boot  4.18.0-22-generi Tue Jun 25 23:50   still running
+reboot   system boot  4.18.0-22-generi Mon Jun 24 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-22-generi Sun Jun 23 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-22-generi Sat Jun 22 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-22-generi Fri Jun 21 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-22-generi Thu Jun 20 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-21-generi Wed Jun 19 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-21-generi Tue Jun 18 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-21-generi Mon Jun 17 23:50 - 23:50  (23:59)
+reboot   system boot  4.18.0-21-generi Mon Jun 17 13:36 - 23:50  (10:13)
+
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 8087:0a2b Intel Corp. 
+Bus 001 Device 003: ID 04b4:6570 Cypress Semiconductor Corp. 
+Bus 001 Device 010: ID 1410:9030 Novatel Wireless 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+
+
+enx0015ff025968:
+100.113.63.209/30
+
+
+
+
+ipop:
+192.168.10.13/16
+
+
+enx0015ff080733: error fetching interface information: Device not found
+
+
+enp2s0:
+
+
+
+
+
+
+
+
+
+
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2019-06-25 23:50:38 EST; 12h ago
+ Main PID: 954 (ipop-tincan)
+    Tasks: 4 (limit: 4358)
+   CGroup: /system.slice/ipopTincan.service
+           └─954 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 26 11:59:54 diana ipop-tincan[954]: [06/26 11:59:54.914244] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 11:59:56 diana ipop-tincan[954]: [06/26 11:59:56.915046] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 11:59:56 diana ipop-tincan[954]: [06/26 11:59:56.915161] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 11:59:56 diana ipop-tincan[954]: [06/26 11:59:56.915205] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 11:59:58 diana ipop-tincan[954]: [06/26 11:59:58.916470] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 11:59:58 diana ipop-tincan[954]: [06/26 11:59:58.916628] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 11:59:58 diana ipop-tincan[954]: [06/26 11:59:58.916675] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 12:00:00 diana ipop-tincan[954]: [06/26 12:00:00.917833] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 12:00:00 diana ipop-tincan[954]: [06/26 12:00:00.917943] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 26 12:00:00 diana ipop-tincan[954]: [06/26 12:00:00.917988] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2019-06-25 23:50:38 EST; 12h ago
+ Main PID: 955 (python)
+    Tasks: 11 (limit: 4358)
+   CGroup: /system.slice/ipopController.service
+           └─955 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 26 11:59:29 diana python[955]: [20190626 11:59:29.232] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 26 11:59:30 diana python[955]: [20190626 11:59:30.335] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jun 26 11:59:32 diana python[955]: [20190626 11:59:32.813] INFO:p2p state: CONNECTED
+Jun 26 11:59:36 diana python[955]: [20190626 11:59:36.508] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jun 26 11:59:44 diana python[955]: [20190626 11:59:44.233] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 26 11:59:45 diana python[955]: [20190626 11:59:45.350] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Jun 26 11:59:47 diana python[955]: [20190626 11:59:47.820] INFO:p2p state: CONNECTED
+Jun 26 11:59:52 diana python[955]: [20190626 11:59:52.955] INFO:recv advertisement: a160b1d96c7e144608d798b1f2f3dfb920f06348
+Jun 26 11:59:59 diana python[955]: [20190626 11:59:59.243] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Jun 26 12:00:00 diana python[955]: [20190626 12:00:00.352] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=50 time=58.6 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=50 time=73.2 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=50 time=57.5 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 57.561/63.150/73.205/7.130 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=97.5 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=163 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=122 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 97.555/127.898/163.208/27.031 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=178 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=177 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=180 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 177.578/178.716/180.497/1.321 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=225 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=146 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=183 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 146.659/185.194/225.797/32.341 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+64 bytes from 192.168.10.13: icmp_seq=1 ttl=64 time=0.053 ms
+64 bytes from 192.168.10.13: icmp_seq=2 ttl=64 time=0.066 ms
+64 bytes from 192.168.10.13: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2036ms
+rtt min/avg/max/mdev = 0.053/0.067/0.083/0.014 ms
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=46 time=262 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=46 time=76.1 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=46 time=60.8 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 60.846/133.296/262.943/91.885 ms
+
+
+[40377.970511] usb 1-4: new high-speed USB device number 10 using xhci_hcd
+[40378.127325] usb 1-4: New USB device found, idVendor=1410, idProduct=9030, bcdDevice= 3.10
+[40378.127334] usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[40378.127339] usb 1-4: Product: MiFi USB730L
+[40378.127344] usb 1-4: Manufacturer: Novatel Wireless
+[40378.127349] usb 1-4: SerialNumber: 0123456789ABCDEF
+[40378.145155] rndis_host 1-4:1.0 eth0: register 'rndis_host' at usb-0000:00:15.0-4, RNDIS device, 00:15:ff:02:59:68
+[40378.160542] hid-generic 0003:1410:9030.0007: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-4/input2
+[40378.186658] rndis_host 1-4:1.0 enx0015ff025968: renamed from eth0
+[40378.221143] IPv6: ADDRCONF(NETDEV_UP): enx0015ff025968: link is not ready
