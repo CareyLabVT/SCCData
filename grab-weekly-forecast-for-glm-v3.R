@@ -22,7 +22,7 @@ lon <- which.min(abs(lon.dom  - (360 - lake_lon_w))) - 1 #NOMADS indexes start a
 lat <- which.min(abs(lat.dom - lake_lat_n)) - 1 #NOMADS indexes start at 0 
 
 #Get yesterdays 6 am GMT, 12 pm GMT, 6 pm GMT, and todays 12 an GMT runs
-urls.out <- GetDODSDates(abbrev = "gens_bc", https = TRUE)
+urls.out <- GetDODSDates(abbrev = "gens_bc")
 
 for(i in 1:length(urls.out$url)){
   
