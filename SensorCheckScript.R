@@ -82,7 +82,7 @@ par(mfrow=c(3,2))
 
 plot(obs1$TIMESTAMP,obs1$RECORD, main="Campbell Logger Record", xlab="Time", ylab="Number", type='l')
 plot(obs1$TIMESTAMP,obs1$BattV, main="Campbell Logger Battery", xlab="Time", ylab="Volts", type='l')
-if(min(na.omit(obs1$BattV))<11.5){
+if(min(tail(na.omit(obs1$BattV)))<11.5){
   mtext("Battery Charge Low", side = 3, col="red")
 }
 plot(obs1$TIMESTAMP,obs1$EXO_battery, main="EXO Battery", xlab="Time", ylab="Volts", type='l')
@@ -166,7 +166,7 @@ pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, heigh
 par(mfrow=c(3,2))
 plot(obs2$TIMESTAMP,obs2$RECORD, main="RECORD", xlab="Time", ylab="Number", type='l')
 plot(obs2$TIMESTAMP,obs2$BattV, main="Battery", xlab="Time", ylab="Volts", type='l')
-if(min(na.omit(obs2$BattV))<11.5){
+if(min(tail(na.omit(obs2$BattV)))<11.5){
   mtext("Battery Charge Low", side = 3, col="red")
 }
 plot(obs2$TIMESTAMP,obs2$AirTemp_C, main="Air Temp", xlab="Time", ylab="degrees C", type='l')
