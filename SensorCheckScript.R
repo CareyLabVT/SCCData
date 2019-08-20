@@ -159,6 +159,9 @@ obs2<-as.data.frame(obs2) #make into DF
 colnames(obs2)<-names(weirdata[index,c(1:7)]) #get column names
 obs2$TIMESTAMP<-full_time2 #now have your array with a proper timedate stamp!
 
+obs2 <- obs2 %>%  mutate(head = (0.149*Lvl_psi)/0.293) %>% 
+  mutate(flow_cms = 2.391* (head^2.5)) 
+
 pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
 par(mfrow=c(3,2))
 plot(obs2$TIMESTAMP,obs2$RECORD, main="RECORD", xlab="Time", ylab="Number", type='l')
@@ -169,4 +172,5 @@ if(min(na.omit(obs2$BattV))<11.5){
 plot(obs2$TIMESTAMP,obs2$AirTemp_C, main="Air Temp", xlab="Time", ylab="degrees C", type='l')
 plot(obs2$TIMESTAMP,obs2$Lvl_psi, main="Water Level", xlab="Time", ylab="psi", type='l')
 plot(obs2$TIMESTAMP,obs2$wtr_weir, main="Water Temp", xlab="Time", ylab="degrees C", type='l')
+plot(obs2$TIMESTAMP,obs2$flow_cms, main="Flow Rate", xlab="Time", ylab="cms", type='l')
 dev.off() #file made!
