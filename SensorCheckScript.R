@@ -3,6 +3,8 @@
 
 if (!"lubridate" %in% installed.packages()) install.packages("lubridate")
 library(lubridate)
+if (!"tidyverse" %in% installed.packages()) install.packages("tidyverse")
+library(tidyverse)
 
 #download data files to working directory
 output_dir <- "~/data/SCCData/daily-email/"
