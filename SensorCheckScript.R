@@ -161,8 +161,8 @@ obs2<-as.data.frame(obs2) #make into DF
 colnames(obs2)<-names(weirdata[index,c(1:7)]) #get column names
 obs2$TIMESTAMP<-full_time2 #now have your array with a proper timedate stamp!
 
-obs2 <- obs2 %>%  mutate(head = (0.149*Lvl_psi)/0.293) %>% 
-  mutate(flow_cms = 2.391* (head^2.5)) 
+obs2 <- obs2 %>%  mutate(head = (0.149*Lvl_psi)/0.293) %>% #equation as given by WW
+  mutate(flow_cms = 2.391* (head^2.5)) #non tidy code; obs2$head=(0.149*obs2$Lvl_psi)/0.293; obs2$flowcms= 2.391*(obs$head^2.5)
 
 pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
 par(mfrow=c(3,2))
