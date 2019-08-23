@@ -172,5 +172,5 @@ if(min(tail(na.omit(obs2$BattV)))<11.5){
 plot(obs2$TIMESTAMP,obs2$AirTemp_C, main="Air Temp", xlab="Time", ylab="degrees C", type='l')
 plot(obs2$TIMESTAMP,obs2$Lvl_psi, main="Water Level", xlab="Time", ylab="psi", type='l')
 plot(obs2$TIMESTAMP,obs2$wtr_weir, main="Water Temp", xlab="Time", ylab="degrees C", type='l')
-plot(obs2$TIMESTAMP,obs2$flow_cms, main="Flow Rate", xlab="Time", ylab="cms", type='l')
+plot(obs2$TIMESTAMP,obs2$flowcms, main="Flow Rate", xlab="Time", ylab="cms", type='l')
 dev.off() #file made!
