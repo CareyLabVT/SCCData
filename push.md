@@ -123,3 +123,5 @@ Bethany, test maintenance log
 Bethany, checking DO for SSS
 
 Bethany, checking DO for SSS again
+
+Vahid, Checking Mia's Connectivity in the Lab
