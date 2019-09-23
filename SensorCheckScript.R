@@ -148,6 +148,11 @@ full_time2 <- seq(start.time2, end.time2, by = "15 min") #create sequence of dat
 obs2 <- array(NA,dim=c(length(full_time2),7)) #create array that will be filled in with 8 columns
 weirdata$TIMESTAMP<-as.POSIXct(strptime(weirdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
 
+if (length(na.omit(weirdata$TIMESTAMP[weirdata$TIMESTAMP>start.time2]))==0) { #if there is no data after start time, then a pdf will be made explaining this
+  pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11, title = paste("No data found between", start.time2, "and", end.time2, sep = " ")) #call PDF file
+  print(paste("No data found between", start.time2, "and", end.time2, sep = " "))
+  dev.off() #file made!
+} else { #else, do normal data wrangling and plotting
 #get columns
 for(i in 1:length(full_time2)){ #this loop looks for matching dates and extracts data from metdata file to obs array
   index = which(weirdata$TIMESTAMP==full_time2[i])
@@ -174,3 +179,4 @@ plot(obs2$TIMESTAMP,obs2$Lvl_psi, main="Water Level", xlab="Time", ylab="psi", t
 plot(obs2$TIMESTAMP,obs2$wtr_weir, main="Water Temp", xlab="Time", ylab="degrees C", type='l')
 plot(obs2$TIMESTAMP,obs2$flowcms, main="Flow Rate", xlab="Time", ylab="cms", type='l')
 dev.off() #file made!
+}
