@@ -150,7 +150,6 @@ weirdata$TIMESTAMP<-as.POSIXct(strptime(weirdata$TIMESTAMP, "%Y-%m-%d %H:%M"), t
 
 if (length(na.omit(weirdata$TIMESTAMP[weirdata$TIMESTAMP>start.time2]))==0) { #if there is no data after start time, then a pdf will be made explaining this
   pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11, title = paste("No data found between", start.time2, "and", end.time2, sep = " ")) #call PDF file
-  print(paste("No data found between", start.time2, "and", end.time2, sep = " "))
   dev.off() #file made!
 } else { #else, do normal data wrangling and plotting
 #get columns
