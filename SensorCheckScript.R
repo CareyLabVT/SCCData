@@ -24,6 +24,12 @@ metdata$TIMESTAMP<-as.POSIXct(strptime(metdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz 
 metdata$TIMESTAMP[c(1:met_timechange-1)]<-with_tz(force_tz(metdata$TIMESTAMP[c(1:met_timechange-1)],"Etc/GMT+4"), "Etc/GMT+5") #pre time change data gets assigned proper timezone then corrected to GMT -5 to match the rest of the data set
 metdata=metdata[-c(met_timechange-1),]
 
+if (length(na.omit(metdata$TIMESTAMP[metdata$TIMESTAMP>start.time]))==0) { #if there is no data after start time, then a pdf will be made explaining this
+  pdf(paste0(output_dir, "MetDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+  plot(NA, xlim=c(0,5), ylim=c(0,5), bty='n',xaxt='n', yaxt='n', xlab='', ylab='') #creates empty plot
+  mtext(paste("No data found between", start.time, "and", end.time, sep = " ")) #fills in text in top margin of plot
+  dev.off() #file made!
+} else {
 for(i in 1:length(full_time)){ #this loop looks for matching dates and extracts data from metdata file to obs array
     index = which(metdata$TIMESTAMP==full_time[i])
     if(length(index)>0){
@@ -45,7 +51,7 @@ plot(obs$TIMESTAMP,obs$WS_ms_Avg, main="Wind speed", xlab="Time", ylab="m/s",typ
 plot(obs$TIMESTAMP,obs$SR01Up_Avg, main="Shortwave", xlab="Time", ylab="W/m2",type='l')
 plot(obs$TIMESTAMP,obs$IR01UpCo_Avg, main="Longwave", xlab="Time", ylab="W/m2",type='l')
 dev.off() #file made!
-
+}
 
 
 #time to now play with catwalk data!
@@ -62,6 +68,12 @@ cat_timechange=max(which(catdata$TIMESTAMP=="2019-04-15 10:00:00"))
 catdata$TIMESTAMP<-as.POSIXct(strptime(catdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
 catdata$TIMESTAMP[c(1:cat_timechange-1)]<-with_tz(force_tz(catdata$TIMESTAMP[c(1:cat_timechange-1)],"Etc/GMT+4"), "Etc/GMT+5") #pre time change data gets assigned proper timezone then corrected to GMT -5 to match the rest of the data set
 
+if (length(na.omit(catdata$TIMESTAMP[catdata$TIMESTAMP>start.time1]))==0) { #if there is no data after start time, then a pdf will be made explaining this
+  pdf(paste0(output_dir, "CatwalkDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+  plot(NA, xlim=c(0,5), ylim=c(0,5), bty='n',xaxt='n', yaxt='n', xlab='', ylab='') #creates empty plot
+  mtext(paste("No data found between", start.time1, "and", end.time1, sep = " ")) #fills in text in top margin of plot
+  dev.off() #file made!
+} else {
 for(j in 5:ncol(catdata)){
   catdata[,j]<-as.numeric(levels(catdata[,j]))[catdata[,j]]#need to set all columns to numeric values
 }
@@ -135,6 +147,7 @@ legend("right",c("0.1m","1m", "2m", "3m", "4m", "5m", "6m", "7m","8m", "9m"),
              "DeepSkyBlue4", "blue2", "blue4"), cex=1, y.intersp=1, x.intersp=0.001, inset=c(0,0), xpd=T, bty='n')
 
 dev.off() #file made!
+}
 
 
 weirheader<-read.csv("FCRweir.csv", skip=1, as.is=T) #get header minus wonky Campbell rows
@@ -149,7 +162,9 @@ obs2 <- array(NA,dim=c(length(full_time2),7)) #create array that will be filled 
 weirdata$TIMESTAMP<-as.POSIXct(strptime(weirdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
 
 if (length(na.omit(weirdata$TIMESTAMP[weirdata$TIMESTAMP>start.time2]))==0) { #if there is no data after start time, then a pdf will be made explaining this
-  pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11, title = paste("No data found between", start.time2, "and", end.time2, sep = " ")) #call PDF file
+  pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+  plot(NA, xlim=c(0,5), ylim=c(0,5), bty='n',xaxt='n', yaxt='n', xlab='', ylab='') #creates empty plot
+  mtext(paste("No data found between", start.time2, "and", end.time2, sep = " ")) #fills in text in top margin of plot
   dev.off() #file made!
 } else { #else, do normal data wrangling and plotting
 #get columns
