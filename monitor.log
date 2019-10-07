@@ -7651,3 +7651,179 @@ rtt min/avg/max/mdev = 42.782/48.552/53.706/4.480 ms
 [77695.945192] perf: interrupt took too long (4991 > 4980), lowering kernel.perf_event_max_sample_rate to 40000
 [123901.842794] perf: interrupt took too long (6245 > 6238), lowering kernel.perf_event_max_sample_rate to 32000
 [270843.176281] perf: interrupt took too long (7827 > 7806), lowering kernel.perf_event_max_sample_rate to 25500
+
+
+#########################################################
+
+############## 10/07/19 12:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 12:00:01 up 3 days, 14:17,  0 users,  load average: 0.50, 0.34, 0.24
+
+
+reboot   system boot  5.0.0-29-generic Thu Oct  3 21:42   still running
+
+wtmp begins Wed Oct  2 10:46:06 2019
+
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 8087:0a2b Intel Corp. 
+Bus 001 Device 003: ID 04b4:6570 Cypress Semiconductor Corp. 
+Bus 001 Device 002: ID 1410:9031 Novatel Wireless 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+
+
+
+
+enx0015ff080733:
+100.117.145.19/29
+
+
+ipop:
+192.168.10.11/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.117.145.19  netmask 255.255.255.248  broadcast 100.117.145.23
+        inet6 2600:1003:b84f:2acf:2d86:de03:db04:d8c4  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:2acf:21a0:1b8d:19c4:6a0a  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::312d:809c:7178:1547  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b84f:2acf:172a:13df:c334:629f  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:2acf:9816:281c:c775:7131  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b84f:2acf:7477:f665:44a3:2cb9  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 3794091  bytes 665486741 (665.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4052419  bytes 1669573776 (1.6 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+192.168.1.5/24
+
+
+
+
+
+
+
+
+
+
+
+
+Unit watchdog.service could not be found.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-10-03 22:15:10 EST; 3 days ago
+ Main PID: 2586 (ipop-tincan)
+    Tasks: 4 (limit: 2120)
+   CGroup: /system.slice/ipopTincan.service
+           └─2586 /home/scc/applications/ipopbin/ipop-tincan
+
+Oct 07 11:59:56 carina ipop-tincan[2586]: [10/07 11:59:56.822678] SendToPeer: XMPP SEND uid 249ee114d182cfc3279a919454c017d547b13651 data a160b1d96c7e144608d798b1f2f3dfb920f06348 type ping_resp
+Oct 07 11:59:58 carina ipop-tincan[2586]: [10/07 11:59:58.481405] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 07 11:59:58 carina ipop-tincan[2586]: [10/07 11:59:58.481511] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 07 11:59:58 carina ipop-tincan[2586]: [10/07 11:59:58.481554] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 07 12:00:00 carina ipop-tincan[2586]: [10/07 12:00:00.483519] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 07 12:00:00 carina ipop-tincan[2586]: [10/07 12:00:00.483601] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 07 12:00:00 carina ipop-tincan[2586]: [10/07 12:00:00.483630] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 07 12:00:02 carina ipop-tincan[2586]: [10/07 12:00:02.484400] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 07 12:00:02 carina ipop-tincan[2586]: [10/07 12:00:02.484507] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 07 12:00:02 carina ipop-tincan[2586]: [10/07 12:00:02.484551] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-10-03 22:15:51 EST; 3 days ago
+ Main PID: 2619 (python)
+    Tasks: 11 (limit: 2120)
+   CGroup: /system.slice/ipopController.service
+           └─2619 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Oct 07 11:59:41 carina python[2619]: [20191007 11:59:41.357] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Oct 07 11:59:41 carina python[2619]: [20191007 11:59:41.707] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Oct 07 11:59:45 carina python[2619]: [20191007 11:59:45.393] INFO:p2p state: CONNECTED
+Oct 07 11:59:45 carina python[2619]: [20191007 11:59:45.595] INFO:recv ping_resp: 249ee114d182cfc3279a919454c017d547b13651
+Oct 07 11:59:45 carina python[2619]: [20191007 11:59:45.643] INFO:recv ping_resp: 249ee114d182cfc3279a919454c017d547b13651
+Oct 07 11:59:45 carina python[2619]: [20191007 11:59:45.644] INFO:recv ping_resp: 249ee114d182cfc3279a919454c017d547b13651
+Oct 07 11:59:56 carina python[2619]: [20191007 11:59:56.356] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Oct 07 11:59:56 carina python[2619]: [20191007 11:59:56.672] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Oct 07 11:59:56 carina python[2619]: [20191007 11:59:56.822] INFO:recv ping: 249ee114d182cfc3279a919454c017d547b13651
+Oct 07 12:00:00 carina python[2619]: [20191007 12:00:00.403] INFO:p2p state: CONNECTED
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=49 time=56.1 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=49 time=47.6 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=49 time=48.1 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 47.617/50.640/56.126/3.894 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=232 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=196 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=172 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 172.644/200.534/232.230/24.476 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.059 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.084 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2055ms
+rtt min/avg/max/mdev = 0.059/0.075/0.084/0.013 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=73.6 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=79.6 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=67.8 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 67.888/73.709/79.615/4.798 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2037ms
+
+
+
+PING github.com (192.30.253.112) 56(84) bytes of data.
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=1 ttl=49 time=66.6 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=2 ttl=49 time=64.7 ms
+64 bytes from lb-192-30-253-112-iad.github.com (192.30.253.112): icmp_seq=3 ttl=49 time=40.6 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 40.660/57.329/66.600/11.813 ms
+
+
+[   11.625981] Bluetooth: BNEP filters: protocol multicast
+[   11.625988] Bluetooth: BNEP socket layer initialized
+[   15.489946] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
+[   15.490192] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+[24914.099301] perf: interrupt took too long (2530 > 2500), lowering kernel.perf_event_max_sample_rate to 79000
+[37770.264282] perf: interrupt took too long (3186 > 3162), lowering kernel.perf_event_max_sample_rate to 62750
+[58294.196633] perf: interrupt took too long (3984 > 3982), lowering kernel.perf_event_max_sample_rate to 50000
+[77695.945192] perf: interrupt took too long (4991 > 4980), lowering kernel.perf_event_max_sample_rate to 40000
+[123901.842794] perf: interrupt took too long (6245 > 6238), lowering kernel.perf_event_max_sample_rate to 32000
+[270843.176281] perf: interrupt took too long (7827 > 7806), lowering kernel.perf_event_max_sample_rate to 25500
