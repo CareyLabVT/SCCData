@@ -8876,3 +8876,180 @@ rtt min/avg/max/mdev = 35.297/36.362/37.480/0.918 ms
 [376685.802939]    generic_sse:  7083.000 MB/sec
 [376685.802942] xor: using function: prefetch64-sse (7751.000 MB/sec)
 [376685.868456] Btrfs loaded, crc32c=crc32c-intel
+
+
+#########################################################
+
+############## 10/09/19 06:00:01 EST -0500 ##############
+
+#########################################################
+
+
+ 06:00:01 up 5 days,  8:17,  0 users,  load average: 0.20, 0.13, 0.09
+
+
+reboot   system boot  5.0.0-29-generic Thu Oct  3 21:42   still running
+
+wtmp begins Wed Oct  2 10:46:06 2019
+
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 8087:0a2b Intel Corp. 
+Bus 001 Device 003: ID 04b4:6570 Cypress Semiconductor Corp. 
+Bus 001 Device 006: ID 1410:9031 Novatel Wireless 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+
+
+
+
+
+enx0015ff080733:
+100.86.120.133/30
+
+
+ipop:
+192.168.10.11/16
+
+
+enx0015ff080733: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 100.86.120.133  netmask 255.255.255.252  broadcast 100.86.120.135
+        inet6 2600:1003:b857:ac2d:27ce:add3:eaaa:1a66  prefixlen 64  scopeid 0x0<global>
+        inet6 2600:1003:b857:ac2d:b97f:6927:c541:e07  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::312d:809c:7178:1547  prefixlen 64  scopeid 0x20<link>
+        inet6 2600:1003:b857:ac2d:3450:73a1:7149:81ff  prefixlen 64  scopeid 0x0<global>
+        ether 00:15:ff:08:07:33  txqueuelen 1000  (Ethernet)
+        RX packets 1498800  bytes 316170240 (316.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1495428  bytes 192779685 (192.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+enp2s0:
+192.168.1.5/24
+
+
+
+
+
+
+
+
+
+
+
+
+Unit watchdog.service could not be found.
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-10-03 22:15:10 EST; 5 days ago
+ Main PID: 2586 (ipop-tincan)
+    Tasks: 4 (limit: 2120)
+   CGroup: /system.slice/ipopTincan.service
+           └─2586 /home/scc/applications/ipopbin/ipop-tincan
+
+Oct 09 06:00:01 carina ipop-tincan[2586]: [10/09 06:00:01.229011] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:03 carina ipop-tincan[2586]: [10/09 06:00:03.230143] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:03 carina ipop-tincan[2586]: [10/09 06:00:03.230247] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:03 carina ipop-tincan[2586]: [10/09 06:00:03.230291] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:05 carina ipop-tincan[2586]: [10/09 06:00:05.231270] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:05 carina ipop-tincan[2586]: [10/09 06:00:05.231387] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:05 carina ipop-tincan[2586]: [10/09 06:00:05.231432] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:07 carina ipop-tincan[2586]: [10/09 06:00:07.233003] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:07 carina ipop-tincan[2586]: [10/09 06:00:07.233117] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:07 carina ipop-tincan[2586]: [10/09 06:00:07.233162] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:09 carina ipop-tincan[2586]: [10/09 06:00:09.234139] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:09 carina ipop-tincan[2586]: [10/09 06:00:09.234242] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Oct 09 06:00:09 carina ipop-tincan[2586]: [10/09 06:00:09.234286] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2019-10-03 22:15:51 EST; 5 days ago
+ Main PID: 2619 (python)
+    Tasks: 11 (limit: 2120)
+   CGroup: /system.slice/ipopController.service
+           └─2619 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Oct 09 05:59:37 carina python[2619]: [20191009 05:59:37.984] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Oct 09 05:59:39 carina python[2619]: [20191009 05:59:39.693] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Oct 09 05:59:39 carina python[2619]: [20191009 05:59:39.696] INFO:recv ping: 249ee114d182cfc3279a919454c017d547b13651
+Oct 09 05:59:39 carina python[2619]: [20191009 05:59:39.807] INFO:recv ping: 249ee114d182cfc3279a919454c017d547b13651
+Oct 09 05:59:43 carina python[2619]: [20191009 05:59:43.986] INFO:p2p state: CONNECTED
+Oct 09 05:59:52 carina python[2619]: [20191009 05:59:52.985] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Oct 09 05:59:54 carina python[2619]: [20191009 05:59:54.705] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Oct 09 05:59:58 carina python[2619]: [20191009 05:59:58.993] INFO:p2p state: CONNECTED
+Oct 09 06:00:07 carina python[2619]: [20191009 06:00:07.992] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Oct 09 06:00:09 carina python[2619]: [20191009 06:00:09.700] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=49 time=39.5 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=49 time=33.7 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=49 time=29.8 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 29.840/34.357/39.503/3.975 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=64.1 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=65.6 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=72.6 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 64.167/67.492/72.680/3.722 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.063 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.084 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.084 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2024ms
+rtt min/avg/max/mdev = 0.063/0.077/0.084/0.009 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=82.8 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=80.4 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=68.3 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 68.337/77.215/82.823/6.349 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2037ms
+
+
+
+PING github.com (192.30.253.113) 56(84) bytes of data.
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=1 ttl=48 time=37.9 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=2 ttl=48 time=38.5 ms
+64 bytes from lb-192-30-253-113-iad.github.com (192.30.253.113): icmp_seq=3 ttl=48 time=37.5 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 37.552/38.026/38.558/0.412 ms
+
+
+[376685.675019] raid6: sse2x1   gen()  4887 MB/s
+[376685.723018] raid6: sse2x1   xor()  2847 MB/s
+[376685.723020] raid6: using algorithm sse2x4 gen() 5448 MB/s
+[376685.723021] raid6: .... xor() 2548 MB/s, rmw enabled
+[376685.723023] raid6: using ssse3x2 recovery algorithm
+[376685.726807] xor: measuring software checksum speed
+[376685.762939]    prefetch64-sse:  7751.000 MB/sec
+[376685.802939]    generic_sse:  7083.000 MB/sec
+[376685.802942] xor: using function: prefetch64-sse (7751.000 MB/sec)
+[376685.868456] Btrfs loaded, crc32c=crc32c-intel
