@@ -25,7 +25,7 @@ metdata$TIMESTAMP[c(1:met_timechange-1)]<-with_tz(force_tz(metdata$TIMESTAMP[c(1
 metdata=metdata[-c(met_timechange-1),]
 
 if (length(na.omit(metdata$TIMESTAMP[metdata$TIMESTAMP>start.time]))==0) { #if there is no data after start time, then a pdf will be made explaining this
-  pdf(paste0(output_dir, "MetDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+  pdf(paste0("MetDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
   plot(NA, xlim=c(0,5), ylim=c(0,5), bty='n',xaxt='n', yaxt='n', xlab='', ylab='') #creates empty plot
   mtext(paste("No data found between", start.time, "and", end.time, sep = " ")) #fills in text in top margin of plot
   dev.off() #file made!
@@ -40,7 +40,7 @@ obs<-as.data.frame(obs) #make into DF
 colnames(obs)<-names(metdata[index,c(1,2,3,8,9,10,11,13,15)]) #get column names
 obs$TIMESTAMP<-full_time #now have your array with a proper timedate stamp!
 
-pdf(paste0(output_dir, "MetDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+pdf(paste0("MetDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
 par(mfrow=c(3,2))
 plot(obs$TIMESTAMP,obs$RECORD, main="RECORD", xlab="Time", ylab="Number", type='l')
 plot(obs$TIMESTAMP,obs$BattV, main="Battery", xlab="Time", ylab="Volts", type='l')
@@ -69,7 +69,7 @@ catdata$TIMESTAMP<-as.POSIXct(strptime(catdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz 
 catdata$TIMESTAMP[c(1:cat_timechange-1)]<-with_tz(force_tz(catdata$TIMESTAMP[c(1:cat_timechange-1)],"Etc/GMT+4"), "Etc/GMT+5") #pre time change data gets assigned proper timezone then corrected to GMT -5 to match the rest of the data set
 
 if (length(na.omit(catdata$TIMESTAMP[catdata$TIMESTAMP>start.time1]))==0) { #if there is no data after start time, then a pdf will be made explaining this
-  pdf(paste0(output_dir, "CatwalkDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+  pdf(paste0("CatwalkDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
   plot(NA, xlim=c(0,5), ylim=c(0,5), bty='n',xaxt='n', yaxt='n', xlab='', ylab='') #creates empty plot
   mtext(paste("No data found between", start.time1, "and", end.time1, sep = " ")) #fills in text in top margin of plot
   dev.off() #file made!
@@ -89,7 +89,7 @@ obs1<-as.data.frame(obs1) #make into DF
 obs1[,1] <- full_time1 #now have your array with a proper timedate stamp!
 colnames(obs1)<-names(catdata[index,c(1:39)]) #get column names
 
-pdf(paste0(output_dir, "CatwalkDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+pdf(paste0("CatwalkDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
 par(mfrow=c(3,2))
 
 plot(obs1$TIMESTAMP,obs1$RECORD, main="Campbell Logger Record", xlab="Time", ylab="Number", type='l')
@@ -162,7 +162,7 @@ obs2 <- array(NA,dim=c(length(full_time2),7)) #create array that will be filled 
 weirdata$TIMESTAMP<-as.POSIXct(strptime(weirdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
 
 if (length(na.omit(weirdata$TIMESTAMP[weirdata$TIMESTAMP>start.time2]))==0) { #if there is no data after start time, then a pdf will be made explaining this
-  pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+  pdf(paste0("WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
   plot(NA, xlim=c(0,5), ylim=c(0,5), bty='n',xaxt='n', yaxt='n', xlab='', ylab='') #creates empty plot
   mtext(paste("No data found between", start.time2, "and", end.time2, sep = " ")) #fills in text in top margin of plot
   dev.off() #file made!
@@ -181,7 +181,7 @@ obs2$TIMESTAMP<-full_time2 #now have your array with a proper timedate stamp!
 obs2$head=(0.149*obs2$Lvl_psi)/0.293 #equation as given by WW
 obs2$flowcms= 2.391*(obs2$head^2.5) #original tidy code; obs2 <- obs2 %>%  mutate(head = (0.149*Lvl_psi)/0.293) %>% mutate(flow_cms = 2.391* (head^2.5)) 
 
-pdf(paste0(output_dir, "WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
+pdf(paste0("WeirDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
 par(mfrow=c(3,2))
 plot(obs2$TIMESTAMP,obs2$RECORD, main="RECORD", xlab="Time", ylab="Number", type='l')
 plot(obs2$TIMESTAMP,obs2$BattV, main="Battery", xlab="Time", ylab="Volts", type='l')
