@@ -62902,3 +62902,516 @@ PING github.com (140.82.113.4) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 3186ms
 rtt min/avg/max/mdev = 251.132/627.095/905.740/275.961 ms
+
+
+############################ carina - 12/02/19 23:50:47 EST -0500 ############################
+
+
+ 23:50:47 up 0 min,  0 users,  load average: 2.09, 0.46, 0.15
+
+
+reboot   system boot  5.0.0-36-generic Mon Dec  2 23:50   still running
+reboot   system boot  5.0.0-36-generic Sun Dec  1 23:50 - 23:50  (23:59)
+
+wtmp begins Sun Dec  1 23:50:03 2019
+
+
+Bus 001 Device 002: ID 1410:9030 Novatel Wireless 
+
+
+[    6.138936] cdc_ether 1-5:1.0 enx0015ff025968: renamed from eth0
+
+
+[    8.195609] audit: type=1400 audit(1575348645.031:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-xpdfimport" pid=699 comm="apparmor_parser"
+[   10.405966] iTCO_vendor_support: vendor-support=0
+[   10.409543] iTCO_wdt: Intel TCO WatchDog Timer Driver v1.11
+[   10.409619] iTCO_wdt: Found a Apollo Lake SoC TCO device (Version=5, TCOBASE=0x0460)
+[   10.409897] iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[   10.420144] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   10.420146] Bluetooth: BNEP filters: protocol multicast
+[   10.420177] Bluetooth: BNEP socket layer initialized
+[   10.491609] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
+[   10.491868] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+
+
+Filesystem      Size  Used Avail Use% Mounted on
+udev            884M     0  884M   0% /dev
+tmpfs           182M  1.2M  181M   1% /run
+/dev/mmcblk0p2   59G  7.8G   48G  14% /
+tmpfs           907M     0  907M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           907M     0  907M   0% /sys/fs/cgroup
+/dev/loop0      150M  150M     0 100% /snap/gnome-3-28-1804/67
+/dev/loop1      157M  157M     0 100% /snap/gnome-3-28-1804/110
+/dev/loop3      4.3M  4.3M     0 100% /snap/gnome-calculator/544
+/dev/loop2       55M   55M     0 100% /snap/core18/1265
+/dev/loop4       45M   45M     0 100% /snap/gtk-common-themes/1353
+/dev/loop5       15M   15M     0 100% /snap/gnome-characters/367
+/dev/loop6      3.8M  3.8M     0 100% /snap/gnome-system-monitor/100
+/dev/loop7       15M   15M     0 100% /snap/gnome-characters/296
+/dev/loop8       43M   43M     0 100% /snap/gtk-common-themes/1313
+/dev/loop9       90M   90M     0 100% /snap/core/8039
+/dev/loop11     1.0M  1.0M     0 100% /snap/gnome-logs/61
+/dev/loop10     1.0M  1.0M     0 100% /snap/gnome-logs/81
+/dev/loop12     4.2M  4.2M     0 100% /snap/gnome-calculator/406
+/dev/loop14      89M   89M     0 100% /snap/core/7270
+/dev/loop13     3.8M  3.8M     0 100% /snap/gnome-system-monitor/111
+/dev/loop15      55M   55M     0 100% /snap/core18/1066
+/dev/sda1        29G  5.9G   22G  22% /data
+/dev/mmcblk0p1  511M  6.1M  505M   2% /boot/efi
+
+
+
+
+enx0015ff025968:
+
+
+
+
+
+
+enp2s0:
+192.168.1.5/24
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-12-02 23:50:48 EST; 1s ago
+ Main PID: 1056 (ipop-tincan)
+    Tasks: 4 (limit: 2119)
+   CGroup: /system.slice/ipopTincan.service
+           └─1056 /home/scc/applications/ipopbin/ipop-tincan
+
+Dec 02 23:50:48 carina systemd[1]: Started IPOP Tincan service.
+Dec 02 23:50:48 carina ipop-tincan[1056]: Making key pair
+Dec 02 23:50:48 carina ipop-tincan[1056]: Returning key pair
+Dec 02 23:50:48 carina ipop-tincan[1056]: Making certificate for a160b1d96c7e144608d798b1f2f3dfb920f06348
+Dec 02 23:50:48 carina ipop-tincan[1056]: Returning certificate
+Dec 02 23:50:48 carina ipop-tincan[1056]: [12/02 23:50:48.744358] Connect: XMPP CONNECTING
+Dec 02 23:50:48 carina ipop-tincan[1056]: OpenSSLAdapter::OnCloseEvent(-2)
+Dec 02 23:50:48 carina ipop-tincan[1056]: [12/02 23:50:48.746928] OnCloseEvent: ONCLOSEEVENT -2
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-12-02 23:50:48 EST; 2s ago
+ Main PID: 1057 (python)
+    Tasks: 11 (limit: 2119)
+   CGroup: /system.slice/ipopController.service
+           └─1057 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Dec 02 23:50:48 carina systemd[1]: Started IPOP controller service.
+Dec 02 23:50:48 carina python[1057]: [20191202 23:50:48.694] INFO:Logger Module Loaded
+Dec 02 23:50:49 carina python[1057]: [20191202 23:50:49.222] INFO:TincanDispatcher Loaded
+Dec 02 23:50:49 carina python[1057]: [20191202 23:50:49.224] INFO:TincanListener Loaded
+Dec 02 23:50:49 carina python[1057]: [20191202 23:50:49.225] INFO:TincanSender Loaded
+Dec 02 23:50:49 carina python[1057]: [20191202 23:50:49.225] INFO:BaseTopologyManager Loaded
+Dec 02 23:50:49 carina python[1057]: [20191202 23:50:49.225] INFO:LinkManager Loaded
+Dec 02 23:50:49 carina python[1057]: [20191202 23:50:49.225] INFO:StatReport Loaded
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=50 time=69.2 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=50 time=52.8 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=50 time=505 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 52.865/209.153/505.311/209.522 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2030ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.041 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.082 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2024ms
+rtt min/avg/max/mdev = 0.041/0.068/0.083/0.021 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2038ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2055ms
+
+
+
+PING github.com (140.82.114.3) 56(84) bytes of data.
+64 bytes from lb-140-82-114-3-iad.github.com (140.82.114.3): icmp_seq=1 ttl=48 time=100 ms
+64 bytes from lb-140-82-114-3-iad.github.com (140.82.114.3): icmp_seq=2 ttl=48 time=67.5 ms
+64 bytes from lb-140-82-114-3-iad.github.com (140.82.114.3): icmp_seq=3 ttl=48 time=59.9 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 59.914/75.917/100.271/17.503 ms
+
+
+############################ carina - 12/02/19 23:55:47 EST -0500 ############################
+
+
+ 23:55:47 up 5 min,  0 users,  load average: 0.39, 0.28, 0.15
+
+
+reboot   system boot  5.0.0-36-generic Mon Dec  2 23:50   still running
+reboot   system boot  5.0.0-36-generic Sun Dec  1 23:50 - 23:50  (23:59)
+
+wtmp begins Sun Dec  1 23:50:03 2019
+
+
+Bus 001 Device 002: ID 1410:9030 Novatel Wireless 
+
+
+[    6.138936] cdc_ether 1-5:1.0 enx0015ff025968: renamed from eth0
+
+
+[    8.195609] audit: type=1400 audit(1575348645.031:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-xpdfimport" pid=699 comm="apparmor_parser"
+[   10.405966] iTCO_vendor_support: vendor-support=0
+[   10.409543] iTCO_wdt: Intel TCO WatchDog Timer Driver v1.11
+[   10.409619] iTCO_wdt: Found a Apollo Lake SoC TCO device (Version=5, TCOBASE=0x0460)
+[   10.409897] iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[   10.420144] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   10.420146] Bluetooth: BNEP filters: protocol multicast
+[   10.420177] Bluetooth: BNEP socket layer initialized
+[   10.491609] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
+[   10.491868] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+
+
+Filesystem      Size  Used Avail Use% Mounted on
+udev            884M     0  884M   0% /dev
+tmpfs           182M  1.6M  180M   1% /run
+/dev/mmcblk0p2   59G  7.8G   48G  14% /
+tmpfs           907M     0  907M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           907M     0  907M   0% /sys/fs/cgroup
+/dev/loop0      150M  150M     0 100% /snap/gnome-3-28-1804/67
+/dev/loop1      157M  157M     0 100% /snap/gnome-3-28-1804/110
+/dev/loop3      4.3M  4.3M     0 100% /snap/gnome-calculator/544
+/dev/loop2       55M   55M     0 100% /snap/core18/1265
+/dev/loop4       45M   45M     0 100% /snap/gtk-common-themes/1353
+/dev/loop5       15M   15M     0 100% /snap/gnome-characters/367
+/dev/loop6      3.8M  3.8M     0 100% /snap/gnome-system-monitor/100
+/dev/loop7       15M   15M     0 100% /snap/gnome-characters/296
+/dev/loop8       43M   43M     0 100% /snap/gtk-common-themes/1313
+/dev/loop9       90M   90M     0 100% /snap/core/8039
+/dev/loop11     1.0M  1.0M     0 100% /snap/gnome-logs/61
+/dev/loop10     1.0M  1.0M     0 100% /snap/gnome-logs/81
+/dev/loop12     4.2M  4.2M     0 100% /snap/gnome-calculator/406
+/dev/loop14      89M   89M     0 100% /snap/core/7270
+/dev/loop13     3.8M  3.8M     0 100% /snap/gnome-system-monitor/111
+/dev/loop15      55M   55M     0 100% /snap/core18/1066
+/dev/sda1        29G  5.9G   22G  22% /data
+/dev/mmcblk0p1  511M  6.1M  505M   2% /boot/efi
+tmpfs           182M   16K  182M   1% /run/user/121
+
+
+
+
+enx0015ff025968:
+100.86.241.141/30
+
+
+
+
+ipop:
+192.168.10.11/16
+
+
+enp2s0:
+192.168.1.5/24
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-12-02 23:50:48 EST; 4min 59s ago
+ Main PID: 1056 (ipop-tincan)
+    Tasks: 4 (limit: 2119)
+   CGroup: /system.slice/ipopTincan.service
+           └─1056 /home/scc/applications/ipopbin/ipop-tincan
+
+Dec 02 23:55:42 carina ipop-tincan[1056]: [12/02 23:55:42.873034] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:55:44 carina ipop-tincan[1056]: [12/02 23:55:44.874784] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:55:44 carina ipop-tincan[1056]: [12/02 23:55:44.874882] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:55:44 carina ipop-tincan[1056]: [12/02 23:55:44.874920] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:55:45 carina ipop-tincan[1056]: [12/02 23:55:45.283204] SendToPeer: uid:b7e5e4036281f1fdc4e874258965570c822150ec data:b7e5e4036281f1fdc4e874258965570c822150ec type:ping
+Dec 02 23:55:45 carina ipop-tincan[1056]: [12/02 23:55:45.283300] HandlePeer: uid:b7e5e4036281f1fdc4e874258965570c822150ec data:b7e5e4036281f1fdc4e874258965570c822150ec type:ping
+Dec 02 23:55:45 carina ipop-tincan[1056]: [12/02 23:55:45.285991] SendToPeer: XMPP SEND uid b7e5e4036281f1fdc4e874258965570c822150ec data a160b1d96c7e144608d798b1f2f3dfb920f06348 type ping_resp
+Dec 02 23:55:46 carina ipop-tincan[1056]: [12/02 23:55:46.876562] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:55:46 carina ipop-tincan[1056]: [12/02 23:55:46.876665] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:55:46 carina ipop-tincan[1056]: [12/02 23:55:46.876704] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-12-02 23:50:48 EST; 4min 59s ago
+ Main PID: 1057 (python)
+    Tasks: 11 (limit: 2119)
+   CGroup: /system.slice/ipopController.service
+           └─1057 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Dec 02 23:55:19 carina python[1057]: [20191202 23:55:19.375] INFO:p2p state: CONNECTED
+Dec 02 23:55:28 carina python[1057]: [20191202 23:55:28.853] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Dec 02 23:55:30 carina python[1057]: [20191202 23:55:30.175] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Dec 02 23:55:32 carina python[1057]: [20191202 23:55:32.210] INFO:recv advertisement: 9c9e61688c83602ecd410d3cbc3fb7921fe99a1b
+Dec 02 23:55:32 carina python[1057]: [20191202 23:55:32.533] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Dec 02 23:55:34 carina python[1057]: [20191202 23:55:34.384] INFO:p2p state: CONNECTED
+Dec 02 23:55:43 carina python[1057]: [20191202 23:55:43.841] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Dec 02 23:55:45 carina python[1057]: [20191202 23:55:45.163] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Dec 02 23:55:45 carina python[1057]: [20191202 23:55:45.285] INFO:recv ping: b7e5e4036281f1fdc4e874258965570c822150ec
+Dec 02 23:55:47 carina python[1057]: [20191202 23:55:47.206] INFO:recv advertisement: 9c9e61688c83602ecd410d3cbc3fb7921fe99a1b
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=50 time=47.3 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=50 time=46.7 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=50 time=158 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 46.777/84.296/158.747/52.645 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=312 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=230 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 2 received, 33% packet loss, time 2002ms
+rtt min/avg/max/mdev = 230.649/271.743/312.837/41.094 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.053 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.083 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.083 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2038ms
+rtt min/avg/max/mdev = 0.053/0.073/0.083/0.014 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=152 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=230 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=110 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 110.485/164.784/230.969/49.902 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2030ms
+
+
+
+PING github.com (140.82.113.4) 56(84) bytes of data.
+64 bytes from lb-140-82-113-4-iad.github.com (140.82.113.4): icmp_seq=1 ttl=48 time=52.6 ms
+64 bytes from lb-140-82-113-4-iad.github.com (140.82.113.4): icmp_seq=2 ttl=48 time=82.1 ms
+64 bytes from lb-140-82-113-4-iad.github.com (140.82.113.4): icmp_seq=3 ttl=48 time=73.4 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 52.647/69.418/82.128/12.375 ms
+
+
+############################ carina - 12/03/19 00:00:01 EST -0500 ############################
+
+
+ 00:00:01 up 9 min,  0 users,  load average: 0.03, 0.13, 0.10
+
+
+reboot   system boot  5.0.0-36-generic Mon Dec  2 23:50   still running
+reboot   system boot  5.0.0-36-generic Sun Dec  1 23:50 - 23:50  (23:59)
+
+wtmp begins Sun Dec  1 23:50:03 2019
+
+
+Bus 001 Device 002: ID 1410:9030 Novatel Wireless 
+
+
+[    6.138936] cdc_ether 1-5:1.0 enx0015ff025968: renamed from eth0
+
+
+[    8.195609] audit: type=1400 audit(1575348645.031:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-xpdfimport" pid=699 comm="apparmor_parser"
+[   10.405966] iTCO_vendor_support: vendor-support=0
+[   10.409543] iTCO_wdt: Intel TCO WatchDog Timer Driver v1.11
+[   10.409619] iTCO_wdt: Found a Apollo Lake SoC TCO device (Version=5, TCOBASE=0x0460)
+[   10.409897] iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[   10.420144] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   10.420146] Bluetooth: BNEP filters: protocol multicast
+[   10.420177] Bluetooth: BNEP socket layer initialized
+[   10.491609] igb 0000:02:00.0 enp2s0: igb: enp2s0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: RX/TX
+[   10.491868] IPv6: ADDRCONF(NETDEV_CHANGE): enp2s0: link becomes ready
+
+
+Filesystem      Size  Used Avail Use% Mounted on
+udev            884M     0  884M   0% /dev
+tmpfs           182M  1.6M  180M   1% /run
+/dev/mmcblk0p2   59G  7.8G   48G  14% /
+tmpfs           907M     0  907M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           907M     0  907M   0% /sys/fs/cgroup
+/dev/loop0      150M  150M     0 100% /snap/gnome-3-28-1804/67
+/dev/loop1      157M  157M     0 100% /snap/gnome-3-28-1804/110
+/dev/loop3      4.3M  4.3M     0 100% /snap/gnome-calculator/544
+/dev/loop2       55M   55M     0 100% /snap/core18/1265
+/dev/loop4       45M   45M     0 100% /snap/gtk-common-themes/1353
+/dev/loop5       15M   15M     0 100% /snap/gnome-characters/367
+/dev/loop6      3.8M  3.8M     0 100% /snap/gnome-system-monitor/100
+/dev/loop7       15M   15M     0 100% /snap/gnome-characters/296
+/dev/loop8       43M   43M     0 100% /snap/gtk-common-themes/1313
+/dev/loop9       90M   90M     0 100% /snap/core/8039
+/dev/loop11     1.0M  1.0M     0 100% /snap/gnome-logs/61
+/dev/loop10     1.0M  1.0M     0 100% /snap/gnome-logs/81
+/dev/loop12     4.2M  4.2M     0 100% /snap/gnome-calculator/406
+/dev/loop14      89M   89M     0 100% /snap/core/7270
+/dev/loop13     3.8M  3.8M     0 100% /snap/gnome-system-monitor/111
+/dev/loop15      55M   55M     0 100% /snap/core18/1066
+/dev/sda1        29G  5.9G   22G  22% /data
+/dev/mmcblk0p1  511M  6.1M  505M   2% /boot/efi
+tmpfs           182M   16K  182M   1% /run/user/121
+
+
+
+
+enx0015ff025968:
+100.86.241.141/30
+
+
+
+
+ipop:
+192.168.10.11/16
+
+
+enp2s0:
+192.168.1.5/24
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-12-02 23:50:48 EST; 9min ago
+ Main PID: 1056 (ipop-tincan)
+    Tasks: 4 (limit: 2119)
+   CGroup: /system.slice/ipopTincan.service
+           └─1056 /home/scc/applications/ipopbin/ipop-tincan
+
+Dec 02 23:59:55 carina ipop-tincan[1056]: [12/02 23:59:55.024882] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:59:57 carina ipop-tincan[1056]: [12/02 23:59:57.026880] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:59:57 carina ipop-tincan[1056]: [12/02 23:59:57.026971] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:59:57 carina ipop-tincan[1056]: [12/02 23:59:57.027007] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:59:59 carina ipop-tincan[1056]: [12/02 23:59:59.027901] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:59:59 carina ipop-tincan[1056]: [12/02 23:59:59.027993] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 02 23:59:59 carina ipop-tincan[1056]: [12/02 23:59:59.028029] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 03 00:00:01 carina ipop-tincan[1056]: [12/03 00:00:01.029217] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 03 00:00:01 carina ipop-tincan[1056]: [12/03 00:00:01.029310] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Dec 03 00:00:01 carina ipop-tincan[1056]: [12/03 00:00:01.029348] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-12-02 23:50:48 EST; 9min ago
+ Main PID: 1057 (python)
+    Tasks: 11 (limit: 2119)
+   CGroup: /system.slice/ipopController.service
+           └─1057 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Dec 02 23:59:34 carina python[1057]: [20191202 23:59:34.518] INFO:p2p state: CONNECTED
+Dec 02 23:59:44 carina python[1057]: [20191202 23:59:44.324] INFO:recv ping: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Dec 02 23:59:44 carina python[1057]: [20191202 23:59:44.326] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Dec 02 23:59:44 carina python[1057]: [20191202 23:59:44.328] INFO:recv ping: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Dec 02 23:59:45 carina python[1057]: [20191202 23:59:45.401] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+Dec 02 23:59:47 carina python[1057]: [20191202 23:59:47.429] INFO:recv advertisement: 9c9e61688c83602ecd410d3cbc3fb7921fe99a1b
+Dec 02 23:59:47 carina python[1057]: [20191202 23:59:47.706] INFO:recv advertisement: 249ee114d182cfc3279a919454c017d547b13651
+Dec 02 23:59:49 carina python[1057]: [20191202 23:59:49.528] INFO:p2p state: CONNECTED
+Dec 02 23:59:59 carina python[1057]: [20191202 23:59:59.073] INFO:recv advertisement: a255de54ecccdf40c56d4f0ebb1d377ce17a51ef
+Dec 03 00:00:00 carina python[1057]: [20191203 00:00:00.412] INFO:recv advertisement: b7e5e4036281f1fdc4e874258965570c822150ec
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=50 time=64.8 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=50 time=85.3 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=50 time=64.6 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 64.669/71.631/85.351/9.704 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+64 bytes from 192.168.10.1: icmp_seq=1 ttl=64 time=128 ms
+64 bytes from 192.168.10.1: icmp_seq=2 ttl=64 time=333 ms
+64 bytes from 192.168.10.1: icmp_seq=3 ttl=64 time=90.8 ms
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 90.895/184.368/333.734/106.726 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.063 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.084 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.084 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2037ms
+rtt min/avg/max/mdev = 0.063/0.077/0.084/0.009 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=89.4 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=232 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=238 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 89.420/186.955/238.880/69.016 ms
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2028ms
+
+
+
+PING github.com (140.82.113.3) 56(84) bytes of data.
+64 bytes from lb-140-82-113-3-iad.github.com (140.82.113.3): icmp_seq=1 ttl=49 time=162 ms
+64 bytes from lb-140-82-113-3-iad.github.com (140.82.113.3): icmp_seq=2 ttl=49 time=667 ms
+64 bytes from lb-140-82-113-3-iad.github.com (140.82.113.3): icmp_seq=3 ttl=49 time=911 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 162.190/580.501/911.805/312.152 ms
