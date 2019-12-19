@@ -1,6 +1,6 @@
-#if (!"rNOMADS" %in% installed.packages()) install.packages("rNOMADS")
-#if (!"RCurl" %in% installed.packages()) install.packages("RCurl")
-#if (!"stringr" %in% installed.packages()) install.packages("stringr")
+if (!"rNOMADS" %in% installed.packages()) install.packages("rNOMADS")
+if (!"RCurl" %in% installed.packages()) install.packages("RCurl")
+if (!"stringr" %in% installed.packages()) install.packages("stringr")
 
 library(rNOMADS)
 library(RCurl)
