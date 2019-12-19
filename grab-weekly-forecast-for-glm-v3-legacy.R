@@ -11,7 +11,7 @@ library(stringr)
 lake_lat_n = 37.27
 lake_lon_w = 79.9
 
-directory = '/home/scc/data/SCCData/NOAA/'
+directory = '/data/SCCData/NOAA/'
 
 #####
 
