@@ -8,11 +8,11 @@ library(stringr)
 
 #User defined location of interest and directory
 
-lake_lat_n_list = c(37.27, 29.688149, 43.392869, 46.2106879) 
-lake_lon_w_list = c(79.9, 82.017318, 72.058199, 89.4739973) 
+lake_lat_n_list = c(37.27, 29.688149, 43.392869, 46.2106879, 68.62956, 47.13012) 
+lake_lon_w_list = c(79.9, 82.017318, 72.058199, 89.4739973, 149.61051, 99.25302) 
 #Degrees west (does not currently work for sites in eastern hemisphere)
 
-lake_name_list = c("FCRE","SUGG","SUNP","CRAM")
+lake_name_list = c("FCRE", "SUGG", "SUNP", "CRAM", "TOOL", "PRPO")
 
 directory = '/data/SCCData/NOAA/'
 if(!file.exists(directory)) {
