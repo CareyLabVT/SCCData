@@ -5666,3 +5666,213 @@ PING github.com (140.82.114.3) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 66.505/96.370/114.247/21.254 ms
+
+
+############################ carina - 04/02/20 23:54:44 EDT -0400 ############################
+
+
+ 23:54:44 up 4 min,  0 users,  load average: 0.29, 0.38, 0.19
+
+
+reboot   system boot  5.3.0-45-generic Thu Apr  2 23:50   still running
+reboot   system boot  5.3.0-45-generic Thu Apr  2 11:50 - 23:50  (11:59)
+reboot   system boot  5.3.0-45-generic Wed Apr  1 23:50 - 11:50  (11:59)
+reboot   system boot  5.3.0-45-generic Wed Apr  1 11:50 - 23:50  (11:59)
+
+wtmp begins Wed Apr  1 11:50:04 2020
+
+
+Bus 001 Device 006: ID 1410:9030 Novatel Wireless 
+
+
+[    8.776908] cdc_ether 1-6.4:1.0 enx0015ff025968: renamed from eth0
+[   61.898470] cdc_ether 1-6.4:1.0 enx0015ff025968: unregister 'cdc_ether' usb-0000:00:15.0-6.4, CDC Ethernet Device
+[   62.249835] cdc_ether 1-6.4:1.0 enx0015ff025968: renamed from eth0
+
+
+[   61.898470] cdc_ether 1-6.4:1.0 enx0015ff025968: unregister 'cdc_ether' usb-0000:00:15.0-6.4, CDC Ethernet Device
+[   62.162167] usb 1-6.4: new high-speed USB device number 6 using xhci_hcd
+[   62.185388] usb 1-6.4: New USB device found, idVendor=1410, idProduct=9030, bcdDevice= 3.10
+[   62.185397] usb 1-6.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   62.185402] usb 1-6.4: Product: MiFi USB730L
+[   62.185406] usb 1-6.4: Manufacturer: Novatel Wireless
+[   62.185410] usb 1-6.4: SerialNumber: 0123456789ABCDEF
+[   62.219462] cdc_ether 1-6.4:1.0 eth0: register 'cdc_ether' at usb-0000:00:15.0-6.4, CDC Ethernet Device, 00:15:ff:02:59:68
+[   62.229968] hid-generic 0003:1410:9030.0002: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-6.4/input2
+[   62.249835] cdc_ether 1-6.4:1.0 enx0015ff025968: renamed from eth0
+
+
+Filesystem      Size  Used Avail Use% Mounted on
+udev            883M     0  883M   0% /dev
+tmpfs           182M  1.6M  180M   1% /run
+/dev/mmcblk0p2   59G   14G   43G  25% /
+tmpfs           906M     0  906M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           906M     0  906M   0% /sys/fs/cgroup
+/dev/loop1      1.0M  1.0M     0 100% /snap/gnome-logs/93
+/dev/loop0       49M   49M     0 100% /snap/gtk-common-themes/1474
+/dev/loop2       45M   45M     0 100% /snap/gtk-common-themes/1440
+/dev/loop3       55M   55M     0 100% /snap/core18/1705
+/dev/loop4      4.3M  4.3M     0 100% /snap/gnome-calculator/544
+/dev/loop5      161M  161M     0 100% /snap/gnome-3-28-1804/116
+/dev/loop6       94M   94M     0 100% /snap/core/8935
+/dev/loop7       92M   92M     0 100% /snap/core/8689
+/dev/loop8       55M   55M     0 100% /snap/core18/1668
+/dev/loop10     1.0M  1.0M     0 100% /snap/gnome-logs/81
+/dev/loop9       15M   15M     0 100% /snap/gnome-characters/495
+/dev/loop12     3.8M  3.8M     0 100% /snap/gnome-system-monitor/135
+/dev/loop11     157M  157M     0 100% /snap/gnome-3-28-1804/110
+/dev/loop13     3.8M  3.8M     0 100% /snap/gnome-system-monitor/127
+/dev/loop14      15M   15M     0 100% /snap/gnome-characters/399
+/dev/loop15     4.4M  4.4M     0 100% /snap/gnome-calculator/704
+/dev/sda1        29G  5.1G   23G  19% /data
+/dev/mmcblk0p1  511M  6.1M  505M   2% /boot/efi
+tmpfs           182M   20K  182M   1% /run/user/121
+
+
+
+
+enx0015ff025968:
+100.83.214.83/29
+
+
+
+
+ipop:
+192.168.10.11/16
+
+
+enp2s0:
+192.168.1.5/24
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2020-04-02 23:50:44 EDT; 4min 0s ago
+ Main PID: 1000 (ipop-tincan)
+    Tasks: 4 (limit: 2117)
+   CGroup: /system.slice/ipopTincan.service
+           └─1000 /home/scc/applications/ipopbin/ipop-tincan
+
+Apr 02 23:54:15 carina ipop-tincan[1000]: Cleanup
+Apr 02 23:54:15 carina ipop-tincan[1000]: [04/02 23:54:15.995486] Connect: XMPP CONNECTING
+Apr 02 23:54:17 carina ipop-tincan[1000]: OpenSSLAdapter::OnConnectEvent
+Apr 02 23:54:17 carina ipop-tincan[1000]: [04/02 23:54:17.653121] OnStateChange: OPENING
+Apr 02 23:54:17 carina ipop-tincan[1000]: BeginSSL: xmpp.ipop-project.org
+Apr 02 23:54:17 carina ipop-tincan[1000]: validated certificate using custom callback
+Apr 02 23:54:18 carina ipop-tincan[1000]: [04/02 23:54:18.353802] OnStateChange: OPEN
+Apr 02 23:54:18 carina ipop-tincan[1000]: [04/02 23:54:18.353992] OnSignOn: XMPP ONLINE scc@xmpp.ipop-project.org/tincana160b1d96c7e144608d798b1f2f3dfb920f06348
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.453016] SendToPeer: XMPP SEND uid b7e5e4036281f1fdc4e874258965570c822150ec data {"con_type": "successor", "fpr": "7F:BE:AA:71:72:B9:BA:46:4F:68:F4:5B:D1:4A:D7:BA:2D:6D:04:7C"} type con_req
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.453319] SendToPeer: XMPP SEND uid 477090afb7a0af8469bd57e1cba063b5bb0572cb data {"con_type": "successor", "fpr": "7F:BE:AA:71:72:B9:BA:46:4F:68:F4:5B:D1:4A:D7:BA:2D:6D:04:7C"} type con_req
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.602988] SendToPeer: uid:477090afb7a0af8469bd57e1cba063b5bb0572cb data:{"con_type": "successor", "fpr": "3F:06:47:9E:48:61:D4:71:D9:92:4F:A6:B2:86:E5:FF:08:B6:DC:CC"} type:con_ack
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.603085] HandlePeer: uid:477090afb7a0af8469bd57e1cba063b5bb0572cb data:{"con_type": "successor", "fpr": "3F:06:47:9E:48:61:D4:71:D9:92:4F:A6:B2:86:E5:FF:08:B6:DC:CC"} type:con_ack
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.607351] CreateTransport: peer_uid:477090afb7a0af8469bd57e1cba063b5bb0572cb time:250696
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Channel[ipop-tincan|1|__]: Not using DTLS.
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Channel[ipop-tincan|1|__]: DTLS setup complete.
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.611667] CreateTransport: CREATED 477090afb7a0af8469bd57e1cba063b5bb0572cb
+Apr 02 23:54:46 carina ipop-tincan[1000]: Transport: ipop-tincan, allocating candidates
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.612640] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.612702] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.612736] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Net[enx0015ff025968:100.83.214.80/29]: Allocation Phase=Udp
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[:1:0:local:Net[enx0015ff025968:100.83.214.80/29]]: Port created
+Apr 02 23:54:46 carina ipop-tincan[1000]: Adding allocated port for ipop-tincan
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[ipop-tincan:1:0:local:Net[enx0015ff025968:100.83.214.80/29]]: Added port to allocator
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[:1:0:local:Net[enx0015ff025968:100.83.214.80/29]]: Port created
+Apr 02 23:54:46 carina ipop-tincan[1000]: Adding allocated port for ipop-tincan
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff025968:100.83.214.80/29]]: Added port to allocator
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Net[enp2s0:192.168.1.0/24]: Allocation Phase=Udp
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[:1:0:local:Net[enp2s0:192.168.1.0/24]]: Port created
+Apr 02 23:54:46 carina ipop-tincan[1000]: Adding allocated port for ipop-tincan
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[ipop-tincan:1:0:local:Net[enp2s0:192.168.1.0/24]]: Added port to allocator
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[:1:0:local:Net[enp2s0:192.168.1.0/24]]: Port created
+Apr 02 23:54:46 carina ipop-tincan[1000]: Adding allocated port for ipop-tincan
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[ipop-tincan:1:0:stun:Net[enp2s0:192.168.1.0/24]]: Added port to allocator
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.614004] SendToPeer: uid:b7e5e4036281f1fdc4e874258965570c822150ec data:{"con_type": "successor", "fpr": "A7:54:04:56:36:8B:31:9E:3F:11:3E:86:9C:EE:59:37:33:04:D6:EC"} type:con_ack
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.614054] HandlePeer: uid:b7e5e4036281f1fdc4e874258965570c822150ec data:{"con_type": "successor", "fpr": "A7:54:04:56:36:8B:31:9E:3F:11:3E:86:9C:EE:59:37:33:04:D6:EC"} type:con_ack
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.617392] CreateTransport: peer_uid:b7e5e4036281f1fdc4e874258965570c822150ec time:250706
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Channel[ipop-tincan|1|__]: Not using DTLS.
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Channel[ipop-tincan|1|__]: DTLS setup complete.
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.618068] CreateTransport: CREATED b7e5e4036281f1fdc4e874258965570c822150ec
+Apr 02 23:54:46 carina ipop-tincan[1000]: Transport: ipop-tincan, allocating candidates
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.618148] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.618176] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 02 23:54:46 carina ipop-tincan[1000]: [04/02 23:54:46.618196] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Net[enx0015ff025968:100.83.214.80/29]: Allocation Phase=Udp
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[:1:0:local:Net[enx0015ff025968:100.83.214.80/29]]: Port created
+Apr 02 23:54:46 carina ipop-tincan[1000]: Adding allocated port for ipop-tincan
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[ipop-tincan:1:0:local:Net[enx0015ff025968:100.83.214.80/29]]: Added port to allocator
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[:1:0:local:Net[enx0015ff025968:100.83.214.80/29]]: Port created
+Apr 02 23:54:46 carina ipop-tincan[1000]: Adding allocated port for ipop-tincan
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[ipop-tincan:1:0:stun:Net[enx0015ff025968:100.83.214.80/29]]: Added port to allocator
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Net[enp2s0:192.168.1.0/24]: Allocation Phase=Udp
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[:1:0:local:Net[enp2s0:192.168.1.0/24]]: Port created
+Apr 02 23:54:46 carina ipop-tincan[1000]: Adding allocated port for ipop-tincan
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[ipop-tincan:1:0:local:Net[enp2s0:192.168.1.0/24]]: Added port to allocator
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[:1:0:local:Net[enp2s0:192.168.1.0/24]]: Port created
+Apr 02 23:54:46 carina ipop-tincan[1000]: Adding allocated port for ipop-tincan
+Apr 02 23:54:46 carina ipop-tincan[1000]: Jingle:Port[ipop-tincan:1:0:stun:Net[enp2s0:192.168.1.0/24]]: Added port to allocator
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2020-04-02 23:50:44 EDT; 4min 2s ago
+ Main PID: 1001 (python)
+    Tasks: 11 (limit: 2117)
+   CGroup: /system.slice/ipopController.service
+           └─1001 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Apr 02 23:54:16 carina python[1001]: [20200402 23:54:16.375] WARNING:Statistics report failed to the stat-server (http://metrics.ipop-project.org:8080/api/submit).
+Apr 02 23:54:16 carina python[1001]: [20200402 23:54:16.433] INFO:p2p state: searching
+Apr 02 23:54:31 carina python[1001]: [20200402 23:54:31.444] INFO:p2p state: searching
+Apr 02 23:54:46 carina python[1001]: [20200402 23:54:46.451] INFO:discovered nodes:
+Apr 02 23:54:46 carina python[1001]: [20200402 23:54:46.453] INFO:sent con_req (successor): b7e5e4036281f1fdc4e874258965570c822150ec
+Apr 02 23:54:46 carina python[1001]: [20200402 23:54:46.454] INFO:sent con_req (successor): 477090afb7a0af8469bd57e1cba063b5bb0572cb
+Apr 02 23:54:46 carina python[1001]: [20200402 23:54:46.604] INFO:recv con_ack (successor): 477090afb7a0af8469bd57e1cba063b5bb0572cb
+Apr 02 23:54:46 carina python[1001]: [20200402 23:54:46.606] INFO:Creating Link with peer
+Apr 02 23:54:46 carina python[1001]: [20200402 23:54:46.616] INFO:recv con_ack (successor): b7e5e4036281f1fdc4e874258965570c822150ec
+Apr 02 23:54:46 carina python[1001]: [20200402 23:54:46.617] INFO:Creating Link with peer
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=49 time=50.0 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=49 time=492 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=49 time=54.0 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms
+rtt min/avg/max/mdev = 50.068/198.773/492.229/207.511 ms
+
+
+PING 192.168.10.1 (192.168.10.1) 56(84) bytes of data.
+
+--- 192.168.10.1 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2000ms
+
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.061 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.061 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.065 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 0.061/0.062/0.065/0.006 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+64 bytes from 192.168.10.12: icmp_seq=1 ttl=64 time=72.5 ms
+64 bytes from 192.168.10.12: icmp_seq=2 ttl=64 time=81.0 ms
+64 bytes from 192.168.10.12: icmp_seq=3 ttl=64 time=96.4 ms
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 72.537/83.315/96.408/9.887 ms
+
+
