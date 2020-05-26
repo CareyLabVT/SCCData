@@ -70,7 +70,7 @@ end.time1 <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), t
 start.time1 <- end.time1 - days(5) #to give us five days of data for looking at changes
 full_time1 <- seq(start.time1, end.time1, by = "10 min") #create sequence of dates from past 5 days to fill in data
 
-obs1 <- array(NA,dim=c(length(full_time1),39)) #create array that will be filled in with 39 columns (the entire size of the array)
+obs1 <- array(NA,dim=c(length(full_time1),41)) #create array that will be filled in with 39 columns (the entire size of the array)
 cat_timechange=max(which(catdata$TIMESTAMP=="2019-04-15 10:00:00"))
 catdata$TIMESTAMP<-as.POSIXct(strptime(catdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
 catdata$TIMESTAMP[c(1:cat_timechange-1)]<-with_tz(force_tz(catdata$TIMESTAMP[c(1:cat_timechange-1)],"Etc/GMT+4"), "Etc/GMT+5") #pre time change data gets assigned proper timezone then corrected to GMT -5 to match the rest of the data set
@@ -88,13 +88,13 @@ for(j in 5:ncol(catdata)){
 for(i in 1:length(full_time1)){ #this loop looks for matching dates and extracts data from metdata file to obs array
   index = which(catdata$TIMESTAMP==full_time1[i])
   if(length(index)>0){
-    obs1[i,] <- unlist(catdata[index,c(1:39)])
+    obs1[i,] <- unlist(catdata[index,c(1:41)])
   }
 }
 
 obs1<-as.data.frame(obs1) #make into DF
 obs1[,1] <- full_time1 #now have your array with a proper timedate stamp!
-colnames(obs1)<-names(catdata[index,c(1:39)]) #get column names
+colnames(obs1)<-names(catdata[index,c(1:41)]) #get column names
 
 pdf(paste0("CatwalkDataFigures_", Sys.Date(), ".pdf"), width=8.5, height=11) #call PDF file
 par(mfrow=c(3,2))
@@ -113,7 +113,8 @@ plot(obs1$TIMESTAMP,obs1$EXO_pressure, main="EXO Pressure", xlab="Time", ylab="p
 plot(obs1$TIMESTAMP,obs1$dotemp_9, main="Water temp of sondes", xlab="Time", ylab="degrees C", type='l', col="medium sea green", lwd=1.5, ylim=c(0,35))
 points(obs1$TIMESTAMP, obs1$dotemp_5, col="black", type='l', lwd=1.5)
 points(obs1$TIMESTAMP, obs1$EXO_wtr_1, col="magenta", type='l', lwd=1.5)
-legend("topleft", c("1m", "5m", "9m"), text.col=c("magenta", "black", "medium sea green"), x.intersp=0.001)
+points(obs1$TIMESTAMP, obs1$wtr_pt_9, col="blue4", type='l', lwd=1.5)
+legend("topleft", c("1m EXO", "5m DO", "9m DO", "9m PT"), text.col=c("magenta", "black", "medium sea green", "blue4"), x.intersp=0.001)
 
 plot(obs1$TIMESTAMP,obs1$doobs_9, main="DO", xlab="Time", ylab="mg/L", type='l', col="medium sea green", lwd=1.5, ylim=c(-0.5,13))
 points(obs1$TIMESTAMP, obs1$doobs_5, col="black", type='l', lwd=1.5)
