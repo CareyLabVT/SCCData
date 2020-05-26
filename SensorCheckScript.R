@@ -107,14 +107,17 @@ if(min(tail(na.omit(obs1$BattV)))<11.5){
 plot(obs1$TIMESTAMP,obs1$EXO_battery, main="EXO Battery", xlab="Time", ylab="Volts", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_cablepower, main="EXO Cable Power", xlab="Time", ylab="Volts", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_depth, main="EXO Depth", xlab="Time", ylab="Meters", type='l')
-plot(obs1$TIMESTAMP,obs1$EXO_pressure, main="EXO Pressure", xlab="Time", ylab="psig", type='l')
+
+plot(obs1$TIMESTAMP,obs1$EXO_pressure, main="Sonde Pressure", xlab="Time", ylab="psig", type='l')
+points(obs1$TIMESTAMP, obs1$Lvl_psi, col="blue4", type='l')
+legend("topleft", c("1.6m EXO", "9m PT"), text.col=c("black", "blue4"), x.intersp=0.001)
 
 #par(mar=c(5.1, 4.1, 4.1, 2.1), mgp=c(3, 1, 0), las=0)
 plot(obs1$TIMESTAMP,obs1$dotemp_9, main="Water temp of sondes", xlab="Time", ylab="degrees C", type='l', col="medium sea green", lwd=1.5, ylim=c(0,35))
 points(obs1$TIMESTAMP, obs1$dotemp_5, col="black", type='l', lwd=1.5)
 points(obs1$TIMESTAMP, obs1$EXO_wtr_1, col="magenta", type='l', lwd=1.5)
 points(obs1$TIMESTAMP, obs1$wtr_pt_9, col="blue4", type='l', lwd=1.5)
-legend("topleft", c("1m EXO", "5m DO", "9m DO", "9m PT"), text.col=c("magenta", "black", "medium sea green", "blue4"), x.intersp=0.001)
+legend("topleft", c("1.6m EXO", "5m DO", "9m DO", "9m PT"), text.col=c("magenta", "black", "medium sea green", "blue4"), x.intersp=0.001)
 
 plot(obs1$TIMESTAMP,obs1$doobs_9, main="DO", xlab="Time", ylab="mg/L", type='l', col="medium sea green", lwd=1.5, ylim=c(-0.5,13))
 points(obs1$TIMESTAMP, obs1$doobs_5, col="black", type='l', lwd=1.5)
