@@ -60,6 +60,10 @@ catheader<-read.csv("Catwalk.csv", skip=1, as.is=T) #get header minus wonky Camp
 catdata<-read.csv("Catwalk.csv", skip=4, header=F) #get data minus wonky Campbell rows
 names(catdata)<-names(catheader) #combine the names to deal with Campbell logger formatting
 
+fcrlvlheader<-read.csv("FCRWaterLevel.csv", skip=1, as.is=T) #get header minus wonky Campbell rows
+fcrlvldata<-read.csv("FCRWaterLevel.csv", skip=4, header=F) #get data minus wonky Campbell rows
+names(fcrlvldata)<-names(fcrlvlheader) #combine the names to deal with Campbell logger formatting
+
 end.time1 <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), tzone = "Etc/GMT+5") #gives us current time with rounded hours in EDT
 start.time1 <- end.time1 - days(5) #to give us five days of data for looking at changes
 full_time1 <- seq(start.time1, end.time1, by = "10 min") #create sequence of dates from past 5 days to fill in data
