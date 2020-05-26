@@ -70,7 +70,7 @@ end.time1 <- with_tz(as.POSIXct(strptime(Sys.time(), format = "%Y-%m-%d %H")), t
 start.time1 <- end.time1 - days(5) #to give us five days of data for looking at changes
 full_time1 <- seq(start.time1, end.time1, by = "10 min") #create sequence of dates from past 5 days to fill in data
 
-obs1 <- array(NA,dim=c(length(full_time1),41)) #create array that will be filled in with 39 columns (the entire size of the array)
+obs1 <- array(NA,dim=c(length(full_time1),41)) #create array that will be filled in with 41 columns (the entire size of the array)
 cat_timechange=max(which(catdata$TIMESTAMP=="2019-04-15 10:00:00"))
 catdata$TIMESTAMP<-as.POSIXct(strptime(catdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
 catdata$TIMESTAMP[c(1:cat_timechange-1)]<-with_tz(force_tz(catdata$TIMESTAMP[c(1:cat_timechange-1)],"Etc/GMT+4"), "Etc/GMT+5") #pre time change data gets assigned proper timezone then corrected to GMT -5 to match the rest of the data set
@@ -81,7 +81,7 @@ if (length(na.omit(catdata$TIMESTAMP[catdata$TIMESTAMP>start.time1]))==0) { #if 
   mtext(paste("No data found between", start.time1, "and", end.time1, sep = " ")) #fills in text in top margin of plot
   dev.off() #file made!
 } else {
-for(j in 5:ncol(catdata)){
+for(j in 5:39){
   catdata[,j]<-as.numeric(levels(catdata[,j]))[catdata[,j]]#need to set all columns to numeric values
 }
 
@@ -108,7 +108,7 @@ plot(obs1$TIMESTAMP,obs1$EXO_battery, main="EXO Battery", xlab="Time", ylab="Vol
 plot(obs1$TIMESTAMP,obs1$EXO_cablepower, main="EXO Cable Power", xlab="Time", ylab="Volts", type='l')
 plot(obs1$TIMESTAMP,obs1$EXO_depth, main="EXO Depth", xlab="Time", ylab="Meters", type='l')
 
-plot(obs1$TIMESTAMP,obs1$EXO_pressure, main="Sonde Pressure", xlab="Time", ylab="psig", type='l')
+plot(obs1$TIMESTAMP,obs1$EXO_pressure, main="Sonde Pressure", xlab="Time", ylab="psi", type='l', ylim=c(-1,15))
 points(obs1$TIMESTAMP, obs1$Lvl_psi, col="blue4", type='l')
 legend("topleft", c("1.6m EXO", "9m PT"), text.col=c("black", "blue4"), x.intersp=0.001)
 
