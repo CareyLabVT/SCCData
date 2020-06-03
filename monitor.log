@@ -74691,3 +74691,186 @@ PING github.com (140.82.114.4) 56(84) bytes of data.
 --- github.com ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 45.464/47.319/48.411/1.330 ms
+
+
+############################ carina - 06/03/20 11:54:49 EDT -0400 ############################
+
+
+ 11:54:49 up 4 min,  0 users,  load average: 0.18, 0.45, 0.24
+
+
+reboot   system boot  5.3.0-53-generic Wed Jun  3 11:50   still running
+reboot   system boot  5.3.0-53-generic Tue Jun  2 23:50 - 11:50  (11:59)
+reboot   system boot  5.3.0-53-generic Tue Jun  2 11:50 - 23:50  (11:59)
+reboot   system boot  5.3.0-53-generic Mon Jun  1 23:50 - 11:50  (11:59)
+reboot   system boot  5.3.0-53-generic Mon Jun  1 11:50 - 23:50  (11:59)
+
+wtmp begins Mon Jun  1 11:50:06 2020
+
+
+Bus 001 Device 006: ID 1410:9030 Novatel Wireless 
+
+
+[    8.373270] cdc_ether 1-6.4:1.0 enx0015ff025968: renamed from eth0
+[   62.930253] cdc_ether 1-6.4:1.0 enx0015ff025968: unregister 'cdc_ether' usb-0000:00:15.0-6.4, CDC Ethernet Device
+[   63.271000] cdc_ether 1-6.4:1.0 enx0015ff025968: renamed from eth0
+
+
+[   62.930253] cdc_ether 1-6.4:1.0 enx0015ff025968: unregister 'cdc_ether' usb-0000:00:15.0-6.4, CDC Ethernet Device
+[   63.184924] usb 1-6.4: new high-speed USB device number 6 using xhci_hcd
+[   63.208370] usb 1-6.4: New USB device found, idVendor=1410, idProduct=9030, bcdDevice= 3.10
+[   63.208373] usb 1-6.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   63.208375] usb 1-6.4: Product: MiFi USB730L
+[   63.208377] usb 1-6.4: Manufacturer: Novatel Wireless
+[   63.208379] usb 1-6.4: SerialNumber: 0123456789ABCDEF
+[   63.241214] cdc_ether 1-6.4:1.0 eth0: register 'cdc_ether' at usb-0000:00:15.0-6.4, CDC Ethernet Device, 00:15:ff:02:59:68
+[   63.242666] hid-generic 0003:1410:9030.0002: hiddev0,hidraw0: USB HID v1.01 Device [Novatel Wireless MiFi USB730L] on usb-0000:00:15.0-6.4/input2
+[   63.271000] cdc_ether 1-6.4:1.0 enx0015ff025968: renamed from eth0
+
+
+Filesystem      Size  Used Avail Use% Mounted on
+udev            882M     0  882M   0% /dev
+tmpfs           182M  1.6M  180M   1% /run
+/dev/mmcblk0p2   59G   14G   42G  26% /
+tmpfs           906M     0  906M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           906M     0  906M   0% /sys/fs/cgroup
+/dev/loop0       55M   55M     0 100% /snap/gtk-common-themes/1502
+/dev/loop1       15M   15M     0 100% /snap/gnome-characters/495
+/dev/loop2      2.5M  2.5M     0 100% /snap/gnome-calculator/748
+/dev/loop3      157M  157M     0 100% /snap/gnome-3-28-1804/110
+/dev/loop5       98M   98M     0 100% /snap/core/9289
+/dev/loop6      384K  384K     0 100% /snap/gnome-characters/539
+/dev/loop7      1.0M  1.0M     0 100% /snap/gnome-logs/100
+/dev/loop4      256M  256M     0 100% /snap/gnome-3-34-1804/33
+/dev/loop8       94M   94M     0 100% /snap/core/9066
+/dev/loop9      1.0M  1.0M     0 100% /snap/gnome-logs/93
+/dev/loop10     2.5M  2.5M     0 100% /snap/gnome-calculator/730
+/dev/loop11     2.3M  2.3M     0 100% /snap/gnome-system-monitor/145
+/dev/loop12      55M   55M     0 100% /snap/core18/1705
+/dev/loop13      63M   63M     0 100% /snap/gtk-common-themes/1506
+/dev/loop14      55M   55M     0 100% /snap/core18/1754
+/dev/loop15     2.3M  2.3M     0 100% /snap/gnome-system-monitor/148
+/dev/loop16     161M  161M     0 100% /snap/gnome-3-28-1804/116
+/dev/sda1        29G  4.9G   23G  18% /data
+/dev/mmcblk0p1  511M  6.1M  505M   2% /boot/efi
+tmpfs           182M   20K  182M   1% /run/user/121
+
+
+
+
+enx0015ff025968:
+100.84.150.233/30
+
+
+
+
+ipop:
+192.168.10.11/16
+
+
+enp2s0:
+192.168.1.5/24
+
+
+● watchdog.service - watchdog daemon
+   Loaded: loaded (/lib/systemd/system/watchdog.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+
+● ipopTincan.service - IPOP Tincan service
+   Loaded: loaded (/etc/systemd/system/ipopTincan.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2020-06-03 11:50:49 EDT; 4min 0s ago
+ Main PID: 998 (ipop-tincan)
+    Tasks: 4 (limit: 2115)
+   CGroup: /system.slice/ipopTincan.service
+           └─998 /home/scc/applications/ipopbin/ipop-tincan
+
+Jun 03 11:54:47 carina ipop-tincan[998]: [06/03 11:54:47.241141] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:54:47 carina ipop-tincan[998]: [06/03 11:54:47.241182] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:54:47 carina ipop-tincan[998]: Accepted peer certificate.
+Jun 03 11:54:47 carina ipop-tincan[998]: Jingle:Channel[ipop-tincan|1|__]: DTLS handshake complete.
+Jun 03 11:54:47 carina ipop-tincan[998]: [06/03 11:54:47.616965] SendToPeer: uid:477090afb7a0af8469bd57e1cba063b5bb0572cb data:unknown type:con_stat
+Jun 03 11:54:47 carina ipop-tincan[998]: [06/03 11:54:47.617129] OnRWChangeState: ONLINE 477090afb7a0af8469bd57e1cba063b5bb0572cb 248236
+Jun 03 11:54:47 carina ipop-tincan[998]: [06/03 11:54:47.617244] SendToPeer: uid:477090afb7a0af8469bd57e1cba063b5bb0572cb data:online type:con_stat
+Jun 03 11:54:49 carina ipop-tincan[998]: [06/03 11:54:49.242666] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:54:49 carina ipop-tincan[998]: [06/03 11:54:49.242731] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:54:49 carina ipop-tincan[998]: [06/03 11:54:49.242749] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:54:51 carina ipop-tincan[998]: [06/03 11:54:51.243830] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:54:51 carina ipop-tincan[998]: [06/03 11:54:51.243934] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:54:51 carina ipop-tincan[998]: [06/03 11:54:51.244026] OnNetworksChanged: IPOP TAP Device to be ignored ipop:ipop
+Jun 03 11:54:51 carina ipop-tincan[998]: [06/03 11:54:51.424911] SendToPeer: XMPP SEND uid b7e5e4036281f1fdc4e874258965570c822150ec data {"con_type": "successor", "fpr": "D8:9A:77:B0:01:B2:5F:12:71:6D:A3:D6:C8:F2:92:50:D3:98:97:BB"} type con_req
+
+
+● ipopController.service - IPOP controller service
+   Loaded: loaded (/etc/systemd/system/ipopController.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2020-06-03 11:50:49 EDT; 4min 2s ago
+ Main PID: 999 (python)
+    Tasks: 11 (limit: 2115)
+   CGroup: /system.slice/ipopController.service
+           └─999 /usr/bin/python -m controller.Controller -c config/gvpn-config.json
+
+Jun 03 11:54:21 carina python[999]:   "status": "success"
+Jun 03 11:54:21 carina python[999]: }
+Jun 03 11:54:28 carina python[999]: [20200603 11:54:28.235] INFO:recv ping: 477090afb7a0af8469bd57e1cba063b5bb0572cb
+Jun 03 11:54:36 carina python[999]: [20200603 11:54:36.417] INFO:p2p state: searching
+Jun 03 11:54:43 carina python[999]: [20200603 11:54:43.221] INFO:recv con_req (successor): 477090afb7a0af8469bd57e1cba063b5bb0572cb
+Jun 03 11:54:43 carina python[999]: [20200603 11:54:43.224] INFO:Creating Link with peer
+Jun 03 11:54:46 carina python[999]: [20200603 11:54:46.351] INFO:recv con_resp: 477090afb7a0af8469bd57e1cba063b5bb0572cb
+Jun 03 11:54:46 carina python[999]: [20200603 11:54:46.351] INFO:Creating Link with peer
+Jun 03 11:54:51 carina python[999]: [20200603 11:54:51.424] INFO:discovered nodes:
+Jun 03 11:54:51 carina python[999]: [20200603 11:54:51.425] INFO:sent con_req (successor): b7e5e4036281f1fdc4e874258965570c822150ec
+
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=49 time=44.6 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=49 time=43.5 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=49 time=45.9 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 43.595/44.703/45.904/0.944 ms
+
+
+PING 192.168.10.2 (192.168.10.2) 56(84) bytes of data.
+64 bytes from 192.168.10.2: icmp_seq=1 ttl=64 time=71.6 ms
+64 bytes from 192.168.10.2: icmp_seq=2 ttl=64 time=95.0 ms
+64 bytes from 192.168.10.2: icmp_seq=3 ttl=64 time=81.1 ms
+
+--- 192.168.10.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 71.676/82.644/95.094/9.617 ms
+
+
+PING 192.168.10.11 (192.168.10.11) 56(84) bytes of data.
+64 bytes from 192.168.10.11: icmp_seq=1 ttl=64 time=0.042 ms
+64 bytes from 192.168.10.11: icmp_seq=2 ttl=64 time=0.059 ms
+64 bytes from 192.168.10.11: icmp_seq=3 ttl=64 time=0.057 ms
+
+--- 192.168.10.11 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2040ms
+rtt min/avg/max/mdev = 0.042/0.052/0.059/0.011 ms
+
+
+PING 192.168.10.12 (192.168.10.12) 56(84) bytes of data.
+
+--- 192.168.10.12 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2043ms
+
+
+
+PING 192.168.10.13 (192.168.10.13) 56(84) bytes of data.
+
+--- 192.168.10.13 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2025ms
+
+
+
+PING github.com (140.82.112.3) 56(84) bytes of data.
+64 bytes from lb-140-82-112-3-iad.github.com (140.82.112.3): icmp_seq=1 ttl=48 time=51.0 ms
+64 bytes from lb-140-82-112-3-iad.github.com (140.82.112.3): icmp_seq=2 ttl=48 time=58.4 ms
+64 bytes from lb-140-82-112-3-iad.github.com (140.82.112.3): icmp_seq=3 ttl=48 time=46.0 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 46.019/51.833/58.411/5.094 ms
