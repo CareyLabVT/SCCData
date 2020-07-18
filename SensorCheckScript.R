@@ -20,7 +20,7 @@ start.time <- end.time - days(5) #to give us five days of data for looking at ch
 full_time <- seq(start.time, end.time, by = "min") #create sequence of dates from past 5 days to fill in data
 
 obs <- array(NA,dim=c(length(full_time),9)) #create array that will be filled in with 8 columns
-met_timechange=max(which(metdata$TIMESTAMP=="2019-04-15 10:19:00")) #shows time point when met station was switched from GMT -4 to GMT -5
+met_timechange=max(which(metdata$TIMESTAMP=="2020-01-01 00:00:00")) #shows time point when met station was switched from GMT -4 to GMT -5
 metdata$TIMESTAMP<-as.POSIXct(strptime(metdata$TIMESTAMP, "%Y-%m-%d %H:%M"), tz = "Etc/GMT+5") #get dates aligned
 metdata$TIMESTAMP[c(1:met_timechange-1)]<-with_tz(force_tz(metdata$TIMESTAMP[c(1:met_timechange-1)],"Etc/GMT+4"), "Etc/GMT+5") #pre time change data gets assigned proper timezone then corrected to GMT -5 to match the rest of the data set
 metdata=metdata[-c(met_timechange-1),]
