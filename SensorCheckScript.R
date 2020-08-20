@@ -1,5 +1,5 @@
 #script written to create daily figures that are sent to lucky SCC team members :)
-#written by CCC, BB, last edited 12 Feb 2019 by Vahid-Dan
+#written by CCC, BB, Vahid-Dan
 
 if (!"lubridate" %in% installed.packages()) install.packages("lubridate")
 library(lubridate)
@@ -305,3 +305,4 @@ dev.off() #file made!
 #   dev.off() #file made!
 # }
 # 
+
