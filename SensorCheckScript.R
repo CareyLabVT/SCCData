@@ -6,10 +6,10 @@ library(lubridate)
 
 #download data files to working directory
 output_dir <- "~/data/SCCData/daily-email/"
-download.file('https://github.com/CareyLabVT/SCCData/raw/carina-data/FCRmet.csv','FCRmet.csv')
-download.file('https://github.com/CareyLabVT/SCCData/raw/mia-data/Catwalk.csv','Catwalk.csv')
-download.file('https://github.com/CareyLabVT/SCCData/raw/mia-data/FCRWaterLevel.csv','FCRWaterLevel.csv')
-download.file('https://github.com/CareyLabVT/SCCData/raw/diana-data/FCRweir.csv','FCRweir.csv')
+download.file('https://github.com/FLARE-forecast/FCRE-data/raw/fcre-metstation-data/FCRmet.csv','FCRmet.csv')
+download.file('https://github.com/FLARE-forecast/FCRE-data/raw/fcre-catwalk-data/Catwalk.csv','Catwalk.csv')
+download.file('https://github.com/FLARE-forecast/FCRE-data/raw/fcre-catwalk-data/FCRWaterLevel.csv','FCRWaterLevel.csv')
+download.file('https://github.com/FLARE-forecast/FCRE-data/raw/fcre-weir-data/FCRweir.csv','FCRweir.csv')
 #download.file('https://github.com/CareyLabVT/SCCData/raw/bjorn-data/BVRplatform.csv','BVRplatform.csv') #dummy script fill actual path
 
 metheader<-read.csv("FCRmet.csv", skip=1, as.is=T) #get header minus wonky Campbell rows
