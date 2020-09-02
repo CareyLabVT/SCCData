@@ -1,2 +1,3 @@
-# SCCData/diana-data
-Data for SCC
+# CareyLabVT/SCCData 
+## This repository has been tranferred to a new location:  
+https://github.com/FLARE-forecast/FCRE-data
