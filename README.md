@@ -1,3 +1,3 @@
 # CareyLabVT/SCCData 
-## This repository has been tranferred to a new location:  
+## This repository has been transferred to a new location:  
 https://github.com/FLARE-forecast/FCRE-data
